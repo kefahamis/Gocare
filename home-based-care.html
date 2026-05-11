@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Based Care – GoCare Training Institute — Professional Caregiving Services</title>
+  <meta name="description" content="GoCare Training Institute offers professional Home Based Care services and training — dignified, expert care delivered to your home.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .hbc-intro{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:80px}
+    @media(max-width:768px){.hbc-intro{grid-template-columns:1fr;gap:36px}}
+    .hbc-img{border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.12);position:relative}
+    .hbc-img img{width:100%;display:block}
+    .hbc-badge-float{position:absolute;bottom:24px;left:24px;background:#fff;border-radius:12px;padding:14px 18px;box-shadow:0 8px 28px rgba(0,0,0,.14);display:flex;align-items:center;gap:12px}
+    .hbc-badge-float .ico{width:38px;height:38px;background:var(--o);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff}
+    .hbc-badge-float strong{display:block;font-family:"Plus Jakarta Sans",sans-serif;font-size:.85rem;font-weight:700;color:var(--dark)}
+    .hbc-badge-float span{font-size:.75rem;color:var(--gray);font-family:"Plus Jakarta Sans",sans-serif}
+    .hbc-text h2{font-family:"DM Serif Display",serif;font-size:2.2rem;color:var(--dark);line-height:1.25;margin-bottom:18px}
+    .hbc-text h2 span{color:var(--o)}
+    .hbc-text p{font-family:"Plus Jakarta Sans",sans-serif;font-size:.95rem;color:var(--gray);line-height:1.8;margin-bottom:16px}
+    .hbc-checks{display:flex;flex-direction:column;gap:10px;margin:24px 0}
+    .hbc-check{display:flex;align-items:center;gap:12px;font-family:"Plus Jakarta Sans",sans-serif;font-size:.9rem;color:var(--mid);font-weight:500}
+    .hbc-check svg{width:18px;height:18px;color:var(--o);flex-shrink:0}
+
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;margin-bottom:80px}
+    .svc-card{background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:28px 24px;transition:.3s var(--ease)}
+    .svc-card:hover{border-color:var(--o);transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,.08)}
+    .svc-ico{width:52px;height:52px;background:var(--ol);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--o);margin-bottom:18px;transition:.2s}
+    .svc-card:hover .svc-ico{background:var(--o);color:#fff}
+    .svc-ico svg{width:24px;height:24px}
+    .svc-card h4{font-family:"DM Serif Display",serif;font-size:1.1rem;color:var(--dark);margin-bottom:10px}
+    .svc-card p{font-family:"Plus Jakarta Sans",sans-serif;font-size:.85rem;color:var(--gray);line-height:1.7}
+
+    .process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;margin-bottom:80px;position:relative}
+    .step{text-align:center;padding:0 24px;position:relative}
+    .step:not(:last-child)::after{content:'';position:absolute;top:28px;right:-1px;width:2px;height:32px;background:var(--border)}
+    @media(max-width:600px){.step:not(:last-child)::after{display:none}}
+    .step-num{width:56px;height:56px;background:var(--o);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"DM Serif Display",serif;font-size:1.5rem;font-weight:900;margin:0 auto 16px}
+    .step h4{font-family:"Plus Jakarta Sans",sans-serif;font-size:.95rem;font-weight:700;color:var(--dark);margin-bottom:8px}
+    .step p{font-family:"Plus Jakarta Sans",sans-serif;font-size:.82rem;color:var(--gray);line-height:1.6}
+  </style>
+</head>
+
+<body>
+  <!-- COOKIE CONSENT -->
+  <div id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="ck-inner">
+      <div class="ck-left">
+        <div class="ck-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/>
+            <path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/>
+          </svg>
+        </div>
+        <div class="ck-copy">
+          <strong>We use cookies</strong>
+          <p>We use cookies to improve your experience, analyse site traffic, and personalise content. By continuing, you agree to our <a href="index.html">Privacy Policy</a>.</p>
+        </div>
+      </div>
+      <div class="ck-actions">
+        <button class="ck-btn-decline" id="ckDecline">Decline</button>
+        <button class="ck-btn-accept" id="ckAccept">Accept All</button>
+        <button class="ck-close" id="ckClose" aria-label="Close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- -- TOP BAR --------------------------------------- -->
+  <div class="topbar">
+    <div class="wrap">
+      <div class="tb-left">
+        <span><i data-lucide="mail"></i>info@gocareinstitute.ac.ke</span>
+        <span><i data-lucide="phone"></i>0703 115 502 &nbsp;|&nbsp; 0745 229 485</span>
+      </div>
+      <div class="tb-right">
+        <a href="index.html#">Student Portal</a>
+        <a href="index.html#">E-learning</a>
+        <a href="faqs.html">FAQs</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- -- NAVBAR ---------------------------------------- -->
+  <nav class="nav" id="mainNav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <img src="images/gocare-institute-logo.png" width="100" />
+      </a>
+      <div class="nav-links">
+        <div class="nav-item"><a href="index.html" class="nav-home">Home</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-about">About</a></div>
+        <div class="nav-item"><a href="courses.html" class="nav-courses">Schools &amp; Programs</a></div>
+        <div class="nav-item"><a href="admissions.html" class="nav-admissions">Admissions</a></div>
+        <div class="nav-item"><a href="industry-liaison.html" class="nav-industry">Industry Liaison</a></div>
+        <div class="nav-item"><a href="careers.html" class="nav-careers">Careers</a></div>
+        <div class="nav-item">
+          <a href="index.html#">Resources <i data-lucide="chevron-down"></i></a>
+          <div class="dropdown">
+            <a href="gallery.html">Gallery</a>
+            <a href="events.html">Events</a>
+            <a href="blog.html">Blog</a>
+            <a href="downloads.html">Downloads</a>
+            <a href="home-based-care.html" class="active">Home based Care</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="contact.html" class="nav-contact">Contact Us</a></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <a href="apply.html" class="btn btn-primary desk-cta" style="flex-shrink:0;border-radius:8px">Start Your Journey <i
+            data-lucide="arrow-right"></i></a>
+        <div class="ham" id="hamBtn"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+    <div class="mob-menu" id="mobMenu">
+      <a href="index.html" class="nav-home">Home</a>
+      <a href="about.html" class="nav-about">About</a>
+      <a href="courses.html" class="nav-courses">Schools &amp; Programs</a>
+      <a href="admissions.html" class="nav-admissions">Admissions</a>
+      <a href="industry-liaison.html" class="nav-industry">Industry Liaison</a>
+      <a href="careers.html" class="nav-careers">Careers</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="home-based-care.html" class="active">Home Based Care</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="events.html">Events &amp; Open Days</a>
+      <a href="blog.html">Blog &amp; Articles</a>
+      <a href="contact.html" class="nav-contact">Contact Us</a>
+      <a href="apply.html" class="btn btn-primary mob-cta">Start Your Journey <i data-lucide="arrow-right"></i></a>
+    </div>
+  </nav>
+
+  <!-- ── PAGE TITLE HERO ──────────────────────────────── -->
+  <section class="page-title-hero">
+    <div class="page-title-orb page-title-orb--1" aria-hidden="true"></div>
+    <div class="page-title-orb page-title-orb--2" aria-hidden="true"></div>
+    <div class="page-title-content">
+      <span class="page-title-badge"><i data-lucide="heart"></i> Community Care</span>
+      <h1>Home Based <span class="accent">Care</span></h1>
+      <div class="page-title-accent"></div>
+      <nav class="page-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="bc-separator"><i data-lucide="chevron-right"></i></span>
+        <span class="bc-current">Home Based Care</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ── HBC CONTENT ─────────────────────────────────── -->
+  <section class="hbc-sec" style="padding: 80px 0; background: #fff;">
+    <div class="wrap">
+      <div class="hbc-intro">
+        <div class="hbc-img reveal">
+          <img src="images/home-care.png" alt="Care at Home">
+          <div class="hbc-badge-float">
+            <div class="ico"><i data-lucide="shield-check"></i></div>
+            <div>
+              <strong>Certified Care</strong>
+              <span>Professional & Compassionate</span>
+            </div>
+          </div>
+        </div>
+        <div class="hbc-text reveal delay-1">
+          <h2>Bringing Quality Healthcare <span class="accent">To Your Doorstep.</span></h2>
+          <p>GoCare Home Based Care (HBC) provides professional, compassionate, and dignified healthcare services to patients within the comfort of their homes.</p>
+          <p>Our team of certified caregivers and nursing assistants are trained to support elderly patients, those recovering from surgery, and individuals with chronic conditions.</p>
+          <div class="hbc-checks">
+            <div class="hbc-check"><i data-lucide="check-circle"></i> Personal hygiene and grooming</div>
+            <div class="hbc-check"><i data-lucide="check-circle"></i> Medication management</div>
+            <div class="hbc-check"><i data-lucide="check-circle"></i> Vital signs monitoring</div>
+            <div class="hbc-check"><i data-lucide="check-circle"></i> Nutritional support</div>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Request a Caregiver <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        <div class="svc-card reveal">
+          <div class="svc-ico"><i data-lucide="user-plus"></i></div>
+          <h4>Elderly Care</h4>
+          <p>Dignified support for our seniors, ensuring they remain comfortable and safe in their familiar environment.</p>
+        </div>
+        <div class="svc-card reveal delay-1">
+          <div class="svc-ico"><i data-lucide="activity"></i></div>
+          <h4>Post-Surgery Care</h4>
+          <p>Specialized assistance for patients recovering from major surgeries to ensure a smooth transition and recovery.</p>
+        </div>
+        <div class="svc-card reveal delay-2">
+          <div class="svc-ico"><i data-lucide="clipboard-list"></i></div>
+          <h4>Chronic Care</h4>
+          <p>Ongoing support for individuals managing long-term conditions like diabetes, hypertension, or stroke recovery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- -- NEWSLETTER ------------------------------------- -->
+  <section class="nl-sec">
+    <div class="wrap nl-inner">
+      <h2>Subscribe &amp; Stay Updated</h2>
+      <p>Get the latest programme news, intake dates and healthcare career tips — no spam, ever.</p>
+      <form class="nl-form" onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:#fff;font-weight:700;padding:16px 24px;font-size:.95rem\'>✅ Subscribed! Thank you.</p>'">
+        <input type="email" placeholder="Enter your email address…" required>
+        <button type="submit">Join 2,500+ Students</button>
+      </form>
+    </div>
+  </section>
+
+  <footer id="contactSection" class="footer">
+    <div class="footer-pattern" aria-hidden="true"></div>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <img src="images/gocare-institute-logo-white.png" alt="GoCare Logo" style="height: 48px; width: auto; margin-bottom: 8px;">
+        </a>
+        <p>GoCare Training Institute — a centre of excellence equipping learners with practical skills and knowledge for impactful careers in healthcare, social work, and beyond.</p>
+        <div class="socials">
+          <a href="#" class="social-btn" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="X (Twitter)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="YouTube">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html#courses">Our Programmes</a></li>
+          <li><a href="industry-liaison.html">Industry Liaison</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html#">Students Portal</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="index.html#">E-learning</a></li>
+          <li><a href="apply.html">Apply Online</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter-col">
+        <h4>Contact Us</h4>
+        <div class="contact-group">
+          <div class="contact-icon-label"><i data-lucide="phone" style="width:16px"></i> <span class="phone-label">Call Us</span></div>
+          <div class="phone">
+            <a href="tel:+254745220344">0745 220 344</a>
+            <a href="tel:+254703115502">0703 115 502</a>
+          </div>
+        </div>
+        <div class="contact-group">
+          <div class="contact-icon-label"><i data-lucide="mail" style="width:16px"></i> <span class="phone-label">Email Us</span></div>
+          <a href="mailto:info@gocareinstitute.ac.ke" class="email-link">info@gocareinstitute.ac.ke</a>
+        </div>
+        <div class="contact-group">
+          <div class="contact-icon-label"><i data-lucide="map-pin" style="width:16px"></i> <span class="phone-label">Visit Us</span></div>
+          <span class="address-text">Nairobi & Ruiru, Kenya</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 <a href="index.html">GoCare Training Institute</a>. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="index.html#">Privacy Policy</a> <span class="divider">|</span> <a href="index.html#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      const mainNav = document.getElementById('mainNav');
+      window.addEventListener('scroll', () => {
+        if(mainNav) mainNav.classList.toggle('scrolled', window.scrollY > 40);
+      });
+      const ham = document.getElementById('hamBtn'), mob = document.getElementById('mobMenu');
+      if(ham && mob) {
+        ham.addEventListener('click', () => { 
+          ham.classList.toggle('open'); 
+          mob.style.display = mob.style.display === 'flex' ? 'none' : 'flex'; 
+        });
+        mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { 
+          mob.style.display = 'none'; 
+          ham.classList.remove('open') 
+        }));
+      }
+      
+      const banner = document.getElementById('cookie-banner');
+      if (banner && !localStorage.getItem('ck_consent')) {
+        setTimeout(() => { banner.classList.add('ck-visible'); }, 1000);
+      }
+      const dismiss = () => { banner.classList.remove('ck-visible'); banner.classList.add('ck-hiding'); };
+      if (document.getElementById('ckAccept')) document.getElementById('ckAccept').addEventListener('click', () => { localStorage.setItem('ck_consent', 'accepted'); dismiss(); });
+      if (document.getElementById('ckDecline')) document.getElementById('ckDecline').addEventListener('click', () => { localStorage.setItem('ck_consent', 'declined'); dismiss(); });
+      if (document.getElementById('ckClose')) document.getElementById('ckClose').addEventListener('click', dismiss);
+
+      function initReveal() {
+        const reveals = document.querySelectorAll('.reveal');
+        const io = new IntersectionObserver(entries => {
+          entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('up'); io.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+        reveals.forEach(el => io.observe(el));
+      }
+      initReveal();
+    });
+  </script>
+</body>
+</html>
