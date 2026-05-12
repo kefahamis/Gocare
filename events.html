@@ -8,22 +8,22 @@
   <meta name="description" content="Stay updated with upcoming events, open days and campus activities at GoCare Training Institute.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     .events-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:28px}
-    .event-card{background:#fff;border-radius:16px;border:1px solid var(--border);overflow:hidden;transition:.3s var(--ease);box-shadow:0 2px 12px rgba(0,0,0,.05)}
+    .event-card{background:#F5F0E8;border-radius:16px;border:1px solid var(--border);overflow:hidden;transition:.3s var(--ease);box-shadow:0 2px 12px rgba(0,0,0,.05)}
     .event-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(0,0,0,.1)}
     .event-img{height:200px;overflow:hidden;position:relative}
     .event-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
     .event-card:hover .event-img img{transform:scale(1.06)}
-    .event-badge{position:absolute;top:14px;left:14px;background:var(--o);color:#fff;font-size:.72rem;font-weight:700;padding:5px 12px;border-radius:50px;font-family:"Plus Jakarta Sans",sans-serif;text-transform:uppercase;letter-spacing:.8px}
+    .event-badge{position:absolute;top:14px;left:14px;background:var(--o);color:#F5F0E8;font-size:.72rem;font-weight:700;padding:5px 12px;border-radius:50px;font-family:"Plus Jakarta Sans",sans-serif;text-transform:uppercase;letter-spacing:.8px}
     .event-body{padding:22px 24px}
     .event-date{display:flex;align-items:center;gap:7px;color:var(--o);font-size:.8rem;font-weight:700;font-family:"Plus Jakarta Sans",sans-serif;margin-bottom:10px;text-transform:uppercase;letter-spacing:.6px}
     .event-date svg{width:14px;height:14px}
-    .event-body h3{font-family:"DM Serif Display",serif;font-size:1.2rem;color:var(--dark);margin-bottom:10px;line-height:1.3}
+    .event-body h3{font-family:'Bebas Neue', sans-serif;font-size:1.2rem;color:var(--dark);margin-bottom:10px;line-height:1.3}
     .event-body p{font-size:.875rem;color:var(--gray);line-height:1.7;font-family:"Plus Jakarta Sans",sans-serif;margin-bottom:18px}
     .event-meta{display:flex;flex-wrap:wrap;gap:12px;font-size:.78rem;color:var(--mid);font-family:"Plus Jakarta Sans",sans-serif;margin-bottom:18px}
     .event-meta span{display:flex;align-items:center;gap:5px}
@@ -83,24 +83,43 @@
       <div class="nav-links">
         <div class="nav-item"><a href="index.html" class="nav-home">Home</a></div>
         <div class="nav-item"><a href="about.html" class="nav-about">About</a></div>
-        <div class="nav-item"><a href="courses.html" class="nav-courses">Schools &amp; Programs</a></div>
+        <div class="nav-item">
+          <a href="courses.html" class="nav-courses">Schools &amp; Programs <i data-lucide="chevron-down"></i></a>
+          <div class="dropdown schools-mega">
+            <div class="res-body">
+              <a href="schools/medical-health-sciences.html"><i data-lucide="stethoscope"></i> <span>School of Medical & Health Sciences</span></a>
+              <a href="schools/hospitality-management.html"><i data-lucide="utensils"></i> <span>School of Hospitality Management</span></a>
+              <a href="schools/social-sciences-business.html"><i data-lucide="users"></i> <span>School of Social Sciences & Business Management</span></a>
+              <a href="schools/international-certifications.html"><i data-lucide="globe"></i> <span>International Certifications</span></a>
+              <a href="courses.html"><i data-lucide="search"></i> <span>View All Courses</span></a>
+            </div>
+          </div>
+        </div>
         <div class="nav-item"><a href="admissions.html" class="nav-admissions">Admissions</a></div>
         <div class="nav-item"><a href="industry-liaison.html" class="nav-industry">Industry Liaison</a></div>
-        <div class="nav-item"><a href="careers.html" class="nav-careers">Careers</a></div>
         <div class="nav-item">
           <a href="index.html#">Resources <i data-lucide="chevron-down"></i></a>
-          <div class="dropdown">
-            <a href="gallery.html">Gallery</a>
-            <a href="events.html" class="active">Events</a>
-            <a href="blog.html">Blog</a>
-            <a href="downloads.html">Downloads</a>
-            <a href="home-based-care.html">Home based Care</a>
+          <div class="dropdown resources-mega">
+            <div class="res-header">Resources</div>
+            <div class="res-body">
+              <a href="#"><i data-lucide="book"></i> <span>Student Resources</span></a>
+              <a href="downloads.html"><i data-lucide="download"></i> <span>Downloads</span></a>
+              <a href="blog.html"><i data-lucide="edit-3"></i> <span>Blogs & Articles</span></a>
+              <a href="careers.html"><i data-lucide="briefcase"></i> <span>Career Pathways</span></a>
+              <a href="#"><i data-lucide="graduation-cap"></i> <span>Student Portal Access</span></a>
+              <a href="index.html#testimonials"><i data-lucide="message-circle"></i> <span>Testimonials and Success Stories</span></a>
+              <a href="#"><i data-lucide="users"></i> <span>Alumni Network</span></a>
+              <a href="home-based-care.html"><i data-lucide="hospital"></i> <span>GoCare Health Solutions</span></a>
+            </div>
+            <div class="res-footer">
+              <a href="courses.html" class="btn btn-primary">Explore Resources <i data-lucide="arrow-right"></i></a>
+            </div>
           </div>
         </div>
         <div class="nav-item"><a href="contact.html" class="nav-contact">Contact Us</a></div>
       </div>
       <div style="display:flex;align-items:center;gap:12px">
-        <a href="apply.html" class="btn btn-primary desk-cta" style="flex-shrink:0;border-radius:8px">Start Your Journey <i
+        <a href="apply.html" class="btn btn-primary desk-cta" style="flex-shrink:0;border-radius: 50px">Start Your Journey <i
             data-lucide="arrow-right"></i></a>
         <div class="ham" id="hamBtn"><span></span><span></span><span></span></div>
       </div>
@@ -111,7 +130,6 @@
       <a href="courses.html" class="nav-courses">Schools &amp; Programs</a>
       <a href="admissions.html" class="nav-admissions">Admissions</a>
       <a href="industry-liaison.html" class="nav-industry">Industry Liaison</a>
-      <a href="careers.html" class="nav-careers">Careers</a>
       <a href="faqs.html">FAQs</a>
       <a href="downloads.html">Downloads</a>
       <a href="home-based-care.html">Home Based Care</a>
@@ -211,7 +229,7 @@
     <div class="wrap nl-inner">
       <h2>Subscribe &amp; Stay Updated</h2>
       <p>Get the latest programme news, intake dates and healthcare career tips — no spam, ever.</p>
-      <form class="nl-form" onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:#fff;font-weight:700;padding:16px 24px;font-size:.95rem\'>✅ Subscribed! Thank you.</p>'">
+      <form class="nl-form" onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:#F5F0E8;font-weight:700;padding:16px 24px;font-size:.95rem\'>✅ Subscribed! Thank you.</p>'">
         <input type="email" placeholder="Enter your email address…" required>
         <button type="submit">Join 2,500+ Students</button>
       </form>
@@ -247,7 +265,7 @@
           <li><a href="about.html">About Us</a></li>
           <li><a href="index.html#courses">Our Programmes</a></li>
           <li><a href="industry-liaison.html">Industry Liaison</a></li>
-          <li><a href="careers.html">Careers</a></li>
+          <li></li>
           <li><a href="contact.html">Contact Us</a></li>
           <li><a href="faqs.html">FAQs</a></li>
         </ul>

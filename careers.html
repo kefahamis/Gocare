@@ -7,7 +7,7 @@
   <title>Career and Job Opportunities · GoCare Training Institute</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -63,24 +63,43 @@
       <div class="nav-links">
         <div class="nav-item"><a href="index.html" class="nav-home">Home</a></div>
         <div class="nav-item"><a href="about.html" class="nav-about">About</a></div>
-        <div class="nav-item"><a href="courses.html" class="nav-courses">Schools &amp; Programs</a></div>
+        <div class="nav-item">
+          <a href="courses.html" class="nav-courses">Schools &amp; Programs <i data-lucide="chevron-down"></i></a>
+          <div class="dropdown schools-mega">
+            <div class="res-body">
+              <a href="schools/medical-health-sciences.html"><i data-lucide="stethoscope"></i> <span>School of Medical & Health Sciences</span></a>
+              <a href="schools/hospitality-management.html"><i data-lucide="utensils"></i> <span>School of Hospitality Management</span></a>
+              <a href="schools/social-sciences-business.html"><i data-lucide="users"></i> <span>School of Social Sciences & Business Management</span></a>
+              <a href="schools/international-certifications.html"><i data-lucide="globe"></i> <span>International Certifications</span></a>
+              <a href="courses.html"><i data-lucide="search"></i> <span>View All Courses</span></a>
+            </div>
+          </div>
+        </div>
         <div class="nav-item"><a href="admissions.html" class="nav-admissions">Admissions</a></div>
         <div class="nav-item"><a href="industry-liaison.html" class="nav-industry">Industry Liaison</a></div>
-        <div class="nav-item"><a href="careers.html" class="nav-careers active">Careers</a></div>
         <div class="nav-item">
           <a href="index.html#">Resources <i data-lucide="chevron-down"></i></a>
-          <div class="dropdown">
-            <a href="gallery.html">Gallery</a>
-            <a href="events.html">Events</a>
-            <a href="blog.html">Blog</a>
-            <a href="downloads.html">Downloads</a>
-            <a href="home-based-care.html">Home based Care</a>
+          <div class="dropdown resources-mega">
+            <div class="res-header">Resources</div>
+            <div class="res-body">
+              <a href="#"><i data-lucide="book"></i> <span>Student Resources</span></a>
+              <a href="downloads.html"><i data-lucide="download"></i> <span>Downloads</span></a>
+              <a href="blog.html"><i data-lucide="edit-3"></i> <span>Blogs & Articles</span></a>
+              <a href="careers.html"><i data-lucide="briefcase"></i> <span>Career Pathways</span></a>
+              <a href="#"><i data-lucide="graduation-cap"></i> <span>Student Portal Access</span></a>
+              <a href="index.html#testimonials"><i data-lucide="message-circle"></i> <span>Testimonials and Success Stories</span></a>
+              <a href="#"><i data-lucide="users"></i> <span>Alumni Network</span></a>
+              <a href="home-based-care.html"><i data-lucide="hospital"></i> <span>GoCare Health Solutions</span></a>
+            </div>
+            <div class="res-footer">
+              <a href="courses.html" class="btn btn-primary">Explore Resources <i data-lucide="arrow-right"></i></a>
+            </div>
           </div>
         </div>
         <div class="nav-item"><a href="contact.html" class="nav-contact">Contact Us</a></div>
       </div>
       <div style="display:flex;align-items:center;gap:12px">
-        <a href="apply.html" class="btn btn-primary desk-cta" style="flex-shrink:0;border-radius:8px">Start Your Journey <i
+        <a href="apply.html" class="btn btn-primary desk-cta" style="flex-shrink:0;border-radius: 50px">Start Your Journey <i
             data-lucide="arrow-right"></i></a>
         <div class="ham" id="hamBtn"><span></span><span></span><span></span></div>
       </div>
@@ -91,7 +110,6 @@
       <a href="courses.html" class="nav-courses">Schools &amp; Programs</a>
       <a href="admissions.html" class="nav-admissions">Admissions</a>
       <a href="industry-liaison.html" class="nav-industry">Industry Liaison</a>
-      <a href="careers.html" class="nav-careers active">Careers</a>
       <a href="faqs.html">FAQs</a>
       <a href="downloads.html">Downloads</a>
       <a href="home-based-care.html">Home Based Care</a>
@@ -132,7 +150,7 @@
 
       <div class="career-sectors-grid">
         <div class="section-head reveal" style="grid-column: 1 / -1; margin-bottom: 40px;">
-          <h3 style="font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--dark);">Where GoCare <span class="accent">Graduates Work</span></h3>
+          <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--dark);">Where GoCare <span class="accent">Graduates Work</span></h3>
           <p style="color: var(--gray);">Our alumni are employed in a wide range of sectors, including:</p>
         </div>
 
@@ -248,12 +266,12 @@
   <!-- ── INTERNATIONAL OPPORTUNITIES ────────────────────── -->
   <section class="intl-opps-sec" style="padding: 90px 0;">
     <div class="wrap">
-      <div class="intl-card reveal" style="background: var(--dark); color: #fff; padding: 60px; border-radius: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; overflow: hidden; position: relative;">
+      <div class="intl-card reveal" style="background: var(--dark); color: #F5F0E8; padding: 60px; border-radius: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; overflow: hidden; position: relative;">
         <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: var(--o); opacity: 0.1; border-radius: 50%; pointer-events: none;"></div>
         
         <div>
           <span class="section-tagline" style="color: var(--o);">Global Advantage</span>
-          <h2 style="font-family: 'DM Serif Display', serif; font-size: 2.6rem; margin-bottom: 24px; color: #fff;">International <span class="accent">Opportunities</span></h2>
+          <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem; margin-bottom: 24px; color: #F5F0E8;">International <span class="accent">Opportunities</span></h2>
           <p style="color: rgba(255,255,255,0.7); margin-bottom: 30px; font-size: 1.1rem; line-height: 1.7;">GoCare Training Institute’s international certifications (AMCA USA, SDC Canada, ICDL Global) open doors to global employment in countries like Canada, USA, UK, Germany, Ireland, UAE, Australia, and more.</p>
           
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
@@ -280,9 +298,9 @@
           </div>
         </div>
 
-        <div style="background: #fff; padding: 40px; border-radius: 16px; color: var(--dark);">
+        <div style="background: #F5F0E8; padding: 40px; border-radius: 16px; color: var(--dark);">
           <div class="v-icon" style="background: var(--ol);"><i data-lucide="globe-2"></i></div>
-          <h4 style="margin-bottom: 15px; font-family: 'DM Serif Display', serif; font-size: 1.4rem;">Sponsorship Benefit</h4>
+          <h4 style="margin-bottom: 15px; font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem;">Sponsorship Benefit</h4>
           <p style="color: var(--gray); font-size: 0.95rem; margin-bottom: 20px;">With GoCare’s Second Course Sponsorship, learners gain additional international qualifications that significantly boost overseas job prospects.</p>
           <a href="apply.html" class="btn btn-primary" style="width: 100%;">Boost Your Career <i data-lucide="arrow-right"></i></a>
         </div>
@@ -358,7 +376,7 @@
   <!-- ── CONCLUSION ────────────────────────────────────── -->
   <section class="careers-footer reveal" style="padding: 100px 0; background: var(--ol); text-align: center;">
     <div class="wrap">
-      <h2 style="font-family: 'DM Serif Display', serif; font-size: 2.8rem; color: var(--dark); margin-bottom: 20px;">Your Future Starts at <span class="accent">GoCare</span></h2>
+      <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: var(--dark); margin-bottom: 20px;">Your Future Starts at <span class="accent">GoCare</span></h2>
       <p style="font-size: 1.2rem; color: var(--gray); max-width: 750px; margin: 0 auto 40px; line-height: 1.8;">Whether your goal is to work in Kenya or abroad, GoCare Training Institute provides the skills, certifications, and opportunities you need to build a successful career.</p>
       <p style="font-weight: 700; color: var(--o); font-size: 1.4rem; margin-bottom: 30px;">Your journey to a brighter future begins here.</p>
       <a href="apply.html" class="btn btn-primary btn-lg">Start Your Journey <i data-lucide="arrow-right"></i></a>
@@ -402,7 +420,7 @@
           <li><a href="about.html">About Us</a></li>
           <li><a href="index.html#courses">Our Programmes</a></li>
           <li><a href="industry-liaison.html">Industry Liaison</a></li>
-          <li><a href="careers.html">Careers</a></li>
+          <li></li>
           <li><a href="contact.html">Contact Us</a></li>
           <li><a href="faqs.html">FAQs</a></li>
         </ul>

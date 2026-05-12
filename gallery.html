@@ -8,14 +8,14 @@
   <meta name="description" content="Browse the GoCare Training Institute gallery — campus life, graduation ceremonies and clinical training.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     .gallery-filters{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:40px}
-    .gal-btn{padding:8px 22px;border-radius:50px;border:1.5px solid var(--border);background:#fff;font-family:"Plus Jakarta Sans",sans-serif;font-size:.85rem;font-weight:600;color:var(--mid);cursor:pointer;transition:.2s}
-    .gal-btn:hover,.gal-btn.active{background:var(--o);border-color:var(--o);color:#fff}
+    .gal-btn{padding:8px 22px;border-radius:50px;border:1.5px solid var(--border);background:#F5F0E8;font-family:"Plus Jakarta Sans",sans-serif;font-size:.85rem;font-weight:600;color:var(--mid);cursor:pointer;transition:.2s}
+    .gal-btn:hover,.gal-btn.active{background:var(--o);border-color:var(--o);color:#F5F0E8}
     .gallery-grid{columns:3;column-gap:16px}
     @media(max-width:768px){.gallery-grid{columns:2}}
     @media(max-width:480px){.gallery-grid{columns:1}}
@@ -24,11 +24,11 @@
     .gal-item:hover img{transform:scale(1.05)}
     .gal-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(17,24,39,.75) 100%);opacity:0;transition:.3s;display:flex;align-items:flex-end;padding:18px}
     .gal-item:hover .gal-overlay{opacity:1}
-    .gal-overlay span{color:#fff;font-size:.82rem;font-weight:600;font-family:"Plus Jakarta Sans",sans-serif}
+    .gal-overlay span{color:#F5F0E8;font-size:.82rem;font-weight:600;font-family:"Plus Jakarta Sans",sans-serif}
     .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;display:none;align-items:center;justify-content:center;padding:24px}
     .lightbox.open{display:flex}
     .lightbox img{max-width:90vw;max-height:85vh;border-radius:12px;object-fit:contain}
-    .lb-close{position:absolute;top:20px;right:24px;color:#fff;font-size:2rem;cursor:pointer;background:none;border:none;line-height:1}
+    .lb-close{position:absolute;top:20px;right:24px;color:#F5F0E8;font-size:2rem;cursor:pointer;background:none;border:none;line-height:1}
     .lb-close:hover{color:var(--o)}
   </style>
 </head>
@@ -83,24 +83,43 @@
       <div class="nav-links">
         <div class="nav-item"><a href="index.html" class="nav-home">Home</a></div>
         <div class="nav-item"><a href="about.html" class="nav-about">About</a></div>
-        <div class="nav-item"><a href="courses.html" class="nav-courses">Schools &amp; Programs</a></div>
+        <div class="nav-item">
+          <a href="courses.html" class="nav-courses">Schools &amp; Programs <i data-lucide="chevron-down"></i></a>
+          <div class="dropdown schools-mega">
+            <div class="res-body">
+              <a href="schools/medical-health-sciences.html"><i data-lucide="stethoscope"></i> <span>School of Medical & Health Sciences</span></a>
+              <a href="schools/hospitality-management.html"><i data-lucide="utensils"></i> <span>School of Hospitality Management</span></a>
+              <a href="schools/social-sciences-business.html"><i data-lucide="users"></i> <span>School of Social Sciences & Business Management</span></a>
+              <a href="schools/international-certifications.html"><i data-lucide="globe"></i> <span>International Certifications</span></a>
+              <a href="courses.html"><i data-lucide="search"></i> <span>View All Courses</span></a>
+            </div>
+          </div>
+        </div>
         <div class="nav-item"><a href="admissions.html" class="nav-admissions">Admissions</a></div>
         <div class="nav-item"><a href="industry-liaison.html" class="nav-industry">Industry Liaison</a></div>
-        <div class="nav-item"><a href="careers.html" class="nav-careers">Careers</a></div>
         <div class="nav-item">
           <a href="index.html#">Resources <i data-lucide="chevron-down"></i></a>
-          <div class="dropdown">
-            <a href="gallery.html" class="active">Gallery</a>
-            <a href="events.html">Events</a>
-            <a href="blog.html">Blog</a>
-            <a href="downloads.html">Downloads</a>
-            <a href="home-based-care.html">Home based Care</a>
+          <div class="dropdown resources-mega">
+            <div class="res-header">Resources</div>
+            <div class="res-body">
+              <a href="#"><i data-lucide="book"></i> <span>Student Resources</span></a>
+              <a href="downloads.html"><i data-lucide="download"></i> <span>Downloads</span></a>
+              <a href="blog.html"><i data-lucide="edit-3"></i> <span>Blogs & Articles</span></a>
+              <a href="careers.html"><i data-lucide="briefcase"></i> <span>Career Pathways</span></a>
+              <a href="#"><i data-lucide="graduation-cap"></i> <span>Student Portal Access</span></a>
+              <a href="index.html#testimonials"><i data-lucide="message-circle"></i> <span>Testimonials and Success Stories</span></a>
+              <a href="#"><i data-lucide="users"></i> <span>Alumni Network</span></a>
+              <a href="home-based-care.html"><i data-lucide="hospital"></i> <span>GoCare Health Solutions</span></a>
+            </div>
+            <div class="res-footer">
+              <a href="courses.html" class="btn btn-primary">Explore Resources <i data-lucide="arrow-right"></i></a>
+            </div>
           </div>
         </div>
         <div class="nav-item"><a href="contact.html" class="nav-contact">Contact Us</a></div>
       </div>
       <div style="display:flex;align-items:center;gap:12px">
-        <a href="apply.html" class="btn btn-primary desk-cta" style="flex-shrink:0;border-radius:8px">Start Your Journey <i
+        <a href="apply.html" class="btn btn-primary desk-cta" style="flex-shrink:0;border-radius: 50px">Start Your Journey <i
             data-lucide="arrow-right"></i></a>
         <div class="ham" id="hamBtn"><span></span><span></span><span></span></div>
       </div>
@@ -111,7 +130,6 @@
       <a href="courses.html" class="nav-courses">Schools &amp; Programs</a>
       <a href="admissions.html" class="nav-admissions">Admissions</a>
       <a href="industry-liaison.html" class="nav-industry">Industry Liaison</a>
-      <a href="careers.html" class="nav-careers">Careers</a>
       <a href="faqs.html">FAQs</a>
       <a href="downloads.html">Downloads</a>
       <a href="home-based-care.html">Home Based Care</a>
@@ -190,7 +208,7 @@
     <div class="wrap nl-inner">
       <h2>Subscribe &amp; Stay Updated</h2>
       <p>Get the latest programme news, intake dates and healthcare career tips — no spam, ever.</p>
-      <form class="nl-form" onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:#fff;font-weight:700;padding:16px 24px;font-size:.95rem\'>✅ Subscribed! Thank you.</p>'">
+      <form class="nl-form" onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:#F5F0E8;font-weight:700;padding:16px 24px;font-size:.95rem\'>✅ Subscribed! Thank you.</p>'">
         <input type="email" placeholder="Enter your email address…" required>
         <button type="submit">Join 2,500+ Students</button>
       </form>
@@ -226,7 +244,7 @@
           <li><a href="about.html">About Us</a></li>
           <li><a href="index.html#courses">Our Programmes</a></li>
           <li><a href="industry-liaison.html">Industry Liaison</a></li>
-          <li><a href="careers.html">Careers</a></li>
+          <li></li>
           <li><a href="contact.html">Contact Us</a></li>
           <li><a href="faqs.html">FAQs</a></li>
         </ul>

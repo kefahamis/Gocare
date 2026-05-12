@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="../style.css">
@@ -66,24 +66,43 @@
       <div class="nav-links">
         <div class="nav-item"><a href="../index.html" class="nav-home">Home</a></div>
         <div class="nav-item"><a href="../about.html" class="nav-about">About</a></div>
-        <div class="nav-item"><a href="../courses.html" class="nav-courses">Schools &amp; Programs</a></div>
+        <div class="nav-item">
+          <a href="../courses.html" class="nav-courses">Schools &amp; Programs <i data-lucide="chevron-down"></i></a>
+          <div class="dropdown schools-mega">
+            <div class="res-body">
+              <a href="../schools/medical-health-sciences.html"><i data-lucide="stethoscope"></i> <span>School of Medical & Health Sciences</span></a>
+              <a href="../schools/hospitality-management.html"><i data-lucide="utensils"></i> <span>School of Hospitality Management</span></a>
+              <a href="../schools/social-sciences-business.html"><i data-lucide="users"></i> <span>School of Social Sciences & Business Management</span></a>
+              <a href="../schools/international-certifications.html"><i data-lucide="globe"></i> <span>International Certifications</span></a>
+              <a href="../courses.html"><i data-lucide="search"></i> <span>View All Courses</span></a>
+            </div>
+          </div>
+        </div>
         <div class="nav-item"><a href="../admissions.html" class="nav-admissions">Admissions</a></div>
         <div class="nav-item"><a href="../industry-liaison.html" class="nav-industry">Industry Liaison</a></div>
-        <div class="nav-item"><a href="../careers.html" class="nav-careers">Careers</a></div>
         <div class="nav-item">
           <a href="../index.html#">Resources <i data-lucide="chevron-down"></i></a>
-          <div class="dropdown">
-            <a href="../gallery.html">Gallery</a>
-            <a href="../events.html">Events</a>
-            <a href="../blog.html">Blog</a>
-            <a href="../downloads.html">Downloads</a>
-            <a href="../home-based-care.html">Home based Care</a>
+          <div class="dropdown resources-mega">
+            <div class="res-header">Resources</div>
+            <div class="res-body">
+              <a href="#"><i data-lucide="book"></i> <span>Student Resources</span></a>
+              <a href="../downloads.html"><i data-lucide="download"></i> <span>Downloads</span></a>
+              <a href="../blog.html"><i data-lucide="edit-3"></i> <span>Blogs & Articles</span></a>
+              <a href="../careers.html"><i data-lucide="briefcase"></i> <span>Career Pathways</span></a>
+              <a href="#"><i data-lucide="graduation-cap"></i> <span>Student Portal Access</span></a>
+              <a href="../index.html#testimonials"><i data-lucide="message-circle"></i> <span>Testimonials and Success Stories</span></a>
+              <a href="#"><i data-lucide="users"></i> <span>Alumni Network</span></a>
+              <a href="../home-based-care.html"><i data-lucide="hospital"></i> <span>GoCare Health Solutions</span></a>
+            </div>
+            <div class="res-footer">
+              <a href="../courses.html" class="btn btn-primary">Explore Resources <i data-lucide="arrow-right"></i></a>
+            </div>
           </div>
         </div>
         <div class="nav-item"><a href="../contact.html" class="nav-contact">Contact Us</a></div>
       </div>
       <div style="display:flex;align-items:center;gap:12px">
-        <a href="../apply.html" class="btn btn-primary desk-cta" style="flex-shrink:0;border-radius:8px">Start Your Journey <i
+        <a href="../apply.html" class="btn btn-primary desk-cta" style="flex-shrink:0;border-radius: 50px">Start Your Journey <i
             data-lucide="arrow-right"></i></a>
         <div class="ham" id="hamBtn"><span></span><span></span><span></span></div>
       </div>
@@ -94,7 +113,6 @@
       <a href="../courses.html" class="nav-courses">Schools &amp; Programs</a>
       <a href="../admissions.html" class="nav-admissions">Admissions</a>
       <a href="../industry-liaison.html" class="nav-industry">Industry Liaison</a>
-      <a href="../careers.html" class="nav-careers">Careers</a>
       <a href="../faqs.html">FAQs</a>
       <a href="../downloads.html">Downloads</a>
       <a href="../home-based-care.html">Home Based Care</a>
@@ -120,8 +138,8 @@
     <div class="wrap">
       <div class="course-hero-content">
         <div class="hero-text">
-          <span class="course-badge" style="background: var(--o); color: #fff;"><i data-lucide="award"></i> TVETA Accredited</span>
-          <span class="course-badge" style="background: var(--dark); color: #fff; margin-left: 8px;"><i data-lucide="globe"></i> Globally Recognized</span>
+          <span class="course-badge" style="background: var(--o); color: #F5F0E8;"><i data-lucide="award"></i> TVETA Accredited</span>
+          <span class="course-badge" style="background: var(--dark); color: #F5F0E8; margin-left: 8px;"><i data-lucide="globe"></i> Globally Recognized</span>
           <h1>Certificate in Caregiving &ndash; Level 4</h1>
           <p style="font-size: 1.05rem; color: var(--o); font-weight: 700; margin-bottom: 4px;">Advanced Health Care Assistant / Caregiver</p>
           <p class="intro">A comprehensive, competency-based program preparing learners to become advanced healthcare assistants and professional caregivers &mdash; delivering safe, compassionate, and supportive patient care across hospitals, clinics, nursing homes, hospices, and home-based care environments.</p>
@@ -170,47 +188,47 @@
             <h2 class="course-sec-title">Why Study This Course at GoCare?</h2>
             <div style="display: grid; gap: 16px; margin-top: 20px;">
               <div style="display: flex; gap: 16px; align-items: flex-start;">
-                <div style="background: var(--o); color: #fff; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">1</div>
+                <div style="background: var(--o); color: #F5F0E8; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">1</div>
                 <p style="margin: 0; line-height: 1.6;">Fully accredited and licensed medical and health sciences training institution.</p>
               </div>
               <div style="display: flex; gap: 16px; align-items: flex-start;">
-                <div style="background: var(--o); color: #fff; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">2</div>
+                <div style="background: var(--o); color: #F5F0E8; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">2</div>
                 <p style="margin: 0; line-height: 1.6;">Competency-based TVET CDACC curriculum aligned with national caregiving and healthcare support standards.</p>
               </div>
               <div style="display: flex; gap: 16px; align-items: flex-start;">
-                <div style="background: var(--o); color: #fff; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">3</div>
+                <div style="background: var(--o); color: #F5F0E8; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">3</div>
                 <p style="margin: 0; line-height: 1.6;">Hands-on clinical training with real patient exposure in hospitals, clinics, nursing homes, and home-based care settings.</p>
               </div>
               <div style="display: flex; gap: 16px; align-items: flex-start;">
-                <div style="background: var(--o); color: #fff; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">4</div>
+                <div style="background: var(--o); color: #F5F0E8; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">4</div>
                 <p style="margin: 0; line-height: 1.6;">Guaranteed hospital attachment placement by the college.</p>
               </div>
               <div style="display: flex; gap: 16px; align-items: flex-start;">
-                <div style="background: var(--o); color: #fff; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">5</div>
+                <div style="background: var(--o); color: #F5F0E8; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">5</div>
                 <p style="margin: 0; line-height: 1.6;">Government and regulator-recognized qualifications, certification, and practice licensure.</p>
               </div>
               <div style="display: flex; gap: 16px; align-items: flex-start;">
-                <div style="background: var(--o); color: #fff; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">6</div>
+                <div style="background: var(--o); color: #F5F0E8; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">6</div>
                 <p style="margin: 0; line-height: 1.6;">International certification options (SDC Canada, AMCA USA).</p>
               </div>
               <div style="display: flex; gap: 16px; align-items: flex-start;">
-                <div style="background: var(--o); color: #fff; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">7</div>
+                <div style="background: var(--o); color: #F5F0E8; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">7</div>
                 <p style="margin: 0; line-height: 1.6;">Clear progression pathway to the KHPOA licensed Certificate in Healthcare Support Services &ndash; Level 5 (CNA).</p>
               </div>
               <div style="display: flex; gap: 16px; align-items: flex-start;">
-                <div style="background: var(--o); color: #fff; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">8</div>
+                <div style="background: var(--o); color: #F5F0E8; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">8</div>
                 <p style="margin: 0; line-height: 1.6;">Training delivered by qualified nurses, clinicians, and professional caregivers.</p>
               </div>
               <div style="display: flex; gap: 16px; align-items: flex-start;">
-                <div style="background: var(--o); color: #fff; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">9</div>
+                <div style="background: var(--o); color: #F5F0E8; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">9</div>
                 <p style="margin: 0; line-height: 1.6;">Modern skills-lab and simulation-based training for patient care, vital signs, mobility assistance, infection control, and homecare procedures.</p>
               </div>
               <div style="display: flex; gap: 16px; align-items: flex-start;">
-                <div style="background: var(--o); color: #fff; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">10</div>
+                <div style="background: var(--o); color: #F5F0E8; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">10</div>
                 <p style="margin: 0; line-height: 1.6;">Flexible study modes (Day, Online, Evening, Saturday).</p>
               </div>
               <div style="display: flex; gap: 16px; align-items: flex-start;">
-                <div style="background: var(--o); color: #fff; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">11</div>
+                <div style="background: var(--o); color: #F5F0E8; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;">11</div>
                 <p style="margin: 0; line-height: 1.6;">High employability in Kenya and abroad across hospitals, homecare agencies, nursing homes, hospices, and community health programs.</p>
               </div>
             </div>
@@ -258,15 +276,15 @@
           <section style="margin-top: 50px; background: linear-gradient(135deg, var(--dark) 0%, #3a1a5e 100%); border-radius: 16px; padding: 40px 35px; position: relative; overflow: hidden;">
             <div style="position: absolute; top: -40px; right: -40px; width: 200px; height: 200px; background: var(--o); opacity: 0.08; border-radius: 50%;"></div>
             <div style="position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; background: var(--o); opacity: 0.06; border-radius: 50%;"></div>
-            <span style="display: inline-block; background: var(--o); color: #fff; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; padding: 6px 16px; border-radius: 20px; margin-bottom: 16px; position: relative; z-index: 2;"><i data-lucide="gift" style="width: 14px; height: 14px; vertical-align: -2px; margin-right: 4px;"></i> Special Offer</span>
-            <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 12px; position: relative; z-index: 2;">Second Course Sponsorship</h3>
+            <span style="display: inline-block; background: var(--o); color: #F5F0E8; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; padding: 6px 16px; border-radius: 20px; margin-bottom: 16px; position: relative; z-index: 2;"><i data-lucide="gift" style="width: 14px; height: 14px; vertical-align: -2px; margin-right: 4px;"></i> Special Offer</span>
+            <h3 style="color: #F5F0E8; font-size: 1.5rem; margin-bottom: 12px; position: relative; z-index: 2;">Second Course Sponsorship</h3>
             <p style="color: rgba(255,255,255,0.85); line-height: 1.7; font-size: 0.95rem; position: relative; z-index: 2;">Enrol for this Certificate in Caregiving &ndash; Level 4 course and receive a fully sponsored international training and certification in an additional program.</p>
             <p style="color: rgba(255,255,255,0.85); line-height: 1.7; font-size: 0.95rem; position: relative; z-index: 2;">This offer includes a second free course, giving every student access to internationally accredited training and certification for either the <strong style="color: var(--o);">Advanced Health Care Assistant</strong> or <strong style="color: var(--o);">Certified Nursing Assistant (CNA)</strong> program, depending on your preference.</p>
             <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; border-left: 4px solid var(--o); margin-top: 20px; position: relative; z-index: 2;">
-              <p style="margin: 0; font-weight: 500; font-size: 16px; color: #fff;">You pay for one course, and GoCare Training Institute sponsors and trains you in the second complimentary course at no extra cost &mdash; enabling you to graduate with two qualifications, including an international certification, and significantly enhanced global employability.</p>
+              <p style="margin: 0; font-weight: 500; font-size: 16px; color: #F5F0E8;">You pay for one course, and GoCare Training Institute sponsors and trains you in the second complimentary course at no extra cost &mdash; enabling you to graduate with two qualifications, including an international certification, and significantly enhanced global employability.</p>
             </div>
             <div style="margin-top: 25px; position: relative; z-index: 2;">
-              <a href="second-course-sponsorship.html" class="btn btn-primary" style="background: var(--o); border-color: var(--o); color: #fff; text-transform: uppercase; font-size: 14px; font-weight: bold; letter-spacing: 1px; padding: 12px 24px;"><i data-lucide="arrow-right"></i> Learn More About Sponsorship</a>
+              <a href="second-course-sponsorship.html" class="btn btn-primary" style="background: var(--o); border-color: var(--o); color: #F5F0E8; text-transform: uppercase; font-size: 14px; font-weight: bold; letter-spacing: 1px; padding: 12px 24px;"><i data-lucide="arrow-right"></i> Learn More About Sponsorship</a>
             </div>
           </section>
 
@@ -311,7 +329,7 @@
         </div>
 
         <aside class="course-sidebar">
-          <div class="sidebar-card" style="background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-bottom: 30px; border-top: 5px solid var(--o);">
+          <div class="sidebar-card" style="background: #F5F0E8; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-bottom: 30px; border-top: 5px solid var(--o);">
             <div class="price-box" style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid #e2e8f0;">
               <span class="price-label" style="text-transform: uppercase; font-size: 12px; letter-spacing: 1px; color: var(--gray);">Total Duration</span>
               <div class="price-value" style="font-size: 36px; font-weight: bold; color: var(--dark); line-height: 1.2;">8 Months</div>
@@ -319,7 +337,7 @@
             </div>
 
             <div class="sidebar-btns" style="display: grid; gap: 15px;">
-              <a href="../apply.html" class="btn btn-primary" style="text-align: center; background: var(--o); border-color: var(--o); color: #fff;">Apply Online</a>
+              <a href="../apply.html" class="btn btn-primary" style="text-align: center; background: var(--o); border-color: var(--o); color: #F5F0E8;">Apply Online</a>
               <a href="../contact.html" class="btn btn-outline" style="text-align: center; border-color: var(--o); color: var(--o);"><i data-lucide="mail"></i> Contact Admissions</a>
             </div>
 
@@ -347,9 +365,9 @@
             </div>
           </div>
 
-          <div class="help-card" style="background: var(--dark); color: #fff; padding: 30px; border-radius: 12px; text-align: center; position: relative; overflow: hidden;">
+          <div class="help-card" style="background: var(--dark); color: #F5F0E8; padding: 30px; border-radius: 12px; text-align: center; position: relative; overflow: hidden;">
             <div style="position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; background: var(--o); opacity: 0.1; border-radius: 50%;"></div>
-            <h4 style="color: #fff; margin-bottom: 10px; position: relative; z-index: 2;">Begin Your Career Today</h4>
+            <h4 style="color: #F5F0E8; margin-bottom: 10px; position: relative; z-index: 2;">Begin Your Career Today</h4>
             <p style="color: rgba(255,255,255,0.8); margin-bottom: 20px; font-size: 14px; position: relative; z-index: 2;">Start your journey toward becoming a certified and globally recognized Caregiver / Advanced Health Care Assistant / CNA.</p>
             <a href="tel:+254703115502" class="help-link" style="display: inline-flex; align-items: center; gap: 10px; font-size: 20px; font-weight: bold; color: var(--o); background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 8px; position: relative; z-index: 2;"><i data-lucide="phone-call"></i> 0703 115 502</a>
           </div>
@@ -423,7 +441,7 @@
           <li><a href="../about.html">About Us</a></li>
           <li><a href="../index.html#courses">Our Programmes</a></li>
           <li><a href="../industry-liaison.html">Industry Liaison</a></li>
-          <li><a href="../careers.html">Careers</a></li>
+          <li></li>
           <li><a href="../contact.html">Contact Us</a></li>
           <li><a href="../faqs.html">FAQs</a></li>
         </ul>

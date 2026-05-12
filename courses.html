@@ -7,7 +7,7 @@
   <title>Schools &amp; Programs | GoCare Training Institute</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -63,24 +63,43 @@
       <div class="nav-links">
         <div class="nav-item"><a href="index.html" class="nav-home">Home</a></div>
         <div class="nav-item"><a href="about.html" class="nav-about">About</a></div>
-        <div class="nav-item"><a href="courses.html" class="nav-courses active">Schools &amp; Programs</a></div>
+        <div class="nav-item">
+          <a href="courses.html" class="nav-courses active">Schools &amp; Programs <i data-lucide="chevron-down"></i></a>
+          <div class="dropdown schools-mega">
+            <div class="res-body">
+              <a href="schools/medical-health-sciences.html"><i data-lucide="stethoscope"></i> <span>School of Medical & Health Sciences</span></a>
+              <a href="schools/hospitality-management.html"><i data-lucide="utensils"></i> <span>School of Hospitality Management</span></a>
+              <a href="schools/social-sciences-business.html"><i data-lucide="users"></i> <span>School of Social Sciences & Business Management</span></a>
+              <a href="schools/international-certifications.html"><i data-lucide="globe"></i> <span>International Certifications</span></a>
+              <a href="courses.html"><i data-lucide="search"></i> <span>View All Courses</span></a>
+            </div>
+          </div>
+        </div>
         <div class="nav-item"><a href="admissions.html" class="nav-admissions">Admissions</a></div>
         <div class="nav-item"><a href="industry-liaison.html" class="nav-industry">Industry Liaison</a></div>
-        <div class="nav-item"><a href="careers.html" class="nav-careers">Careers</a></div>
         <div class="nav-item">
           <a href="index.html#">Resources <i data-lucide="chevron-down"></i></a>
-          <div class="dropdown">
-            <a href="gallery.html">Gallery</a>
-            <a href="events.html">Events</a>
-            <a href="blog.html">Blog</a>
-            <a href="downloads.html">Downloads</a>
-            <a href="home-based-care.html">Home based Care</a>
+          <div class="dropdown resources-mega">
+            <div class="res-header">Resources</div>
+            <div class="res-body">
+              <a href="#"><i data-lucide="book"></i> <span>Student Resources</span></a>
+              <a href="downloads.html"><i data-lucide="download"></i> <span>Downloads</span></a>
+              <a href="blog.html"><i data-lucide="edit-3"></i> <span>Blogs & Articles</span></a>
+              <a href="careers.html"><i data-lucide="briefcase"></i> <span>Career Pathways</span></a>
+              <a href="#"><i data-lucide="graduation-cap"></i> <span>Student Portal Access</span></a>
+              <a href="index.html#testimonials"><i data-lucide="message-circle"></i> <span>Testimonials and Success Stories</span></a>
+              <a href="#"><i data-lucide="users"></i> <span>Alumni Network</span></a>
+              <a href="home-based-care.html"><i data-lucide="hospital"></i> <span>GoCare Health Solutions</span></a>
+            </div>
+            <div class="res-footer">
+              <a href="courses.html" class="btn btn-primary">Explore Resources <i data-lucide="arrow-right"></i></a>
+            </div>
           </div>
         </div>
         <div class="nav-item"><a href="contact.html" class="nav-contact">Contact Us</a></div>
       </div>
       <div style="display:flex;align-items:center;gap:12px">
-        <a href="apply.html" class="btn btn-primary desk-cta" style="flex-shrink:0;border-radius:8px">Start Your Journey <i
+        <a href="apply.html" class="btn btn-primary desk-cta" style="flex-shrink:0;border-radius: 50px">Start Your Journey <i
             data-lucide="arrow-right"></i></a>
         <div class="ham" id="hamBtn"><span></span><span></span><span></span></div>
       </div>
@@ -91,7 +110,6 @@
       <a href="courses.html" class="nav-courses active">Schools &amp; Programs</a>
       <a href="admissions.html" class="nav-admissions">Admissions</a>
       <a href="industry-liaison.html" class="nav-industry">Industry Liaison</a>
-      <a href="careers.html" class="nav-careers">Careers</a>
       <a href="faqs.html">FAQs</a>
       <a href="downloads.html">Downloads</a>
       <a href="home-based-care.html">Home Based Care</a>
@@ -111,7 +129,7 @@
 
     <div class="page-title-content">
       <span class="page-title-badge"><i data-lucide="book-open"></i> Academic Programs</span>
-      <h1>Our <span class="accent">Schools &amp; Programs</span></h1>
+      <h1>View All <span class="accent">Courses</span></h1>
       <div class="page-title-accent"></div>
       <nav class="page-breadcrumb" aria-label="Breadcrumb">
         <a href="index.html">Home</a>
@@ -121,79 +139,183 @@
     </div>
   </section>
 
-  <!-- ── COURSES GRID ─────────────────────────────────── -->
-  <section class="courses-page-sec">
+  <!-- ── SPLIT HERO ───────────────────────────────────── -->
+  <section class="courses-hero-split">
     <div class="wrap">
-      <div class="courses-page-grid">
-        <!-- MEDICAL SCHOOL -->
-        <div class="course-cat-card reveal">
-          <h4><i data-lucide="stethoscope"></i> School of Medical & Health Sciences</h4>
-          <ul>
-            <li><a href="courses/certificate-in-healthcare-support-services-level-5-certified-nursing-assistant.html">Certificate in Healthcare Support Services – Level 5 (CNA)</a></li>
-            <li><a href="courses/certificate-in-caregiving-level-4.html">Certificate in Caregiving – Level 4</a></li>
-            <li><a href="courses/caregiver-course-level-ii.html">Caregiver Course – Level II</a></li>
-            <li><a href="courses/certificate-in-home-based-care-support-level-3.html">Certificate in Home Based Care Support – Level 3</a></li>
-            <li><a href="courses/certificate-in-health-care-assistant-hca.html">Certificate in Health Care Assistant (HCA)</a></li>
-            <li><a href="courses/certified-nursing-assistant-cna-options.html">Certified Nursing Assistant (CNA) Options</a></li>
-            <li><a href="courses/diploma-in-perioperative-theatre-technology-level-6.html">Diploma in Perioperative Theatre Technology – Level 6</a></li>
-            <li><a href="courses/certificate-in-perioperative-theatre-technology-level-5.html">Certificate in Perioperative Theatre Technology – Level 5</a></li>
-            <li><a href="courses/diploma-in-mortuary-science-level-6.html">Diploma in Mortuary Science – Level 6</a></li>
-            <li><a href="courses/certificate-in-mortuary-science-level-5.html">Certificate in Mortuary Science – Level 5</a></li>
-            <li><a href="courses/diploma-in-orthopaedic-and-trauma-medicine-level-6.html">Diploma in Orthopaedic & Trauma Medicine – Level 6</a></li>
-            <li><a href="courses/certificate-in-orthopaedic-and-trauma-medicine-level-5.html">Certificate in Orthopaedic & Trauma Medicine – Level 5</a></li>
-            <li><a href="courses/diploma-in-community-health-assistant-level-6.html">Diploma In Community Health Assistant – Level 6</a></li>
-            <li><a href="courses/certificate-in-community-health-assistant-level-5.html">Certificate In Community Health Assistant – Level 5</a></li>
-          </ul>
+      <div class="courses-hero-grid">
+        <div class="courses-hero-left">
+          <img src="images/Homecare-Management-4.jpg" alt="Students Training">
         </div>
-
-        <!-- HOSPITALITY SCHOOL -->
-        <div class="course-cat-card reveal">
-          <h4><i data-lucide="utensils"></i> School of Hospitality Management</h4>
-          <ul>
-            <li><a href="courses/certificate-in-food-and-beverage-production-culinary-arts-level-3.html">Certificate In Food & Beverage Production (Culinary Arts) – Level 3</a></li>
-            <li><a href="courses/certificate-in-front-office-operations-level-3.html">Certificate In Front Office Operations – Level 3</a></li>
-            <li><a href="courses/certificate-in-housekeeping-and-accommodation-level-3.html">Certificate In Housekeeping & Accommodation – Level 3</a></li>
-            <li><a href="courses/certificate-in-homecare-management-level-4.html">Certificate In Homecare Management – Level 4</a></li>
-            <li><a href="courses/certificate-in-homecare-management-level-3.html">Certificate In Homecare Management – Level 3</a></li>
-          </ul>
-        </div>
-
-        <!-- SOCIAL SCIENCES SCHOOL -->
-        <div class="course-cat-card reveal">
-          <h4><i data-lucide="users-2"></i> School of Social Sciences & Business Management</h4>
-          <ul>
-            <li><a href="courses/diploma-in-social-work-and-community-development-level-6.html">Diploma in Social Work & Community Development – Level 6</a></li>
-            <li><a href="courses/certificate-in-office-administrator-level-5.html">Certificate In Office Administrator – Level 5</a></li>
-            <li><a href="courses/certificate-in-office-assistant-customer-service-level-4.html">Certificate In Office Assistant / Customer Service – Level 4</a></li>
-          </ul>
-        </div>
-
-        <!-- INTERNATIONAL CERTIFICATIONS -->
-        <div class="course-cat-card reveal">
-          <h4><i data-lucide="globe"></i> International Certifications</h4>
-          <ul>
-            <li><a href="courses/amca-usa-certification.html">The American Medical Certification Association (AMCA) – (USA) Certification</a></li>
-            <li><a href="courses/sdc-canada-certification.html">Skill Development Council (SDC) – Canada Certification</a></li>
-            <li><a href="courses/second-course-sponsorship.html">Second Course Sponsorship</a></li>
-          </ul>
+        <div class="courses-hero-right">
+          <div class="courses-find-card">
+            <h3>Find Your Course</h3>
+            <div class="form-group">
+              <select>
+                <option>Select School</option>
+                <option>School of Medical & Health Sciences</option>
+                <option>School of Hospitality Management</option>
+                <option>School of Social Sciences & Business Management</option>
+                <option>International Certifications</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select>
+                <option>Program Type</option>
+                <option>Diploma</option>
+                <option>Certificate</option>
+                <option>Short Course</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select>
+                <option>Duration</option>
+                <option>3 Months</option>
+                <option>6 Months</option>
+                <option>1 Year</option>
+                <option>2 Years</option>
+              </select>
+            </div>
+            <button class="btn-search">Search Courses <i data-lucide="chevron-right"></i></button>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── NEWSLETTER ───────────────────────────────────── -->
-  <section class="nl-sec">
-    <div class="wrap nl-inner">
-      <h2>Subscribe &amp; Stay Updated</h2>
-      <p>Get the latest programme news, intake dates and healthcare career tips — no spam, ever.</p>
-      <form class="nl-form" onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:#fff;font-weight:700;padding:16px 24px;font-size:.95rem\'>✅ Subscribed! Thank you.</p>'">
-        <input type="email" placeholder="Enter your email address…" required>
-        <button type="submit">Join 2,500+ Students</button>
-      </form>
+  <!-- ── RIBBON ───────────────────────────────────────── -->
+  <div class="courses-ribbon">
+    <div class="wrap">
+      Train with the Experts... Become an Expert!
+    </div>
+  </div>
+
+  <!-- ── CATEGORY CARDS ───────────────────────────────── -->
+  <section class="courses-cat-cards">
+    <div class="wrap">
+      <div class="courses-cat-grid">
+        <div class="courses-cat-item reveal">
+          <div class="courses-cat-icon"><i data-lucide="stethoscope"></i></div>
+          <h4>Medical & Health Sciences</h4>
+          <a href="schools/medical-health-sciences.html" class="btn-view">View Courses ></a>
+        </div>
+        <div class="courses-cat-item reveal">
+          <div class="courses-cat-icon"><i data-lucide="utensils"></i></div>
+          <h4>Hospitality Management</h4>
+          <a href="schools/hospitality-management.html" class="btn-view">View Courses ></a>
+        </div>
+        <div class="courses-cat-item reveal">
+          <div class="courses-cat-icon"><i data-lucide="briefcase"></i></div>
+          <h4>Social Sciences & Business</h4>
+          <a href="schools/social-sciences-business.html" class="btn-view">View Courses ></a>
+        </div>
+        <div class="courses-cat-item reveal">
+          <div class="courses-cat-icon"><i data-lucide="globe"></i></div>
+          <h4>International Certifications</h4>
+          <a href="schools/international-certifications.html" class="btn-view">View Courses ></a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <footer id="contactSection" class="footer">
+  <!-- ── BROWSE OUR COURSES ────────────────────────────── -->
+  <section class="browse-courses-sec">
+    <div class="wrap">
+      <div class="browse-title">
+        <h2>Browse Our Courses</h2>
+      </div>
+      
+      <div class="browse-grid">
+        <!-- CERTIFICATE COLUMN -->
+        <div class="browse-col reveal">
+          <div class="browse-col-head">Certificate Courses</div>
+          <div class="browse-col-img"><img src="images/Homecare-Management.jpg" alt="Certificate"></div>
+          <div class="browse-list">
+            <div class="browse-item">
+              <span>Healthcare Support Services</span>
+              <a href="apply.html" class="btn-action">Apply Now ></a>
+            </div>
+            <div class="browse-item">
+              <span>Food Production</span>
+              <a href="apply.html" class="btn-action">Apply Now ></a>
+            </div>
+            <div class="browse-item">
+              <span>Business Management</span>
+              <a href="apply.html" class="btn-action">Apply Now ></a>
+            </div>
+            <div class="browse-item">
+              <span>ICDL Digital Skills</span>
+              <a href="apply.html" class="btn-action">Enroll Now ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIPLOMA COLUMN -->
+        <div class="browse-col reveal">
+          <div class="browse-col-head diploma">Diploma Programs</div>
+          <div class="browse-col-img"><img src="images/Front-office.jpg" alt="Diploma"></div>
+          <div class="browse-list">
+            <div class="browse-item">
+              <span>Perioperative Theatre</span>
+              <a href="schools/medical-health-sciences.html" class="btn-action learn">Learn More ></a>
+            </div>
+            <div class="browse-item">
+              <span>Hospitality Management</span>
+              <a href="schools/hospitality-management.html" class="btn-action learn">Learn More ></a>
+            </div>
+            <div class="browse-item">
+              <span>Human Resource Management</span>
+              <a href="schools/social-sciences-business.html" class="btn-action learn">Learn More ></a>
+            </div>
+            <!-- QUICK LINKS SIDEBAR INLINE -->
+            <div class="quick-links-card">
+              <div class="ql-title">Quick Links</div>
+              <div class="ql-list">
+                <a href="downloads.html"><i data-lucide="download"></i> Download Prospectus</a>
+                <a href="#"><i data-lucide="user"></i> Student Portal</a>
+                <a href="contact.html"><i data-lucide="mail"></i> Faculty Contacts</a>
+                <a href="careers.html"><i data-lucide="trending-up"></i> Career Pathways</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SPECIALIZED COLUMN -->
+        <div class="browse-col reveal">
+          <div class="browse-col-head special">Specialized Training</div>
+          <div class="browse-col-img"><img src="images/Housekeeping-Accomodation.jpg" alt="Specialized"></div>
+          <div class="browse-list">
+            <div class="browse-item">
+              <span>Entrepreneurship</span>
+              <a href="#" class="btn-action learn">Explore More ></a>
+            </div>
+            <div class="browse-item">
+              <span>Events Management</span>
+              <a href="#" class="btn-action learn">Explore More ></a>
+            </div>
+            <div class="browse-item">
+              <span>Project Management Essentials</span>
+              <a href="#" class="btn-action learn">Explore More ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER RIBBON ────────────────────────────────── -->
+  <div class="courses-ribbon" style="margin-top: 40px;">
+    <div class="wrap">
+      Train with the Experts.... Become an Expert! <i data-lucide="arrow-up" style="vertical-align: middle; margin-left: 10px;"></i>
+    </div>
+  </div>
+
+  <!-- ── STICKY CTA ───────────────────────────────────── -->
+  <div class="sticky-cta-bar">
+    <a href="apply.html" class="btn btn-primary" style="background:var(--o);border-color:var(--o);">Apply Now ></a>
+    <a href="courses.html" class="btn btn-outline" style="border-color:var(--dark);color:var(--dark);">Explore Courses ></a>
+  </div>
+
+  <footer id="contactSection" class="footer" style="padding-bottom: 100px;">
     <div class="footer-pattern" aria-hidden="true"></div>
     <div class="footer-top">
       <div class="footer-brand">
@@ -220,9 +342,9 @@
         <h4>About</h4>
         <ul>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="index.html#courses">Our Programmes</a></li>
+          <li><a href="courses.html">Our Programmes</a></li>
           <li><a href="industry-liaison.html">Industry Liaison</a></li>
-          <li><a href="careers.html">Careers</a></li>
+          <li></li>
           <li><a href="contact.html">Contact Us</a></li>
           <li><a href="faqs.html">FAQs</a></li>
         </ul>
@@ -230,9 +352,9 @@
       <div class="footer-col">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="index.html#">Students Portal</a></li>
+          <li><a href="#">Students Portal</a></li>
           <li><a href="admissions.html">Admissions</a></li>
-          <li><a href="index.html#">E-learning</a></li>
+          <li><a href="#">E-learning</a></li>
           <li><a href="apply.html">Apply Online</a></li>
         </ul>
       </div>
@@ -258,7 +380,7 @@
     <div class="footer-bottom">
       <p class="footer-copy">© 2026 <a href="index.html">GoCare Training Institute</a>. All rights reserved.</p>
       <div class="footer-bottom-links">
-        <a href="index.html#">Privacy Policy</a> <span class="divider">|</span> <a href="index.html#">Terms of Service</a>
+        <a href="#">Privacy Policy</a> <span class="divider">|</span> <a href="#">Terms of Service</a>
       </div>
     </div>
   </footer>
