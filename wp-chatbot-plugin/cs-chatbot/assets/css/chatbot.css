@@ -1,0 +1,426 @@
+/* ═══════════════════════════════════════════════════════════════
+   CS Chatbot – Stylesheet
+   Uses !important on structural properties to survive theme overrides.
+   Brand colours are written by JS as inline styles on the elements.
+═══════════════════════════════════════════════════════════════ */
+
+/* ── Animations ─────────────────────────────────────────────────────────── */
+@keyframes cs-slide-up {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes cs-badge-pulse {
+    0%, 100% { transform: scale(1); }
+    50%       { transform: scale(1.2); }
+}
+@keyframes cs-dot-pulse {
+    0%, 80%, 100% { transform: scale(0); opacity: .3; }
+    40%            { transform: scale(1); opacity: 1; }
+}
+
+/* ── Toggle button ───────────────────────────────────────────────────────── */
+#csChatToggle {
+    position: fixed !important;
+    bottom: 24px !important;
+    right: 24px !important;
+    top: auto !important;
+    left: auto !important;
+    z-index: 2147483647 !important;
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    background: #2563eb;
+    color: #fff !important;
+    border: none !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 6px 24px rgba(37,99,235,.45) !important;
+    transition: background .2s, transform .15s !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    outline: none !important;
+    text-decoration: none !important;
+    font-family: inherit !important;
+    line-height: 1 !important;
+    box-sizing: border-box !important;
+}
+#csChatToggle:hover  { filter: brightness(1.1); }
+#csChatToggle:active { transform: scale(.93) !important; }
+
+#csChatToggle svg {
+    width: 26px !important;
+    height: 26px !important;
+    display: block !important;
+    fill: none;
+    stroke: currentColor;
+}
+
+/* Notification badge */
+#csNotifBadge {
+    position: absolute !important;
+    top: -4px !important;
+    right: -4px !important;
+    width: 20px !important;
+    height: 20px !important;
+    background: #ef4444 !important;
+    color: #fff !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    animation: cs-badge-pulse 2s infinite !important;
+    pointer-events: none !important;
+    line-height: 1 !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* ── Chat window ─────────────────────────────────────────────────────────── */
+#csChatWindow {
+    position: fixed !important;
+    bottom: 96px !important;
+    right: 24px !important;
+    top: auto !important;
+    left: auto !important;
+    z-index: 2147483646 !important;
+    width: 370px !important;
+    max-width: calc(100vw - 32px) !important;
+    height: 540px !important;
+    max-height: calc(100vh - 120px) !important;
+    background: #fff !important;
+    border-radius: 18px !important;
+    box-shadow: 0 12px 48px rgba(0,0,0,.2) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    transition: opacity .25s ease, transform .25s ease !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    color: #334155 !important;
+}
+#csChatWindow * {
+    box-sizing: border-box !important;
+}
+#csChatWindow.cs-chat-hidden {
+    opacity: 0 !important;
+    transform: translateY(16px) scale(.97) !important;
+    pointer-events: none !important;
+}
+#csChatWindow.cs-chat-visible {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+    pointer-events: auto !important;
+}
+
+/* ── Header ──────────────────────────────────────────────────────────────── */
+#csChatHeader {
+    background: #2563eb !important;
+    padding: 12px 14px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+}
+.cs-avatar-wrap {
+    position: relative !important;
+    flex-shrink: 0 !important;
+}
+.cs-avatar {
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 50% !important;
+    background: rgba(255,255,255,.2) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 18px !important;
+}
+.cs-online-dot {
+    position: absolute !important;
+    bottom: 1px !important;
+    right: 1px !important;
+    width: 10px !important;
+    height: 10px !important;
+    background: #4ade80 !important;
+    border: 2px solid #2563eb !important;
+    border-radius: 50% !important;
+}
+.cs-header-info { flex: 1 !important; min-width: 0 !important; }
+.cs-company-name {
+    color: #fff !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    background: none !important;
+    border: none !important;
+}
+.cs-tagline {
+    color: rgba(255,255,255,.78) !important;
+    font-size: 11px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+    border: none !important;
+}
+.cs-header-actions {
+    display: flex !important;
+    gap: 6px !important;
+    flex-shrink: 0 !important;
+}
+.cs-icon-btn {
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50% !important;
+    background: rgba(255,255,255,.18) !important;
+    color: #fff !important;
+    border: none !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    transition: background .15s !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+    line-height: 1 !important;
+}
+.cs-icon-btn:hover { background: rgba(255,255,255,.32) !important; }
+.cs-icon-btn svg {
+    width: 14px !important;
+    height: 14px !important;
+    display: block !important;
+}
+
+/* ── Messages ────────────────────────────────────────────────────────────── */
+#csChatMessages {
+    flex: 1 !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    padding: 14px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    background: #f8fafc !important;
+    margin: 0 !important;
+}
+#csChatMessages::-webkit-scrollbar { width: 4px; }
+#csChatMessages::-webkit-scrollbar-track { background: transparent; }
+#csChatMessages::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 99px; }
+
+.cs-msg-row-user {
+    display: flex !important;
+    justify-content: flex-end !important;
+    animation: cs-slide-up .25s ease-out !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.cs-msg-row-bot {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    animation: cs-slide-up .25s ease-out !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.cs-bot-icon {
+    width: 26px !important;
+    height: 26px !important;
+    min-width: 26px !important;
+    border-radius: 50% !important;
+    background: #eff6ff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 13px !important;
+    flex-shrink: 0 !important;
+    margin-top: 2px !important;
+}
+.cs-bubble-user {
+    max-width: 78% !important;
+    background: #2563eb !important;
+    color: #fff !important;
+    padding: 9px 14px !important;
+    border-radius: 16px 16px 4px 16px !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    word-break: break-word !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1) !important;
+    margin: 0 !important;
+}
+.cs-bubble-bot {
+    max-width: 80% !important;
+    background: #fff !important;
+    color: #334155 !important;
+    padding: 9px 14px !important;
+    border-radius: 16px 16px 16px 4px !important;
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    word-break: break-word !important;
+    box-shadow: 0 1px 4px rgba(0,0,0,.07) !important;
+    border: 1px solid #e2e8f0 !important;
+    margin: 0 !important;
+}
+.cs-bubble-bot a { color: #2563eb !important; }
+.cs-bubble-bot b { font-weight: 600 !important; }
+.cs-bubble-bot br { display: block !important; content: "" !important; margin: 2px 0 !important; }
+
+/* Typing dots */
+.cs-typing-dots {
+    display: flex !important;
+    gap: 4px !important;
+    padding: 2px 0 !important;
+    align-items: center !important;
+}
+.cs-dot {
+    width: 7px !important;
+    height: 7px !important;
+    border-radius: 50% !important;
+    background: #94a3b8 !important;
+    animation: cs-dot-pulse 1.4s infinite ease-in-out !important;
+    display: inline-block !important;
+    flex-shrink: 0 !important;
+}
+.cs-dot:nth-child(2) { animation-delay: .2s !important; }
+.cs-dot:nth-child(3) { animation-delay: .4s !important; }
+
+/* ── Quick replies ────────────────────────────────────────────────────────── */
+#csQuickReplies {
+    padding: 8px 12px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    background: #fff !important;
+    border-top: 1px solid #f1f5f9 !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    min-height: 0 !important;
+}
+.cs-chip {
+    font-size: 11px !important;
+    padding: 4px 12px !important;
+    border-radius: 99px !important;
+    border: 1px solid #2563eb !important;
+    color: #2563eb !important;
+    background: #fff !important;
+    cursor: pointer !important;
+    transition: background .15s, color .15s !important;
+    line-height: 1.4 !important;
+    font-family: inherit !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+}
+.cs-chip:hover {
+    background: #2563eb !important;
+    color: #fff !important;
+}
+
+/* ── Input bar ───────────────────────────────────────────────────────────── */
+#csChatInputBar {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 10px 12px !important;
+    background: #fff !important;
+    border-top: 1px solid #f1f5f9 !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+}
+#csChatInput {
+    flex: 1 !important;
+    border: none !important;
+    background: #f1f5f9 !important;
+    border-radius: 99px !important;
+    padding: 9px 16px !important;
+    font-size: 13px !important;
+    font-family: inherit !important;
+    color: #334155 !important;
+    outline: none !important;
+    transition: box-shadow .15s !important;
+    margin: 0 !important;
+    width: auto !important;
+    box-shadow: none !important;
+    -webkit-appearance: none !important;
+}
+#csChatInput:focus { box-shadow: 0 0 0 3px rgba(37,99,235,.22) !important; }
+#csChatInput::placeholder { color: #94a3b8 !important; }
+
+#csSendBtn {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    border-radius: 50% !important;
+    background: #2563eb !important;
+    color: #fff !important;
+    border: none !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    transition: background .15s, transform .1s !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    line-height: 1 !important;
+}
+#csSendBtn:hover  { filter: brightness(1.1); }
+#csSendBtn:active { transform: scale(.9) !important; }
+#csSendBtn svg {
+    width: 18px !important;
+    height: 18px !important;
+    display: block !important;
+}
+
+/* ── Footer ──────────────────────────────────────────────────────────────── */
+#csChatFooter {
+    text-align: center !important;
+    font-size: 10px !important;
+    color: #94a3b8 !important;
+    padding: 5px 12px 7px !important;
+    background: #fff !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+    border: none !important;
+    line-height: 1.4 !important;
+}
+#csChatFooter span { font-weight: 600 !important; color: #2563eb !important; }
+#csChatFooter a { color: #94a3b8 !important; text-decoration: none !important; }
+#csChatFooter a:hover { text-decoration: underline !important; }
+
+/* ── Utility ─────────────────────────────────────────────────────────────── */
+.cs-hidden { display: none !important; }
+
+/* ── Mobile: full screen ─────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+    #csChatWindow {
+        bottom: 0 !important;
+        right: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 100% !important;
+        max-height: 100% !important;
+        border-radius: 0 !important;
+    }
+    #csChatToggle {
+        bottom: 16px !important;
+        right: 16px !important;
+    }
+}

@@ -1,0 +1,435 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="images/gocare-institute-logo.png">
+  <link rel="apple-touch-icon" href="images/gocare-institute-logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Service Chatbot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#2563eb',
+              dark: '#1d4ed8',
+              light: '#eff6ff',
+            }
+          },
+          animation: {
+            'slide-up': 'slideUp 0.3s ease-out',
+            'bounce-in': 'bounceIn 0.4s ease-out',
+            'pulse-dot': 'pulseDot 1.4s infinite ease-in-out',
+          },
+          keyframes: {
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            bounceIn: {
+              '0%': { opacity: '0', transform: 'scale(0.8)' },
+              '70%': { transform: 'scale(1.05)' },
+              '100%': { opacity: '1', transform: 'scale(1)' },
+            },
+            pulseDot: {
+              '0%, 80%, 100%': { transform: 'scale(0)', opacity: '0.3' },
+              '40%': { transform: 'scale(1)', opacity: '1' },
+            },
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Scrollbar styling */
+    #chatMessages::-webkit-scrollbar { width: 4px; }
+    #chatMessages::-webkit-scrollbar-track { background: transparent; }
+    #chatMessages::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 99px; }
+
+    /* Typing dots */
+    .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #94a3b8; margin: 0 2px; animation: pulseDot 1.4s infinite ease-in-out; }
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+
+    /* Quick reply chips */
+    .chip { transition: background 0.15s, color 0.15s; }
+    .chip:hover { background: #2563eb; color: #fff; }
+
+    /* Chat container open/close */
+    #chatWindow { transition: opacity 0.25s, transform 0.25s; }
+    #chatWindow.hidden-chat { opacity: 0; transform: translateY(16px) scale(0.97); pointer-events: none; }
+    #chatWindow.visible-chat { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+
+    /* Notification badge pulse */
+    @keyframes badgePulse { 0%,100%{transform:scale(1)}50%{transform:scale(1.2)} }
+    #notifBadge { animation: badgePulse 2s infinite; }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-slate-100 to-blue-50 min-h-screen font-sans flex items-center justify-center">
+
+  <!-- Demo page background content -->
+  <div class="text-center px-6 select-none">
+    <div class="text-6xl mb-4">🛒</div>
+    <h1 class="text-3xl font-bold text-slate-700 mb-2">ShopEase Store</h1>
+    <p class="text-slate-500 text-lg mb-1">Your one-stop online shop</p>
+    <p class="text-slate-400 text-sm">Click the chat button at the bottom-right to get help</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       FLOATING TOGGLE BUTTON
+  ════════════════════════════════════════════ -->
+  <button
+    id="chatToggle"
+    onclick="toggleChat()"
+    class="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-brand shadow-lg shadow-blue-300/50 text-white flex items-center justify-center hover:bg-brand-dark active:scale-95 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300"
+    aria-label="Open customer support chat"
+  >
+    <!-- Chat icon (shown when closed) -->
+    <svg id="iconOpen" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z"/>
+    </svg>
+    <!-- Close icon (shown when open) -->
+    <svg id="iconClose" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+    </svg>
+    <!-- Notification badge -->
+    <span id="notifBadge" class="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold">1</span>
+  </button>
+
+  <!-- ═══════════════════════════════════════════
+       CHAT WINDOW
+  ════════════════════════════════════════════ -->
+  <div
+    id="chatWindow"
+    class="hidden-chat fixed bottom-24 right-6 z-40 w-[370px] max-w-[calc(100vw-1.5rem)] bg-white rounded-2xl shadow-2xl shadow-slate-300/60 flex flex-col overflow-hidden"
+    style="height: 540px; max-height: calc(100vh - 120px);"
+    role="dialog"
+    aria-label="Customer support chat"
+  >
+    <!-- Header -->
+    <div class="bg-brand px-4 py-3 flex items-center gap-3 shrink-0">
+      <div class="relative">
+        <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-xl">🎧</div>
+        <span class="absolute bottom-0 right-0 w-3 h-3 bg-green-400 border-2 border-brand rounded-full"></span>
+      </div>
+      <div class="flex-1">
+        <p class="text-white font-semibold text-sm leading-tight">ShopEase Support</p>
+        <p class="text-blue-200 text-xs">Typically replies instantly</p>
+      </div>
+      <!-- Escalation buttons -->
+      <div class="flex gap-2">
+        <a href="https://wa.me/254700000000" target="_blank" title="WhatsApp" class="w-8 h-8 rounded-full bg-white/15 hover:bg-white/30 flex items-center justify-center transition-colors" aria-label="Contact via WhatsApp">
+          <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.887.502 3.659 1.381 5.193L2 22l4.878-1.361A9.937 9.937 0 0012 22c5.523 0 10-4.477 10-10S17.522 2 11.999 2zm.001 18.182a8.181 8.181 0 01-4.164-1.133l-.299-.177-3.091.863.872-3.018-.194-.31A8.183 8.183 0 013.818 12c0-4.512 3.67-8.182 8.183-8.182 4.512 0 8.182 3.67 8.182 8.182 0 4.513-3.67 8.182-8.182 8.182z"/>
+          </svg>
+        </a>
+        <a href="mailto:support@shopease.com" title="Email" class="w-8 h-8 rounded-full bg-white/15 hover:bg-white/30 flex items-center justify-center transition-colors" aria-label="Contact via Email">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+        </a>
+        <button onclick="toggleChat()" class="w-8 h-8 rounded-full bg-white/15 hover:bg-white/30 flex items-center justify-center transition-colors" aria-label="Close chat">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Messages area -->
+    <div id="chatMessages" class="flex-1 overflow-y-auto px-4 py-4 flex flex-col gap-3 bg-slate-50"></div>
+
+    <!-- Quick replies -->
+    <div id="quickReplies" class="px-4 py-2 flex flex-wrap gap-2 bg-white border-t border-slate-100 shrink-0"></div>
+
+    <!-- Input bar -->
+    <div class="px-3 py-3 bg-white border-t border-slate-100 flex items-center gap-2 shrink-0">
+      <input
+        id="chatInput"
+        type="text"
+        placeholder="Type a message&hellip;"
+        maxlength="300"
+        class="flex-1 text-sm bg-slate-100 rounded-full px-4 py-2.5 outline-none focus:ring-2 focus:ring-brand/40 placeholder-slate-400 text-slate-700 transition-all"
+        onkeydown="handleKey(event)"
+        aria-label="Type your message"
+      />
+      <button
+        id="sendBtn"
+        onclick="handleSend()"
+        class="w-10 h-10 rounded-full bg-brand text-white flex items-center justify-center hover:bg-brand-dark active:scale-95 transition-all shrink-0 disabled:opacity-40"
+        aria-label="Send message"
+      >
+        <svg class="w-5 h-5 rotate-45 -translate-y-px" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Footer -->
+    <p class="text-center text-[10px] text-slate-400 py-1.5 bg-white shrink-0">
+      Powered by <span class="font-semibold text-brand">ShopEase</span> &middot; <a href="mailto:support@shopease.com" class="hover:underline">support@shopease.com</a>
+    </p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       CHATBOT SCRIPT
+  ════════════════════════════════════════════ -->
+  <script>
+  // ── State ────────────────────────────────────────────────────────────────
+  let chatOpen = false;
+  let isTyping = false;
+  let conversationStep = 'start';
+
+  // ── Knowledge Base ────────────────────────────────────────────────────────
+  const KB = [
+    {
+      patterns: [/^(hi|hello|hey|good\s?(morning|afternoon|evening)|howdy|greetings)/i],
+      response: "Hello there! 👋 Welcome to ShopEase Support. How can I help you today?",
+      chips: ["Track my order", "Return & Refund", "Payment issue", "Product enquiry"]
+    },
+    {
+      patterns: [/track|order\s?status|where.*order|dispatch|shipped|delivery\s?status/i],
+      response: "📦 To track your order:\n1. Go to <b>My Orders</b> in your account.\n2. Click the order and select <b>Track Shipment</b>.\n3. You'll see real-time courier updates.\n\nOrders typically ship within <b>1&ndash;2 business days</b> and arrive in <b>3&ndash;5 days</b>.",
+      chips: ["Order not arrived", "Change delivery address", "Talk to an agent"]
+    },
+    {
+      patterns: [/return|refund|exchange|money\s?back|cancel.*order/i],
+      response: "&#8617;️ Our <b>Return & Refund Policy</b>:\n&bull; Returns accepted within <b>14 days</b> of delivery.\n&bull; Items must be unused and in original packaging.\n&bull; Refunds are processed in <b>5&ndash;7 business days</b>.\n\nStart a return from <b>My Orders &rarr; Return Item</b>.",
+      chips: ["How to return", "Refund timeline", "Talk to an agent"]
+    },
+    {
+      patterns: [/pay|payment|card|mpesa|billing|charge|invoice|receipt/i],
+      response: "💳 We accept <b>M-Pesa, Visa, Mastercard</b>, and bank transfers.\n\nIf you were charged but your order wasn't placed, the hold is released automatically in <b>24&ndash;48 hours</b>.\n\nFor billing disputes, email <b>billing@shopease.com</b> with your order number.",
+      chips: ["Payment failed", "Request receipt", "Talk to an agent"]
+    },
+    {
+      patterns: [/product|stock|availab|size|colour|color|specification|feature/i],
+      response: "🛍️ You can check product availability, sizes, and specs directly on the product page.\n\nNeed help finding something specific? Tell me the product name and I'll point you in the right direction!",
+      chips: ["Out of stock item", "Product comparison", "Talk to an agent"]
+    },
+    {
+      patterns: [/shipping|delivery\s?fee|free\s?delivery|how\s?long.*deliver/i],
+      response: "🚚 <b>Shipping Info:</b>\n&bull; Free delivery on orders above <b>KES 2,000</b>.\n&bull; Standard shipping: KES 200 (3&ndash;5 days).\n&bull; Express shipping: KES 450 (next day, Nairobi only).\n\nOrders placed before 2 PM ship same day.",
+      chips: ["Track my order", "Change delivery address", "Talk to an agent"]
+    },
+    {
+      patterns: [/account|login|password|sign\s?in|forgot|reset\s?password/i],
+      response: "🔐 <b>Account help:</b>\n&bull; Use <b>Forgot Password</b> on the login page to reset via email or SMS.\n&bull; If your account is locked, wait 15 minutes or contact support.\n\nStill stuck? Email <b>accounts@shopease.com</b> with your registered phone number.",
+      chips: ["Reset password", "Talk to an agent"]
+    },
+    {
+      patterns: [/promo|discount|coupon|voucher|offer|deal|sale/i],
+      response: "🎉 <b>Current promotions:</b>\n&bull; Use code <b>SAVE10</b> for 10% off your first order.\n&bull; Sign up for our newsletter for exclusive weekly deals.\n&bull; Follow us on Instagram <b>@ShopEase</b> for flash sales!",
+      chips: ["Apply a coupon", "Newsletter signup", "Talk to an agent"]
+    },
+    {
+      patterns: [/agent|human|person|representative|staff|speak.*someone|live\s?chat/i],
+      response: "👤 Connecting you to a live agent&hellip;\n\nOur support team is available <b>Mon &ndash; Sat, 8 AM &ndash; 8 PM</b>.\n\nFor the fastest response, reach us on:\n📱 <b>WhatsApp:</b> +254 700 000 000\n📧 <b>Email:</b> support@shopease.com",
+      chips: ["WhatsApp now", "Send email", "Continue self-service"]
+    },
+    {
+      patterns: [/whatsapp/i],
+      response: "📱 Tap the WhatsApp icon at the top of the chat to message us directly, or click here: <a href='https://wa.me/254700000000' target='_blank' class='text-brand underline'>wa.me/254700000000</a>",
+      chips: ["Talk to an agent", "Back to main menu"]
+    },
+    {
+      patterns: [/thank|thanks|thank\s?you|appreciate|helpful/i],
+      response: "You're very welcome! 😊 Is there anything else I can help you with today?",
+      chips: ["Track my order", "Return & Refund", "No, I'm good!"]
+    },
+    {
+      patterns: [/no.*good|all\s?good|that.*all|nothing|bye|goodbye|done|sorted/i],
+      response: "Great! Have a wonderful day! 🌟 Don't hesitate to reach out if you need anything else. Goodbye! 👋",
+      chips: []
+    },
+  ];
+
+  const FALLBACK_RESPONSES = [
+    "I'm not quite sure about that. Could you rephrase? Or I can connect you with a live agent.",
+    "Hmm, I didn't catch that. Try asking about orders, returns, payments, or shipping.",
+    "I want to help! Could you give me a bit more detail? Or choose an option below.",
+  ];
+  let fallbackIndex = 0;
+
+  // ── DOM Helpers ───────────────────────────────────────────────────────────
+  const $ = id => document.getElementById(id);
+  const messagesEl = () => $('chatMessages');
+
+  function scrollBottom() {
+    const el = messagesEl();
+    el.scrollTop = el.scrollHeight;
+  }
+
+  function formatText(text) {
+    return text
+      .replace(/\n/g, '<br>')
+      .replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
+  }
+
+  // ── Toggle chat ───────────────────────────────────────────────────────────
+  function toggleChat() {
+    chatOpen = !chatOpen;
+    const win = $('chatWindow');
+    win.classList.toggle('hidden-chat', !chatOpen);
+    win.classList.toggle('visible-chat', chatOpen);
+    $('iconOpen').classList.toggle('hidden', chatOpen);
+    $('iconClose').classList.toggle('hidden', !chatOpen);
+    $('notifBadge').classList.add('hidden');
+
+    if (chatOpen) {
+      $('chatInput').focus();
+      if (messagesEl().children.length === 0) {
+        // First open &mdash; show welcome message
+        setTimeout(() => addBotMessage(
+          "Hi there! 👋 I'm the <b>ShopEase</b> virtual assistant. I can help with orders, returns, payments, and more.\n\nWhat can I help you with today?",
+          ["Track my order", "Return & Refund", "Payment issue", "Talk to an agent"]
+        ), 400);
+      }
+    }
+  }
+
+  // ── Add messages ──────────────────────────────────────────────────────────
+  function addUserMessage(text) {
+    const div = document.createElement('div');
+    div.className = 'flex justify-end animate-slide-up';
+    div.innerHTML = `
+      <div class="max-w-[78%] bg-brand text-white text-sm px-4 py-2.5 rounded-2xl rounded-br-sm shadow-sm leading-relaxed">
+        ${escapeHtml(text)}
+      </div>`;
+    messagesEl().appendChild(div);
+    scrollBottom();
+  }
+
+  function addBotMessage(html, chips = []) {
+    const div = document.createElement('div');
+    div.className = 'flex items-start gap-2 animate-slide-up';
+    div.innerHTML = `
+      <div class="w-7 h-7 rounded-full bg-brand-light flex items-center justify-center text-sm shrink-0 mt-0.5">🎧</div>
+      <div class="max-w-[80%] bg-white text-slate-700 text-sm px-4 py-2.5 rounded-2xl rounded-tl-sm shadow-sm border border-slate-100 leading-relaxed">
+        ${html}
+      </div>`;
+    messagesEl().appendChild(div);
+    setQuickReplies(chips);
+    scrollBottom();
+  }
+
+  function showTypingIndicator() {
+    const div = document.createElement('div');
+    div.id = 'typingIndicator';
+    div.className = 'flex items-start gap-2 animate-slide-up';
+    div.innerHTML = `
+      <div class="w-7 h-7 rounded-full bg-brand-light flex items-center justify-center text-sm shrink-0">🎧</div>
+      <div class="bg-white px-4 py-3 rounded-2xl rounded-tl-sm shadow-sm border border-slate-100">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </div>`;
+    messagesEl().appendChild(div);
+    scrollBottom();
+  }
+
+  function removeTypingIndicator() {
+    const el = $('typingIndicator');
+    if (el) el.remove();
+  }
+
+  // ── Quick reply chips ─────────────────────────────────────────────────────
+  function setQuickReplies(chips) {
+    const el = $('quickReplies');
+    el.innerHTML = '';
+    chips.forEach(chip => {
+      const btn = document.createElement('button');
+      btn.textContent = chip;
+      btn.className = 'chip text-xs border border-brand text-brand rounded-full px-3 py-1 bg-white hover:bg-brand hover:text-white transition-all';
+      btn.onclick = () => handleUserInput(chip);
+      el.appendChild(btn);
+    });
+  }
+
+  // ── Send logic ────────────────────────────────────────────────────────────
+  function handleKey(e) {
+    if (e.key === 'Enter') handleSend();
+  }
+
+  function handleSend() {
+    const input = $('chatInput');
+    const text = input.value.trim();
+    if (!text || isTyping) return;
+    input.value = '';
+    handleUserInput(text);
+  }
+
+  function handleUserInput(text) {
+    if (isTyping) return;
+    addUserMessage(text);
+    setQuickReplies([]);
+    isTyping = true;
+
+    const delay = 700 + Math.random() * 600;
+    showTypingIndicator();
+
+    setTimeout(() => {
+      removeTypingIndicator();
+      const { response, chips } = getResponse(text);
+      typeMessage(response, chips);
+    }, delay);
+  }
+
+  // ── Typing effect ─────────────────────────────────────────────────────────
+  function typeMessage(html, chips) {
+    const div = document.createElement('div');
+    div.className = 'flex items-start gap-2 animate-slide-up';
+    const bubble = document.createElement('div');
+    bubble.className = 'max-w-[80%] bg-white text-slate-700 text-sm px-4 py-2.5 rounded-2xl rounded-tl-sm shadow-sm border border-slate-100 leading-relaxed';
+    div.innerHTML = `<div class="w-7 h-7 rounded-full bg-brand-light flex items-center justify-center text-sm shrink-0 mt-0.5">🎧</div>`;
+    div.appendChild(bubble);
+    messagesEl().appendChild(div);
+    scrollBottom();
+
+    // Strip HTML for character-by-character effect, then swap to full HTML
+    const plainLen = html.replace(/<[^>]+>/g, '').length;
+    const charDelay = Math.max(10, Math.min(25, 1200 / plainLen));
+    let i = 0;
+    const stripped = stripHtml(html);
+
+    const interval = setInterval(() => {
+      i += Math.ceil(plainLen / 60); // chunk to keep it snappy
+      bubble.textContent = stripped.slice(0, i);
+      scrollBottom();
+      if (i >= stripped.length) {
+        clearInterval(interval);
+        bubble.innerHTML = formatText(html);
+        setQuickReplies(chips);
+        isTyping = false;
+        scrollBottom();
+      }
+    }, charDelay);
+  }
+
+  // ── Response matcher ──────────────────────────────────────────────────────
+  function getResponse(text) {
+    for (const entry of KB) {
+      if (entry.patterns.some(p => p.test(text))) {
+        return { response: entry.response, chips: entry.chips || [] };
+      }
+    }
+    const resp = FALLBACK_RESPONSES[fallbackIndex % FALLBACK_RESPONSES.length];
+    fallbackIndex++;
+    return {
+      response: resp,
+      chips: ["Track my order", "Return & Refund", "Talk to an agent"]
+    };
+  }
+
+  // ── Utilities ─────────────────────────────────────────────────────────────
+  function escapeHtml(text) {
+    return text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
+  function stripHtml(html) {
+    return html.replace(/<[^>]+>/g, '').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>');
+  }
+  </script>
+</body>
+</html>

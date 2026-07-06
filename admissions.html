@@ -1,0 +1,1294 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="images/gocare-institute-logo.png">
+  <link rel="apple-touch-icon" href="images/gocare-institute-logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admissions | GoCare Training Institute</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- COOKIE CONSENT -->
+  <div id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="ck-inner">
+      <div class="ck-left">
+        <div class="ck-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/>
+            <path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/>
+          </svg>
+        </div>
+        <div class="ck-copy">
+          <strong>We use cookies</strong>
+          <p>We use cookies to improve your experience, analyse site traffic, and personalise content. By continuing, you agree to our <a href="#">Privacy Policy</a>.</p>
+        </div>
+      </div>
+      <div class="ck-actions">
+        <button class="ck-btn-decline" id="ckDecline">Decline</button>
+        <button class="ck-btn-accept" id="ckAccept">Accept All</button>
+        <button class="ck-close" id="ckClose" aria-label="Close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- -- NAVBAR ---------------------------------------- -->
+<nav class="nav" id="mainNav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <img loading="eager" decoding="async" src="images/gocare-institute-logo.png" width="100" />
+      </a>
+      <div class="nav-links">
+        <div class="nav-item"><a href="index.html">Home</a></div>
+        <div class="nav-item">
+          <a href="about.html">About GoCare <i data-lucide="chevron-down"></i></a>
+          <div class="dropdown about-mega">
+            <div class="res-header">
+              <span class="res-hd-icon"><i data-lucide="info"></i></span>
+              <div class="res-hd-text"><strong>About GoCare</strong><small>Our story, values &amp; recognition</small></div>
+            </div>
+            <div class="res-body">
+              <a href="about.html"><span class="rm-ico rm-ico--indigo"><i data-lucide="home"></i></span><span class="rm-text"><strong>About GoCare Institute</strong><small>Our history &amp; leadership</small></span></a>
+              <a href="about.html#vision"><span class="rm-ico rm-ico--teal"><i data-lucide="flag"></i></span><span class="rm-text"><strong>Mission &amp; Vision</strong><small>What drives us forward</small></span></a>
+              <a href="about.html#core-values"><span class="rm-ico rm-ico--rose"><i data-lucide="heart"></i></span><span class="rm-text"><strong>Core Values</strong><small>Principles we live by</small></span></a>
+              <a href="about/accreditation.html"><span class="rm-ico rm-ico--purple"><i data-lucide="globe"></i></span><span class="rm-text"><strong>Accreditation &amp; Recognition</strong><small>Nationally &amp; internationally recognised</small></span></a>
+              <a href="about/why-choose-us.html"><span class="rm-ico rm-ico--amber"><i data-lucide="check-circle"></i></span><span class="rm-text"><strong>Why Choose GoCare</strong><small>Stand-out reasons to join us</small></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="courses.html">Schools &amp; Programs <i data-lucide="chevron-down"></i></a>
+          <div class="dropdown schools-mega">
+            <div class="res-header">
+              <span class="res-hd-icon"><i data-lucide="graduation-cap"></i></span>
+              <div class="res-hd-text"><strong>Schools &amp; Programs</strong><small>Explore our diverse range of courses</small></div>
+            </div>
+            <div class="res-body">
+              <a href="schools/medical-health-sciences.html"><span class="rm-ico rm-ico--rose"><i data-lucide="stethoscope"></i></span><span class="rm-text"><strong>School of Medical &amp; Health Sciences</strong><small>Healthcare &amp; clinical programs</small></span></a>
+              <a href="schools/hospitality-management.html"><span class="rm-ico rm-ico--amber"><i data-lucide="utensils"></i></span><span class="rm-text"><strong>School of Hospitality Management</strong><small>Tourism, food &amp; front office</small></span></a>
+              <a href="schools/social-sciences-business.html"><span class="rm-ico rm-ico--indigo"><i data-lucide="users"></i></span><span class="rm-text"><strong>School of Social Sciences &amp; Business</strong><small>Community &amp; business programs</small></span></a>
+              <a href="schools/international-certifications.html"><span class="rm-ico rm-ico--teal"><i data-lucide="globe"></i></span><span class="rm-text"><strong>International Certifications</strong><small>Globally recognised qualifications</small></span></a>
+              <a href="courses.html"><span class="rm-ico rm-ico--purple"><i data-lucide="search"></i></span><span class="rm-text"><strong>View All Courses</strong><small>Browse the full programme list</small></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="admissions.html#overview">Admissions <i data-lucide="chevron-down"></i></a>
+          <div class="dropdown admissions-mega">
+            <div class="res-header">
+              <span class="res-hd-icon"><i data-lucide="clipboard-list"></i></span>
+              <div class="res-hd-text"><strong>Admissions</strong><small>Your journey to GoCare starts here</small></div>
+            </div>
+            <div class="res-body">
+              <a href="admissions.html#overview"><span class="rm-ico rm-ico--indigo"><i data-lucide="info"></i></span><span class="rm-text"><strong>Admissions Overview</strong><small>Everything you need to know</small></span></a>
+              <a href="admissions.html#how-to-apply"><span class="rm-ico rm-ico--teal"><i data-lucide="file-edit"></i></span><span class="rm-text"><strong>How to Apply</strong><small>Step-by-step application guide</small></span></a>
+              <a href="admissions.html#requirements"><span class="rm-ico rm-ico--orange"><i data-lucide="clipboard-list"></i></span><span class="rm-text"><strong>Entry Requirements</strong><small>Academic &amp; age criteria</small></span></a>
+              <a href="admissions.html#fees"><span class="rm-ico rm-ico--purple"><i data-lucide="wallet"></i></span><span class="rm-text"><strong>Fees &amp; Payment Options</strong><small>Tuition, HELB &amp; bursaries</small></span></a>
+              <a href="admissions.html#support"><span class="rm-ico rm-ico--rose"><i data-lucide="headphones"></i></span><span class="rm-text"><strong>Admissions Support</strong><small>Get help from our team</small></span></a>
+              <a href="modes-of-study.html"><span class="rm-ico rm-ico--teal"><i data-lucide="book-open"></i></span><span class="rm-text"><strong>Modes of Study</strong><small>Full-time, part-time &amp; online</small></span></a>
+              <a href="hostels-and-accommodation.html"><span class="rm-ico rm-ico--amber"><i data-lucide="bed"></i></span><span class="rm-text"><strong>Hostels &amp; Accommodation</strong><small>Comfortable student housing</small></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="industry-liaison.html">Industry Liaison <i data-lucide="chevron-down"></i></a>
+          <div class="dropdown industry-mega">
+            <div class="res-header">
+              <span class="res-hd-icon"><i data-lucide="briefcase"></i></span>
+              <div class="res-hd-text"><strong>Industry Liaison</strong><small>Partnerships, internships &amp; career services</small></div>
+            </div>
+            <div class="res-body">
+              <a href="industry-liaison.html#our-role"><span class="rm-ico rm-ico--indigo"><i data-lucide="globe"></i></span><span class="rm-text"><strong>Our Role</strong><small>Bridging education &amp; industry</small></span></a>
+              <a href="industrial-attachment.html"><span class="rm-ico rm-ico--orange"><i data-lucide="clipboard-list"></i></span><span class="rm-text"><strong>Internship &amp; Attachment</strong><small>Hands-on industry placements</small></span></a>
+              <a href="institutional-partnerships.html"><span class="rm-ico rm-ico--teal"><i data-lucide="handshake"></i></span><span class="rm-text"><strong>Institutional Partnerships</strong><small>Our network of employers</small></span></a>
+              <a href="careers.html"><span class="rm-ico rm-ico--amber"><i data-lucide="briefcase"></i></span><span class="rm-text"><strong>Career Services</strong><small>Jobs, placements &amp; guidance</small></span></a>
+              <a href="courses/amca-usa-certification.html"><span class="rm-ico rm-ico--purple"><i data-lucide="globe-2"></i></span><span class="rm-text"><strong>International Certification</strong><small>USA &amp; global qualifications</small></span></a>
+              <a href="alumni-network.html"><span class="rm-ico rm-ico--rose"><i data-lucide="users"></i></span><span class="rm-text"><strong>Alumni Network</strong><small>Stay connected after graduation</small></span></a>
+              <a href="home-based-care.html"><span class="rm-ico rm-ico--teal"><i data-lucide="heart-pulse"></i></span><span class="rm-text"><strong>GoCare Health Solutions</strong><small>Professional healthcare services</small></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="#">Resources <i data-lucide="chevron-down"></i></a>
+          <div class="dropdown resources-mega">
+            <div class="res-header">
+              <span class="res-hd-icon"><i data-lucide="layers"></i></span>
+              <div class="res-hd-text"><strong>Resources &amp; Tools</strong><small>Everything you need to succeed at GoCare</small></div>
+            </div>
+            <div class="res-body">
+              <a href="student-resources.html"><span class="rm-ico rm-ico--purple"><i data-lucide="book-open"></i></span><span class="rm-text"><strong>Student Resources</strong><small>Study materials &amp; guides</small></span></a>
+              <a href="downloads.html"><span class="rm-ico rm-ico--orange"><i data-lucide="download"></i></span><span class="rm-text"><strong>Downloads</strong><small>Forms, brochures &amp; prospectus</small></span></a>
+              <a href="blog.html"><span class="rm-ico rm-ico--amber"><i data-lucide="edit-3"></i></span><span class="rm-text"><strong>Blogs &amp; Articles</strong><small>Insights, tips &amp; news</small></span></a>
+              <a href="#"><span class="rm-ico rm-ico--indigo"><i data-lucide="graduation-cap"></i></span><span class="rm-text"><strong>Student Portal</strong><small>Access your student account</small></span></a>
+              <a href="student-testimonials-success-stories.html"><span class="rm-ico rm-ico--teal"><i data-lucide="message-circle"></i></span><span class="rm-text"><strong>Success Stories</strong><small>Graduate testimonials</small></span></a>
+              <a href="gallery.html"><span class="rm-ico rm-ico--rose"><i data-lucide="images"></i></span><span class="rm-text"><strong>Photo Gallery</strong><small>Life &amp; moments at GoCare</small></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item"><a href="contact.html">Contact Us</a></div>
+      </div>
+      <div class="nav-right">
+        <a href="apply.html" class="nav-apply-btn">Start Your Journey <i data-lucide="arrow-right"></i></a>
+        <div class="ham" id="hamBtn"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+    <div class="mob-menu" id="mobMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="courses.html">Schools &amp; Programs</a>
+      <a href="admissions.html#overview">Admissions</a>
+      <a href="industry-liaison.html">Industry Liaison</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="home-based-care.html">Home Based Care</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="events.html">Events &amp; Open Days</a>
+      <a href="blog.html">Blog &amp; Articles</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="apply.html" class="btn btn-primary mob-cta">Start Your Journey <i data-lucide="arrow-right"></i></a>
+    </div>
+  </nav>
+
+  <!-- -- SUB BAR --------------------------------------- -->
+  <div class="subbar">
+    <div class="wrap subbar-inner">
+      <span class="subbar-tagline">TRAIN WITH THE EXPERTS &nbsp;..&nbsp; BECOME AN EXPERT!</span>
+      <div class="subbar-portals">
+        <a href="#" class="subbar-btn subbar-btn--student">Student Portal</a>
+        <a href="#" class="subbar-btn subbar-btn--staff">Staff Portal</a>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+  
+
+  
+
+<style>
+  :root { --o: #ec7424; --p: #642a7e; --w: #fcf9f8; --dark: #4a1a6d; }
+  .adm-page { background: #fdfdfd; font-family: 'Inter', sans-serif; color: #111; overflow-x: hidden; }
+  
+  @keyframes blobMove { 0%{transform:translate(0,0) scale(1)} 33%{transform:translate(30px,-50px) scale(1.1)} 66%{transform:translate(-20px,20px) scale(0.9)} 100%{transform:translate(0,0) scale(1)} }
+  @keyframes float { 0%{transform:translateY(0)} 50%{transform:translateY(-10px)} 100%{transform:translateY(0)} }
+  @keyframes gradientGlow { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+
+  /* Hero Section */
+  .sc-hero-sec { 
+    background-size: cover !important; background-position: center top !important; min-height: 700px; display: flex; align-items: center; color: #fff; position: relative;
+    padding: 100px 0; overflow: hidden;
+  }
+  .sc-hero-sec::before {
+    content:''; position:absolute; top:-20%; left:-10%; width:50vw; height:50vw; background: radial-gradient(circle, rgba(237,115,38,0.2) 0%, transparent 70%); border-radius:50%; animation: blobMove 15s infinite alternate ease-in-out; pointer-events: none;
+  }
+  .sc-hero-sec::after {
+    content:''; position:absolute; bottom:-20%; right:-10%; width:60vw; height:60vw; background: radial-gradient(circle, rgba(105,51,129,0.4) 0%, transparent 70%); border-radius:50%; animation: blobMove 20s infinite alternate-reverse ease-in-out; pointer-events: none;
+  }
+
+  .sc-hero-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 10; max-width: 1200px; margin: 0 auto; padding: 0 20px;}
+  .sc-hero-copy h1 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 4.5rem; line-height: 1.1; font-weight: 800; margin-bottom: 25px; background: linear-gradient(to right, #ffffff, #ffecd2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 4px 15px rgba(0,0,0,0.3)); letter-spacing: -1px; }
+  .sc-hero-copy p { font-size: 1.3rem; opacity: 0.95; margin-bottom: 35px; max-width: 600px; line-height: 1.7; font-weight: 300; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+
+  .sc-hero-form { animation: float 6s ease-in-out infinite; }
+  .sc-glass-form { background: rgba(255,255,255,0.06); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border: 1px solid rgba(255,255,255,0.2); border-top: 1px solid rgba(255,255,255,0.5); border-left: 1px solid rgba(255,255,255,0.5); box-shadow: 0 35px 60px rgba(0,0,0,0.4), inset 0 0 20px rgba(255,255,255,0.05); border-radius: 20px; padding: 45px; position: relative; overflow: hidden; }
+  .sc-glass-form::before { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background: linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.1) 50%, transparent 60%); transform: rotate(45deg); pointer-events:none; }
+  
+  .sc-glass-form h2 { font-family: 'Outfit', 'Inter', sans-serif; font-size: 2rem; margin-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 20px; font-weight: 700; line-height: 1.3; color: #fff; }
+  .sc-form-group { margin-bottom: 20px; }
+  .sc-input { width: 100%; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 15px 20px; color: #fff; font-size: 1.05rem; outline: none; transition: 0.3s; font-family: 'Inter', sans-serif; }
+  .sc-input:focus { background: rgba(255,255,255,0.1); border-color: var(--o); box-shadow: 0 0 0 4px rgba(237,115,38,0.2); }
+  .sc-input::placeholder { color: rgba(255,255,255,0.6); }
+  .sc-input option { color: #111; background: #fff; }
+  
+  .btn-sc-submit { width: 100%; background: linear-gradient(135deg, #f37021, #d05d15); color: #fff; border: none; padding: 18px; border-radius: 8px; font-weight: 800; font-size: 1.1rem; cursor: pointer; margin-top: 25px; transition: 0.3s; text-transform: uppercase; letter-spacing: 1.5px; box-shadow: 0 10px 25px rgba(237,115,38,0.4); position: relative; overflow: hidden; display:inline-block; text-decoration:none; text-align:center;}
+  .btn-sc-submit::after { content:''; position:absolute; top:0; left:-100%; width:100%; height:100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); transition: 0.5s; }
+  .btn-sc-submit:hover::after { left: 100%; }
+  .btn-sc-submit:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(237,115,38,0.5); color:#fff;}
+  
+  .btn-sc-outline { width: 100%; background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.3); padding: 16px; border-radius: 8px; font-weight: 700; font-size: 1rem; cursor: pointer; margin-top: 15px; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; display:inline-block; text-decoration:none; text-align:center;}
+  .btn-sc-outline:hover { background: rgba(255,255,255,0.1); border-color: #fff; transform: translateY(-2px); color:#fff; }
+
+  /* Ribbon */
+  .sc-ribbon { background: linear-gradient(270deg, #4a1a6d, #842861, #ec7424, #4a1a6d); background-size: 800% 800%; animation: gradientGlow 12s ease infinite; color: #fff; text-align: center; padding: 25px; font-weight: 800; font-size: 1.5rem; font-style: italic; letter-spacing: 2px; text-transform: uppercase; box-shadow: inset 0 0 20px rgba(0,0,0,0.2), 0 10px 30px rgba(0,0,0,0.1); position: relative; z-index: 20; }
+
+  /* Admissions Content */
+  .adm-sec { padding: 60px 0 100px; background: var(--w); }
+  .adm-wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+  
+  .adm-banner { background: linear-gradient(135deg, #f37021, #d05d15); border-radius: 12px; padding: 25px 35px; color: #fff; display: flex; align-items: center; gap: 20px; box-shadow: 0 15px 30px rgba(237,115,38,0.2); margin-bottom: 30px; }
+  .adm-banner-icon { width: 48px; height: 48px; background: rgba(255,255,255,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+  .adm-banner-icon i { font-size: 28px; }
+  .adm-banner h2 { margin: 0; font-family: 'Outfit', 'Inter', sans-serif; font-size: 2.2rem; font-weight: 800; }
+  .adm-banner-desc { font-size: 1.1rem; color: #334155; font-weight: 600; margin-bottom: 50px; background: #fff; padding: 20px 25px; border-radius: 8px; border-left: 4px solid var(--o); box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+
+  .adm-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 40px; }
+  .adm-card { background: #fff; border-radius: 12px; border: 1px solid rgba(0,0,0,0.04); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.04); display: flex; flex-direction: column; transition: 0.3s; }
+  .adm-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+  .adm-card-header { padding: 20px 25px; display: flex; align-items: center; gap: 15px; color: var(--dark); font-weight: 800; font-size: 1.25rem; border-bottom: 1px solid #f1f5f9; background: #fdfdfd; }
+  .adm-card-header i { color: var(--o); }
+  .adm-card-body { padding: 25px; flex: 1; }
+  
+  .adm-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+  .adm-list li { display: flex; align-items: flex-start; gap: 12px; font-weight: 600; color: #475569; font-size: 0.95rem; line-height: 1.5; }
+  .adm-list li i { color: var(--o); flex-shrink: 0; margin-top: 2px; }
+
+  /* Step Flow */
+  .adm-step-flow { display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 45px 40px; border-radius: 16px; margin: 60px 0; box-shadow: 0 15px 40px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.03); }
+  .adm-step { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 15px; flex: 1; position: relative; z-index: 2; }
+  .adm-step-icon { width: 80px; height: 80px; background: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(0,0,0,0.06); border: 3px solid #fff; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); color: var(--dark); }
+  .adm-step:hover .adm-step-icon { transform: scale(1.15); background: var(--dark); color: #fff; border-color: rgba(74,26,109,0.2); }
+  .adm-step-icon i { font-size: 34px; }
+  .adm-step-title { font-weight: 800; color: #1e293b; font-size: 1.1rem; }
+  
+  .adm-step-arrow { flex: 0.5; display: flex; justify-content: center; color: #cbd5e1; position: relative; z-index: 1; }
+  .adm-step-arrow i { font-size: 36px; }
+
+  /* 4 Column Footer */
+  .adm-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 60px; }
+  .adm-4col-card { border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+  .adm-4col-header { padding: 18px; text-align: center; color: #fff; font-weight: 800; font-size: 1.15rem; }
+  .adm-4col-body { padding: 20px; }
+  
+  .adm-c1 .adm-4col-header { background: linear-gradient(135deg, #1e3a8a, #2563eb); }
+  .adm-c2 .adm-4col-header { background: linear-gradient(135deg, #c2410c, #ea580c); }
+  .adm-c3 .adm-4col-header { background: linear-gradient(135deg, #b91c1c, #dc2626); }
+  .adm-c4 .adm-4col-header { background: linear-gradient(135deg, #4a1a6d, #642a7e); }
+
+  .adm-4col-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px; }
+  .adm-4col-list li { display: flex; align-items: center; gap: 12px; font-weight: 700; color: #334155; font-size: 0.95rem; }
+  .adm-4col-list li i { flex-shrink: 0; color: #94a3b8; }
+  .adm-c1 .adm-4col-list li i { color: #2563eb; }
+  .adm-c2 .adm-4col-list li i { color: #ea580c; }
+  .adm-c3 .adm-4col-list li i { color: #dc2626; }
+  .adm-c4 .adm-4col-list li i { color: #642a7e; }
+
+  .adm-c4 { background: #4a1a6d; color: #fff; }
+  .adm-c4 .adm-4col-list li { color: rgba(255,255,255,0.9); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px; }
+  .adm-c4 .adm-4col-list li:last-child { border-bottom: none; padding-bottom: 0; }
+  .adm-c4 .adm-4col-list li i { color: #fff; }
+  
+  @media (max-width: 1024px) {
+    .sc-hero-grid { grid-template-columns: 1fr; }
+    .adm-grid-3 { grid-template-columns: 1fr; }
+    .adm-grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .adm-step-flow { flex-direction: column; gap: 30px; }
+    .adm-step-arrow { display: none; }
+    .sc-glass-form { padding: 32px 28px; }
+    .sc-sidebar-hub { position: static; margin-top: 30px; }
+  }
+  @media (max-width: 768px) {
+    .adm-grid-4 { grid-template-columns: 1fr; }
+    .sc-hero-copy h1 { font-size: 2.4rem; }
+    .sc-hero-copy p { font-size: 1.05rem; }
+    .sc-hero-sec { padding: 60px 0; min-height: auto; }
+    .sc-glass-form { padding: 28px 20px; }
+    .sc-glass-form h2 { font-size: 1.5rem; }
+    .adm-c1, .adm-c2, .adm-c3, .adm-c4 { padding: 40px 0; }
+    .adm-sec-title { font-size: 1.8rem; }
+  }
+  @media (max-width: 480px) {
+    .sc-hero-copy h1 { font-size: 1.9rem; }
+    .sc-hero-copy p { font-size: .95rem; }
+    .sc-glass-form { padding: 24px 16px; }
+    .sc-glass-form h2 { font-size: 1.3rem; }
+    .sc-input { padding: 12px 14px; font-size: .95rem; }
+    .adm-sec-title { font-size: 1.5rem; }
+    .adm-step-num { width: 44px; height: 44px; font-size: 1.1rem; }
+    .adm-step-card { padding: 24px 20px; }
+    .adm-step-card h4 { font-size: 1.05rem; }
+    .adm-step-card p { font-size: .88rem; }
+  }
+  .adm2-photo-strip { display:grid; grid-template-columns:1fr 1fr 1fr; height:260px; gap:6px; }
+  .adm2-photo-strip img { width:100%; height:100%; object-fit:cover; display:block; }
+  .adm2-split { display:grid; grid-template-columns:1fr 1fr; border-radius:16px; overflow:hidden; border:1px solid #e2e8f0; margin:40px 0; }
+  .adm2-split-img { overflow:hidden; min-height:280px; }
+  .adm2-split-img img { width:100%; height:100%; object-fit:cover; }
+  .adm2-split-body { padding:36px 32px; display:flex; flex-direction:column; justify-content:center; background:#fcf9f8; }
+  .adm2-split-body h3 { font-size:1.3rem; font-weight:800; color:#4a1a6d; margin-bottom:12px; }
+  .adm2-split-body p { font-size:.95rem; color:#475569; line-height:1.7; }
+  @media(max-width:768px){ .adm2-photo-strip{grid-template-columns:1fr 1fr;height:180px;} .adm2-photo-strip img:last-child{display:none;} .adm2-split{grid-template-columns:1fr;} .adm2-split-img{min-height:220px;} }
+</style>
+
+<div class="adm-page">
+    <!-- PAGE HERO -->
+  <section class="ph ph--split">
+    <div class="ph-bg">
+      <img loading="eager" decoding="async" src="images/new-images/Admissions-hero.jpeg" alt="Join GoCare">
+    </div>
+    <div class="ph-overlay"></div>
+    <div class="ph-inner">
+      <div class="ph-content">
+        <span class="ph-eyebrow"><i data-lucide="graduation-cap"></i> Join GoCare</span>
+        <nav class="ph-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><i data-lucide="chevron-right"></i><span>Admissions</span>
+        </nav>
+        <h1>Start Your Journey at <em>GoCare</em></h1>
+        <p>Enrol in Kenya&#8217;s leading healthcare, hospitality, and social sciences training college. TVETA licensed. TVET CDACC accredited. NITA recognised. Globally respected.</p>
+        <div class="ph-btns">
+          <a href="apply.html" class="ph-btn-primary">Apply Now <i data-lucide="arrow-right"></i></a>
+          <a href="courses.html" class="ph-btn-ghost">Explore Courses <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="ph-form-card">
+        <h3>Apply Today</h3>
+        <p>Start your application &ndash; takes less than 5 minutes.</p>
+        <div class="ph-form-group">
+          <label>Full Name</label>
+          <input type="text" class="ph-form-input" placeholder="Your full name">
+        </div>
+        <div class="ph-form-group">
+          <label>Phone Number</label>
+          <input type="tel" class="ph-form-input" placeholder="07XX XXX XXX">
+        </div>
+        <div class="ph-form-group">
+          <label>Course of Interest</label>
+          <select class="ph-form-input">
+            <option value="">Select a course</option>
+            <option>Healthcare Support Services (CNA)</option>
+            <option>Perioperative Theatre Technology</option>
+            <option>Mortuary Science</option>
+            <option>Orthopaedic &amp; Trauma Medicine</option>
+            <option>Culinary Arts / Food &amp; Beverage</option>
+            <option>Social Work &amp; Community Development</option>
+            <option>International Certifications</option>
+          </select>
+        </div>
+        <button class="ph-form-submit" onclick="window.location='apply.html'">Start Application &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+<!-- -- STICKY SECTION NAV ------------------------------- -->
+<style>
+  /* Section nav */
+  .adm-sec-nav {
+    position: sticky; top: 70px; z-index: 150;
+    background: #fff;
+    border-bottom: 2px solid #f1f5f9;
+    box-shadow: 0 4px 24px rgba(0,0,0,.08);
+  }
+  .adm-sec-nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; gap: 0;
+    overflow-x: auto; scrollbar-width: none;
+    padding: 0 32px;
+  }
+  .adm-sec-nav-inner::-webkit-scrollbar { display: none; }
+  .adm-nav-pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 16px 22px; white-space: nowrap;
+    font-size: .85rem; font-weight: 700; text-decoration: none;
+    color: #64748b; border-bottom: 3px solid transparent;
+    transition: color .2s, border-color .2s;
+    flex-shrink: 0;
+  }
+  .adm-nav-pill .lucide { width: 15px; height: 15px; }
+  .adm-nav-pill:hover { color: #ec7424; }
+  .adm-nav-pill.active { color: #ec7424; border-bottom-color: #ec7424; }
+
+  /* Shared section styles */
+  .adm-section {
+    padding: 88px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .adm-section--cream { background: #fcf9f8; }
+  .adm-section--white { background: #fff; }
+  .adm-section--dark {
+    background: linear-gradient(135deg, #0d0820 0%, #2d0f3c 55%, #1a0924 100%);
+    color: #fff;
+  }
+  .adm-section--dark::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(236,116,36,.12) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .adm-section-wrap { max-width: 1200px; margin: 0 auto; padding: 0 48px; position: relative; z-index: 1; }
+
+  /* Section eyebrow + heading */
+  .adm-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: .75rem; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 2px; margin-bottom: 14px;
+    color: #ec7424;
+  }
+  .adm-eyebrow .lucide { width: 14px; height: 14px; }
+  .adm-section--dark .adm-eyebrow { color: #ffa040; }
+  .adm-sec-heading {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 800; line-height: 1.15;
+    margin-bottom: 12px;
+  }
+  .adm-section--dark .adm-sec-heading { color: #fff; }
+  .adm-section--cream .adm-sec-heading,
+  .adm-section--white .adm-sec-heading { color: #1a0a2e; }
+  .adm-sec-heading em { color: #ec7424; font-style: normal; }
+  .adm-sec-sub {
+    font-size: 1rem; line-height: 1.7; margin-bottom: 44px; max-width: 600px;
+  }
+  .adm-section--dark .adm-sec-sub { color: rgba(255,255,255,.68); }
+  .adm-section--cream .adm-sec-sub,
+  .adm-section--white .adm-sec-sub { color: #475569; }
+
+  /* Section decorator number */
+  .adm-sec-num {
+    position: absolute; top: -20px; right: 40px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 10rem; font-weight: 900; line-height: 1;
+    pointer-events: none; user-select: none; z-index: 0;
+  }
+  .adm-section--dark .adm-sec-num { color: rgba(255,255,255,.04); }
+  .adm-section--cream .adm-sec-num,
+  .adm-section--white .adm-sec-num { color: rgba(74,26,109,.06); }
+
+  /* -- OVERVIEW CARDS ----------------------- */
+  .adm-overview-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+  .adm-ov-card {
+    background: #fff; border-radius: 20px; padding: 32px 28px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 8px 30px rgba(0,0,0,.06);
+    transition: transform .3s, box-shadow .3s;
+  }
+  .adm-ov-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,.1); }
+  .adm-ov-icon {
+    width: 52px; height: 52px; border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 18px;
+  }
+  .adm-ov-icon .lucide { width: 26px; height: 26px; }
+  .adm-ov-icon--purple { background: rgba(74,26,109,.1); color: #4a1a6d; }
+  .adm-ov-icon--orange { background: rgba(236,116,36,.1); color: #ec7424; }
+  .adm-ov-icon--teal   { background: rgba(20,184,166,.1); color: #14b8a6; }
+  .adm-ov-card h4 { font-family: 'Outfit',sans-serif; font-size: 1.15rem; font-weight: 800; margin-bottom: 10px; color: #1a0a2e; }
+  .adm-ov-card p { font-size: .9rem; color: #475569; line-height: 1.65; }
+  .adm-ov-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 18px; font-size: .82rem; font-weight: 700;
+    color: #ec7424; text-decoration: none;
+  }
+  .adm-ov-link .lucide { width: 13px; height: 13px; }
+
+  /* -- HOW TO APPLY STEPS -------------------- */
+  .adm-steps-layout { display: grid; grid-template-columns: 1fr 420px; gap: 64px; align-items: center; }
+  .adm-steps-list { display: flex; flex-direction: column; gap: 0; }
+  .adm-step-item {
+    display: flex; gap: 20px; padding-bottom: 32px;
+    position: relative;
+  }
+  .adm-step-item:not(:last-child)::before {
+    content: '';
+    position: absolute; left: 20px; top: 44px;
+    width: 2px; bottom: 0;
+    background: linear-gradient(to bottom, #ec7424, rgba(236,116,36,.15));
+  }
+  .adm-step-num {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: #ec7424; color: #fff;
+    font-family: 'Outfit',sans-serif; font-weight: 900; font-size: .95rem;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; position: relative; z-index: 1;
+    box-shadow: 0 4px 16px rgba(236,116,36,.4);
+  }
+  .adm-step-body h4 { font-family: 'Outfit',sans-serif; font-weight: 800; font-size: 1.05rem; color: #fff; margin-bottom: 4px; }
+  .adm-step-body p { font-size: .88rem; color: rgba(255,255,255,.65); line-height: 1.6; }
+  .adm-steps-img {
+    border-radius: 20px; overflow: hidden;
+    box-shadow: 0 24px 60px rgba(0,0,0,.4);
+    position: relative;
+  }
+  .adm-steps-img img { width: 100%; height: 480px; object-fit: cover; display: block; }
+  .adm-steps-img-badge {
+    position: absolute; bottom: 24px; left: 24px;
+    background: rgba(255,255,255,.12); backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 14px; padding: 16px 22px; color: #fff;
+  }
+  .adm-steps-img-badge strong { display: block; font-size: 1.6rem; font-weight: 900; color: #fff; }
+  .adm-steps-img-badge span { font-size: .78rem; color: rgba(255,255,255,.75); }
+
+  /* -- INTAKES CARDS ------------------------- */
+  .adm-intakes-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+
+  /* -- MONTH CHIPS --------------------------- */
+  .adm-month-chip {
+    border-radius: 14px; padding: 16px 12px 14px;
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    font-weight: 700; font-size: .85rem; letter-spacing: .5px;
+    text-transform: uppercase; transition: transform .15s, box-shadow .15s;
+    cursor: default;
+  }
+  .adm-month-chip:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,.12); }
+  .adm-month-chip--p { background: linear-gradient(135deg, var(--p) 0%, #8b3db8 100%); color: #fff; }
+  .adm-month-chip--o { background: linear-gradient(135deg, var(--o) 0%, #f59a3a 100%); color: #fff; }
+  .adm-month-name { font-size: .8rem; }
+  .adm-month-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: rgba(255,255,255,.6);
+    box-shadow: 0 0 0 2px rgba(255,255,255,.3);
+  }
+  @media (max-width: 768px) {
+    .adm-month-chip { padding: 12px 8px; font-size: .75rem; }
+  }
+  @media (max-width: 480px) {
+    .adm-month-chip-grid { grid-template-columns: repeat(3,1fr) !important; }
+  }
+  .adm-intake-card {
+    border-radius: 20px; overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,.08);
+    transition: transform .3s;
+  }
+  .adm-intake-card:hover { transform: translateY(-6px); }
+  .adm-intake-head {
+    padding: 28px 28px 24px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .adm-intake-head--jan { background: linear-gradient(135deg, #4a1a6d, #642a7e); }
+  .adm-intake-head--may { background: linear-gradient(135deg, #ec7424, #d05d15); }
+  .adm-intake-head--sep { background: linear-gradient(135deg, #6a2b81, #5f277b); }
+  .adm-intake-month {
+    font-family: 'Outfit',sans-serif; font-size: 2rem; font-weight: 900;
+    color: #fff; line-height: 1;
+  }
+  .adm-intake-label { font-size: .75rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: rgba(255,255,255,.75); }
+  .adm-intake-body {
+    background: #fff; padding: 24px 28px;
+  }
+  .adm-intake-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+  .adm-intake-row .lucide { width: 16px; height: 16px; color: #ec7424; flex-shrink: 0; margin-top: 2px; }
+  .adm-intake-row span { font-size: .9rem; color: #334155; line-height: 1.5; }
+  .adm-intake-row strong { color: #1a0a2e; }
+  .adm-intake-cta {
+    display: block; width: 100%; text-align: center;
+    padding: 12px; border-radius: 10px;
+    font-weight: 700; font-size: .85rem;
+    text-decoration: none; transition: .2s;
+    background: #f8fafc; color: #ec7424;
+    border: 1px solid #ec7424; margin-top: 8px;
+  }
+  .adm-intake-cta:hover { background: #ec7424; color: #fff; }
+
+  /* -- ENTRY REQUIREMENTS -------------------- */
+  .adm-req-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .adm-req-col h4 { font-family: 'Outfit',sans-serif; font-size: 1.15rem; font-weight: 800; color: #ec7424; margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+  .adm-req-col h4 .lucide { width: 20px; height: 20px; color: #ec7424; }
+  .adm-req-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+  .adm-req-list li {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 14px 18px; border-radius: 12px;
+    background: #f8fafc; border: 1px solid #f1f5f9;
+    font-size: .9rem; color: #334155; line-height: 1.55;
+  }
+  .adm-req-list li .lucide { width: 16px; height: 16px; color: #ec7424; flex-shrink: 0; margin-top: 2px; }
+  .adm-req-levels { display: flex; flex-direction: column; gap: 12px; }
+  .adm-req-level {
+    display: grid; grid-template-columns: auto 1fr;
+    gap: 14px; align-items: center;
+    padding: 16px 18px; border-radius: 12px;
+    background: #f8fafc; border-left: 4px solid;
+  }
+  .adm-req-level--diploma { border-left-color: #4a1a6d; }
+  .adm-req-level--cert    { border-left-color: #ec7424; }
+  .adm-req-level--short   { border-left-color: #14b8a6; }
+  .adm-req-level .adm-grade {
+    font-family: 'Outfit',sans-serif; font-size: 1.5rem; font-weight: 900; color: #1a0a2e;
+  }
+  .adm-req-level .adm-grade-desc strong { display: block; font-size: .9rem; color: #1a0a2e; }
+  .adm-req-level .adm-grade-desc span { font-size: .8rem; color: #64748b; }
+
+  /* -- FEES & PAYMENT ------------------------ */
+  .adm-fees-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; margin-bottom: 40px; }
+  .adm-fee-card {
+    border-radius: 20px; padding: 32px 28px;
+    background: #fff; border: 1px solid #f1f5f9;
+    box-shadow: 0 8px 30px rgba(0,0,0,.06);
+    text-align: center; transition: .3s;
+  }
+  .adm-fee-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,.1); }
+  .adm-fee-icon {
+    width: 64px; height: 64px; border-radius: 18px; margin: 0 auto 20px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .adm-fee-icon .lucide { width: 30px; height: 30px; }
+  .adm-fee-icon--helb   { background: rgba(74,26,109,.1); color: #4a1a6d; }
+  .adm-fee-icon--plan   { background: rgba(236,116,36,.1); color: #ec7424; }
+  .adm-fee-icon--mobile { background: rgba(20,184,166,.1); color: #14b8a6; }
+  .adm-fee-card h4 { font-family: 'Outfit',sans-serif; font-weight: 800; font-size: 1.05rem; color: #1a0a2e; margin-bottom: 10px; }
+  .adm-fee-card p { font-size: .88rem; color: #475569; line-height: 1.65; }
+  .adm-fee-note {
+    background: linear-gradient(135deg, rgba(236,116,36,.1), rgba(74,26,109,.08));
+    border: 1px solid rgba(236,116,36,.2);
+    border-radius: 16px; padding: 24px 28px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .adm-fee-note .lucide { width: 28px; height: 28px; color: #ec7424; flex-shrink: 0; }
+  .adm-fee-note p { font-size: .92rem; color: #334155; line-height: 1.65; margin: 0; }
+  .adm-fee-note p strong { color: #ec7424; }
+
+  /* -- ADMISSIONS SUPPORT -------------------- */
+  .adm-support-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+  .adm-support-card {
+    border-radius: 20px; padding: 32px 28px;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.14);
+    text-align: center;
+    backdrop-filter: blur(8px);
+    transition: .3s;
+  }
+  .adm-support-card:hover {
+    background: rgba(255,255,255,.12);
+    border-color: rgba(236,116,36,.35);
+    transform: translateY(-6px);
+  }
+  .adm-support-icon {
+    width: 64px; height: 64px; border-radius: 18px; margin: 0 auto 20px;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(236,116,36,.2);
+  }
+  .adm-support-icon .lucide { width: 30px; height: 30px; stroke: #ffa040; }
+  .adm-support-card h4 { font-family: 'Outfit',sans-serif; font-weight: 800; font-size: 1.05rem; color: #fff; margin-bottom: 10px; }
+  .adm-support-card p { font-size: .88rem; color: rgba(255,255,255,.65); line-height: 1.65; }
+  .adm-support-card a.adm-support-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 18px; font-size: .82rem; font-weight: 700;
+    color: #ffa040; text-decoration: none;
+  }
+  .adm-support-link .lucide { width: 13px; height: 13px; }
+
+  /* Divider between sections */
+  .adm-divider {
+    width: 100%; height: 1px;
+    background: linear-gradient(to right, transparent, rgba(236,116,36,.3), transparent);
+  }
+
+  /* CTA at bottom */
+  .adm-final-cta {
+    background: #ec7424; padding: 56px 0; text-align: center;
+  }
+  .adm-final-cta h3 { font-family: 'Outfit',sans-serif; font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 10px; }
+  .adm-final-cta p { color: rgba(255,255,255,.8); margin-bottom: 28px; font-size: 1rem; }
+  .adm-final-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .adm-final-btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #fff; color: #ec7424;
+    padding: 14px 32px; border-radius: 50px;
+    font-weight: 800; font-size: .95rem; text-decoration: none; transition: .2s;
+  }
+  .adm-final-btn-primary:hover { background: #1a0a2e; color: #fff; }
+  .adm-final-btn-ghost {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: transparent; color: #fff;
+    padding: 14px 32px; border-radius: 50px;
+    font-weight: 700; font-size: .95rem;
+    border: 2px solid rgba(255,255,255,.55); text-decoration: none; transition: .2s;
+  }
+  .adm-final-btn-ghost:hover { background: rgba(255,255,255,.15); }
+
+  @media(max-width: 960px) {
+    .adm-steps-layout { grid-template-columns: 1fr; }
+    .adm-steps-img { display: none; }
+    .adm-req-layout { grid-template-columns: 1fr; }
+    .adm-overview-grid, .adm-intakes-grid, .adm-fees-grid, .adm-support-grid { grid-template-columns: 1fr 1fr; }
+    .adm-section-wrap { padding: 0 24px; }
+  }
+  @media(max-width: 600px) {
+    .adm-overview-grid, .adm-intakes-grid, .adm-fees-grid, .adm-support-grid { grid-template-columns: 1fr; }
+    .adm-section { padding: 60px 0; }
+    .adm-sec-nav { top: 60px; }
+  }
+</style>
+
+<!-- STICKY SECTION NAV -->
+<nav class="adm-sec-nav" id="admSecNav">
+  <div class="adm-sec-nav-inner">
+    <a href="#overview"      class="adm-nav-pill active"><i data-lucide="layout-grid"></i> Overview</a>
+    <a href="#how-to-apply"  class="adm-nav-pill"><i data-lucide="mouse-pointer-click"></i> How to Apply</a>
+    <a href="#requirements"  class="adm-nav-pill"><i data-lucide="clipboard-list"></i> Entry Requirements</a>
+    <a href="#fees"          class="adm-nav-pill"><i data-lucide="wallet"></i> Fees & Payment</a>
+    <a href="#support"       class="adm-nav-pill"><i data-lucide="headphones"></i> Support</a>
+  </div>
+</nav>
+
+<!-- ------------------ SECTION 1: OVERVIEW ------------------ -->
+<section id="overview" class="adm-section adm-section--cream">
+  <span class="adm-sec-num">01</span>
+  <div class="adm-section-wrap">
+    <div class="adm-eyebrow"><i data-lucide="layout-grid"></i> Admissions at GoCare</div>
+    <h2 class="adm-sec-heading">Welcome to <em>GoCare</em> Admissions</h2>
+    <p class="adm-sec-sub">Everything you need to join Kenya's leading healthcare, hospitality, and social sciences training institute &ndash; from choosing your programme to completing your enrolment.</p>
+
+    <div class="adm-overview-grid">
+      <div class="adm-ov-card">
+        <div class="adm-ov-icon adm-ov-icon--purple"><i data-lucide="mouse-pointer-click"></i></div>
+        <h4>Simple Application</h4>
+        <p>Apply online in minutes via our portal. No complex paperwork &ndash; just fill, upload, and submit.</p>
+        <a href="#how-to-apply" class="adm-ov-link">See the steps <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="adm-ov-card">
+        <div class="adm-ov-icon adm-ov-icon--orange"><i data-lucide="calendar-check"></i></div>
+        <h4>Rolling Intake</h4>
+        <p>We accept new students every month &mdash; January through December &mdash; so you can start whenever you&rsquo;re ready.</p>
+        <a href="apply.html" class="adm-ov-link">Apply Now <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="adm-ov-card">
+        <div class="adm-ov-icon adm-ov-icon--teal"><i data-lucide="shield-check"></i></div>
+        <h4>TVETA Accredited &amp; Licensed</h4>
+        <p>Fully accredited by TVETA, TVET CDACC, NITA and internationally recognised &ndash; your certificate holds global value.</p>
+        <a href="#requirements" class="adm-ov-link">Check requirements <i data-lucide="arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="adm-divider"></div>
+
+<!-- ------------------ SECTION 2: HOW TO APPLY ------------------ -->
+<section id="how-to-apply" class="adm-section adm-section--dark">
+  <span class="adm-sec-num">02</span>
+  <div class="adm-section-wrap">
+    <div class="adm-eyebrow"><i data-lucide="mouse-pointer-click"></i> Application Process</div>
+    <h2 class="adm-sec-heading">How to <em>Apply</em></h2>
+    <p class="adm-sec-sub">Our digital admissions process is fast and straightforward. Follow these four steps to secure your place at GoCare.</p>
+
+    <div class="adm-steps-layout">
+      <div class="adm-steps-list">
+        <div class="adm-step-item">
+          <div class="adm-step-num">1</div>
+          <div class="adm-step-body">
+            <h4>Create an Account</h4>
+            <p>Visit our online admissions portal and register your student account with a valid email address and phone number.</p>
+          </div>
+        </div>
+        <div class="adm-step-item">
+          <div class="adm-step-num">2</div>
+          <div class="adm-step-body">
+            <h4>Fill the Application Form</h4>
+            <p>Complete the online form with your personal details, academic background, and preferred programme of study.</p>
+          </div>
+        </div>
+        <div class="adm-step-item">
+          <div class="adm-step-num">3</div>
+          <div class="adm-step-body">
+            <h4>Upload Your Documents</h4>
+            <p>Upload scanned copies of your KCSE certificate, National ID or Passport, and two recent passport photos.</p>
+          </div>
+        </div>
+        <div class="adm-step-item">
+          <div class="adm-step-num">4</div>
+          <div class="adm-step-body">
+            <h4>Submit &amp; Track Your Status</h4>
+            <p>Submit your application and use the portal to track your admission status in real time. Receive your offer letter by email.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="adm-steps-img">
+        <img loading="lazy" decoding="async" src="images/new-images/DSC06020.jpg" alt="GoCare graduate holding her certificate">
+        <div class="adm-steps-img-badge">
+          <strong>5 min</strong>
+          <span>Average application time</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:40px;">
+      <a href="apply.html" style="display:inline-flex;align-items:center;gap:8px;background:#ec7424;color:#fff;padding:14px 32px;border-radius:50px;font-weight:700;font-size:.95rem;text-decoration:none;">
+        Start Your Application <i data-lucide="arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="adm-divider"></div>
+
+<!-- ------------------ SECTION 3: INTAKES ------------------ -->
+<section id="intakes" class="adm-section adm-section--white">
+  <span class="adm-sec-num">03</span>
+  <div class="adm-section-wrap">
+    <style>
+      .intk-block{display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center;}
+      .intk-live{display:inline-flex;align-items:center;gap:9px;background:rgba(236,116,36,.1);border:1px solid rgba(236,116,36,.32);color:var(--o);font-size:.72rem;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;padding:8px 16px;border-radius:50px;margin-bottom:20px;}
+      .intk-live-dot{width:9px;height:9px;border-radius:50%;background:var(--o);animation:intkPulse 1.8s infinite;}
+      @keyframes intkPulse{0%{box-shadow:0 0 0 0 rgba(236,116,36,.5)}70%{box-shadow:0 0 0 11px rgba(236,116,36,0)}100%{box-shadow:0 0 0 0 rgba(236,116,36,0)}}
+      .intk-title{font-family:'Outfit',sans-serif;font-size:clamp(1.9rem,3.8vw,2.7rem);font-weight:800;color:var(--dark);line-height:1.08;margin:0 0 14px;}
+      .intk-title span{color:var(--o);}
+      .intk-sub{font-size:1.02rem;color:#5b6472;line-height:1.65;margin:0 0 24px;max-width:460px;}
+      .intk-banner{display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,var(--o),#d05d15);border-radius:14px;padding:18px 22px;margin-bottom:26px;box-shadow:0 14px 32px rgba(236,116,36,.3);}
+      .intk-banner i{width:26px;height:26px;color:#fff;flex-shrink:0;}
+      .intk-banner strong{color:#fff;font-size:1.02rem;font-weight:800;line-height:1.4;}
+      .intk-list{list-style:none;padding:0;margin:0 0 30px;display:flex;flex-direction:column;gap:14px;}
+      .intk-list li{display:flex;align-items:center;gap:13px;color:#334155;font-size:.98rem;line-height:1.4;}
+      .intk-check{width:27px;height:27px;border-radius:8px;background:rgba(236,116,36,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+      .intk-check svg{width:15px;height:15px;color:var(--o);}
+      .intk-btns{display:flex;gap:14px;flex-wrap:wrap;}
+      .intk-btn-primary{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,#ff9f43,var(--o));color:#fff;padding:15px 30px;border-radius:50px;font-weight:800;font-size:.98rem;text-decoration:none;box-shadow:0 12px 28px rgba(236,116,36,.4);transition:.25s;}
+      .intk-btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(236,116,36,.55);}
+      .intk-btn-ghost{display:inline-flex;align-items:center;gap:9px;background:transparent;border:2px solid var(--dark);color:var(--dark);padding:14px 30px;border-radius:50px;font-weight:800;font-size:.98rem;text-decoration:none;transition:.25s;}
+      .intk-btn-ghost:hover{background:var(--dark);color:#fff;}
+      /* Calendar card */
+      .intk-cal{background:#fff;border:1px solid #f0e7dc;border-radius:22px;padding:26px 24px;box-shadow:0 22px 50px rgba(100,42,126,.1);position:relative;overflow:hidden;}
+      .intk-cal::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--o),#a04bc4);}
+      .intk-cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;}
+      .intk-cal-head b{font-family:'Outfit',sans-serif;font-size:1.05rem;color:var(--dark);}
+      .intk-cal-head small{display:block;font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#94a3b8;margin-top:3px;}
+      .intk-cal-icon{width:40px;height:40px;border-radius:12px;background:rgba(236,116,36,.12);display:flex;align-items:center;justify-content:center;color:var(--o);flex-shrink:0;}
+      .intk-cal-icon svg{width:20px;height:20px;}
+      .intk-months{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+      .intk-mchip{display:flex;flex-direction:column;align-items:center;gap:4px;padding:13px 6px;border-radius:12px;background:#faf7f2;border:1px solid #f1eae0;transition:.2s;}
+      .intk-mchip b{font-family:'Outfit',sans-serif;font-size:.92rem;font-weight:700;color:var(--dark);}
+      .intk-mchip span{font-size:.56rem;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:#2e9e4f;}
+      .intk-mchip--now{background:linear-gradient(135deg,#ff9f43,var(--o));border-color:transparent;box-shadow:0 10px 22px rgba(236,116,36,.4);}
+      .intk-mchip--now b{color:#fff;}
+      .intk-mchip--now span{color:rgba(255,255,255,.92);}
+      .intk-cal-foot{margin-top:18px;display:flex;align-items:center;gap:8px;font-size:.82rem;color:#64748b;line-height:1.45;}
+      .intk-cal-foot svg{width:16px;height:16px;color:var(--o);flex-shrink:0;}
+      @media(max-width:860px){ .intk-block{grid-template-columns:1fr;gap:34px;} }
+    </style>
+    <div class="adm-eyebrow"><i data-lucide="calendar"></i> When to Join</div>
+    <div class="intk-block">
+      <div>
+        <span class="intk-live"><span class="intk-live-dot"></span> Registration Ongoing</span>
+        <h2 class="intk-title">Intakes &amp; <span>Deadlines</span></h2>
+        <p class="intk-sub">Stay informed about current and upcoming intakes &mdash; plan your enrolment early and secure your place.</p>
+        <div class="intk-banner">
+          <i data-lucide="megaphone"></i>
+          <strong>Registration &amp; Admission for the Upcoming Intake is Ongoing &mdash; Apply Now!</strong>
+        </div>
+        <ul class="intk-list">
+          <li><span class="intk-check"><i data-lucide="check"></i></span> Multiple intakes throughout the year for different schedules.</li>
+          <li><span class="intk-check"><i data-lucide="check"></i></span> Admissions open on a rolling basis for select programmes.</li>
+          <li><span class="intk-check"><i data-lucide="check"></i></span> Apply early to secure your place in the next intake.</li>
+        </ul>
+        <div class="intk-btns">
+          <a href="apply.html" class="intk-btn-primary">Apply Now <i data-lucide="arrow-right" style="width:18px;height:18px;"></i></a>
+          <a href="courses.html" class="intk-btn-ghost">View Programmes</a>
+        </div>
+      </div>
+
+      <div class="intk-cal">
+        <div class="intk-cal-head">
+          <div><b>Intake Calendar</b><small>New cohorts every month</small></div>
+          <span class="intk-cal-icon"><i data-lucide="calendar-days"></i></span>
+        </div>
+        <div class="intk-months" id="intkMonths">
+          <div class="intk-mchip" data-m="0"><b>Jan</b><span>Open</span></div>
+          <div class="intk-mchip" data-m="1"><b>Feb</b><span>Open</span></div>
+          <div class="intk-mchip" data-m="2"><b>Mar</b><span>Open</span></div>
+          <div class="intk-mchip" data-m="3"><b>Apr</b><span>Open</span></div>
+          <div class="intk-mchip" data-m="4"><b>May</b><span>Open</span></div>
+          <div class="intk-mchip" data-m="5"><b>Jun</b><span>Open</span></div>
+          <div class="intk-mchip" data-m="6"><b>Jul</b><span>Open</span></div>
+          <div class="intk-mchip" data-m="7"><b>Aug</b><span>Open</span></div>
+          <div class="intk-mchip" data-m="8"><b>Sep</b><span>Open</span></div>
+          <div class="intk-mchip" data-m="9"><b>Oct</b><span>Open</span></div>
+          <div class="intk-mchip" data-m="10"><b>Nov</b><span>Open</span></div>
+          <div class="intk-mchip" data-m="11"><b>Dec</b><span>Open</span></div>
+        </div>
+        <div class="intk-cal-foot"><i data-lucide="repeat"></i> Rolling admissions &mdash; enrol any month and start in the next available cohort.</div>
+      </div>
+    </div>
+    <script>
+      (function(){
+        var now = new Date().getMonth();
+        var chips = document.querySelectorAll('#intkMonths .intk-mchip');
+        chips.forEach(function(c){
+          if (parseInt(c.getAttribute('data-m'), 10) === now) {
+            c.classList.add('intk-mchip--now');
+            var s = c.querySelector('span'); if (s) s.textContent = 'Now';
+          }
+        });
+      })();
+    </script>
+  </div>
+</section>
+
+<div class="adm-divider"></div>
+
+<!-- ------------------ SECTION 4: ENTRY REQUIREMENTS ------------------ -->
+<section id="requirements" class="adm-section adm-section--dark">
+  <span class="adm-sec-num">04</span>
+  <div class="adm-section-wrap">
+    <div class="adm-eyebrow"><i data-lucide="clipboard-list"></i> Eligibility</div>
+    <h2 class="adm-sec-heading">Entry <em>Requirements</em></h2>
+    <p class="adm-sec-sub">At GoCare Training Institute, every learner has a pathway to success &mdash; no one is left behind.</p>
+
+    <style>
+      .er-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:920px;}
+      .er-card{position:relative;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:28px 26px;transition:transform .28s,border-color .28s,background .28s,box-shadow .28s;overflow:hidden;}
+      .er-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--o),transparent);}
+      .er-card::after{content:attr(data-num);position:absolute;right:16px;bottom:6px;font-family:'Outfit',sans-serif;font-size:4.5rem;font-weight:900;line-height:1;color:rgba(255,255,255,.05);pointer-events:none;}
+      .er-card:hover{transform:translateY(-6px);border-color:rgba(236,116,36,.55);background:rgba(255,255,255,.09);box-shadow:0 22px 46px rgba(0,0,0,.32);}
+      .er-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,#ff9f43,#d05d15);display:flex;align-items:center;justify-content:center;margin-bottom:18px;box-shadow:0 10px 22px rgba(236,116,36,.4);position:relative;z-index:1;}
+      .er-icon svg{width:24px;height:24px;color:#fff;}
+      .er-card h4{font-family:'Outfit',sans-serif;font-size:1.16rem;font-weight:800;color:#fff;margin:0 0 8px;position:relative;z-index:1;}
+      .er-card p{font-size:.92rem;color:rgba(255,255,255,.74);line-height:1.6;margin:0;position:relative;z-index:1;}
+      .er-card--cta{background:linear-gradient(140deg,rgba(236,116,36,.24),rgba(236,116,36,.07));border-color:rgba(236,116,36,.42);text-decoration:none;display:block;}
+      .er-card--cta:hover{background:linear-gradient(140deg,rgba(236,116,36,.34),rgba(236,116,36,.12));transform:translateY(-6px);}
+      .er-card--cta .er-icon{background:linear-gradient(135deg,#fff,#ffe6d2);}
+      .er-card--cta .er-icon svg{color:var(--o);}
+      .er-cta-link{display:inline-flex;align-items:center;gap:7px;margin-top:16px;color:var(--o);font-weight:800;font-size:.9rem;position:relative;z-index:1;}
+      .er-cta-link svg{width:16px;height:16px;transition:transform .2s;}
+      .er-card--cta:hover .er-cta-link svg{transform:translateX(4px);}
+      @media(max-width:720px){ .er-grid{grid-template-columns:1fr;} }
+    </style>
+    <div class="er-grid">
+      <div class="er-card" data-num="01">
+        <div class="er-icon"><i data-lucide="award"></i></div>
+        <h4>Any KCSE Grade Qualifies</h4>
+        <p>From A to E, your KCSE mean grade opens a pathway to a course that fits you.</p>
+      </div>
+      <div class="er-card" data-num="02">
+        <div class="er-icon"><i data-lucide="sliders-horizontal"></i></div>
+        <h4>Course-Specific Entry</h4>
+        <p>Different courses have their own entry requirements, levels, and durations.</p>
+      </div>
+      <div class="er-card" data-num="03">
+        <div class="er-icon"><i data-lucide="file-check-2"></i></div>
+        <h4>KCPE Holders Welcome</h4>
+        <p>Completed KCPE? You also qualify to enrol in selected foundation programmes.</p>
+      </div>
+      <a class="er-card er-card--cta" data-num="04" href="courses.html">
+        <div class="er-icon"><i data-lucide="search"></i></div>
+        <h4>Check Your Course</h4>
+        <p>Visit individual course pages for the specific requirements of each programme.</p>
+        <span class="er-cta-link">Browse all courses <i data-lucide="arrow-right"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="adm-divider"></div>
+
+<!-- ------------------ SECTION 5: FEES & PAYMENT ------------------ -->
+<section id="fees" class="adm-section adm-section--cream">
+  <span class="adm-sec-num">05</span>
+  <div class="adm-section-wrap">
+    <div class="adm-eyebrow"><i data-lucide="wallet"></i> Fees &amp; Financing</div>
+    <h2 class="adm-sec-heading">Fees &amp; <em>Payment Options</em></h2>
+    <p class="adm-sec-sub">GoCare offers transparent, affordable fees with multiple financing options to ensure quality education is accessible to everyone.</p>
+
+    <div class="adm-fees-grid">
+      <div class="adm-fee-card">
+        <div class="adm-fee-icon adm-fee-icon--plan"><i data-lucide="wallet"></i></div>
+        <h4>One-off Payments</h4>
+        <p>Settle your tuition in a single, full payment at the start of the term &ndash; simple, convenient, and hassle-free.</p>
+      </div>
+      <div class="adm-fee-card">
+        <div class="adm-fee-icon adm-fee-icon--mobile"><i data-lucide="calendar-range"></i></div>
+        <h4>Flexible Payments</h4>
+        <p>Spread your tuition across manageable monthly or termly instalments, paid conveniently via M-Pesa Paybill, bank transfer, or direct deposit.</p>
+      </div>
+    </div>
+
+    <div class="adm-fee-note">
+      <i data-lucide="info"></i>
+      <p>Detailed fee structures are provided with your admission letter as costs vary by programme. For a fee estimate, contact our admissions team or <a href="#support" style="color:#ec7424;font-weight:700;">visit the Support section below.</a> <strong>Second course sponsorship</strong> is also available for eligible enrolled students.</p>
+    </div>
+  </div>
+</section>
+
+<div class="adm-divider"></div>
+
+<!-- ------------------ SECTION 6: ADMISSIONS SUPPORT ------------------ -->
+<section id="support" class="adm-section adm-section--dark">
+  <span class="adm-sec-num">06</span>
+  <div class="adm-section-wrap">
+    <div class="adm-eyebrow"><i data-lucide="headphones"></i> We Are Here for You</div>
+    <h2 class="adm-sec-heading">Admissions <em>Support</em></h2>
+    <p class="adm-sec-sub">Our dedicated admissions team is available to guide you through every step of the process &ndash; from choosing a course to completing your enrolment.</p>
+
+    <div class="adm-support-grid">
+      <div class="adm-support-card">
+        <div class="adm-support-icon"><i data-lucide="message-circle"></i></div>
+        <h4>WhatsApp Helpdesk</h4>
+        <p>Get instant responses 24/7 via our WhatsApp helpdesk. Ideal for quick questions about courses, requirements, and deadlines.</p>
+        <a href="https://wa.me/254703115502" class="adm-support-link" target="_blank">Chat on WhatsApp <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="adm-support-card">
+        <div class="adm-support-icon"><i data-lucide="mail"></i></div>
+        <h4>Email Support</h4>
+        <p>Send detailed queries to our admissions team. We respond within 24 hours on business days.</p>
+        <a href="mailto:info@gocareinstitute.ac.ke" class="adm-support-link">Send an Email <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="adm-support-card">
+        <div class="adm-support-icon"><i data-lucide="map-pin"></i></div>
+        <h4>Campus Visit</h4>
+        <p>Visit our Nairobi campus admissions desk Monday&ndash;Friday, 8:00 AM &ndash; 5:00 PM for in-person guidance and document submission.</p>
+        <a href="contact.html#location" class="adm-support-link">Get Directions <i data-lucide="arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<div class="adm-final-cta">
+  <h3>Ready to Take the First Step?</h3>
+  <p>Join thousands of GoCare graduates building rewarding careers across Kenya and internationally.</p>
+  <div class="adm-final-btns">
+    <a href="apply.html" class="adm-final-btn-primary"><i data-lucide="arrow-right"></i> Apply Now</a>
+    <a href="docs/GoCare%20Training%20Institute%20Prospectus.pdf" class="adm-final-btn-ghost" target="_blank">Download Prospectus</a>
+  </div>
+</div>
+
+<script>
+  /* Highlight active pill on scroll */
+  (function() {
+    var pills = document.querySelectorAll('.adm-nav-pill');
+    var sections = ['overview','how-to-apply','intakes','requirements','fees','support'];
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          var id = e.target.id;
+          pills.forEach(function(p) {
+            p.classList.toggle('active', p.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) obs.observe(el);
+    });
+  })();
+</script>
+
+<footer id="contactSection" class="footer">
+    <!-- Decorative pattern overlay -->
+    <div class="footer-pattern" aria-hidden="true"></div>
+
+    <div class="footer-top footer-top--five">
+      <!-- Brand Column -->
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <img loading="eager" decoding="async" src="images/gocare-institute-logo-white.png" alt="GoCare Logo" style="height: 48px; width: auto; margin-bottom: 8px;">
+        </a>
+        <p>GoCare Training Institute offers expert-led healthcare education to shape your future.</p>
+        <p class="footer-tagline"><em>Train with the Experts&hellip; Become an Expert!</em></p>
+      </div>
+
+      <!-- Schools & Programs Column -->
+      <div class="footer-col">
+        <h4>Schools &amp; Programs</h4>
+        <ul class="footer-icon-list">
+          <li>
+            <a href="schools/medical-health-sciences.html">
+              School of Medical &amp; Health Sciences
+            </a>
+          </li>
+          <li>
+            <a href="schools/hospitality-management.html">
+              School of Hospitality Management
+            </a>
+          </li>
+          <li>
+            <a href="schools/social-sciences-business.html">
+              School of Social Sciences &amp; Business Management
+            </a>
+          </li>
+          <li>
+            <a href="schools/international-certifications.html">
+              International Certifications
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Resources Column -->
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul class="footer-icon-list">
+          <li>
+            <a href="student-resources.html">
+              Student Resources
+            </a>
+          </li>
+          <li>
+            <a href="downloads.html">
+              Downloads
+            </a>
+          </li>
+          <li>
+            <a href="blog.html">
+              Blogs &amp; Articles
+            </a>
+          </li>
+          <li>
+            <a href="student-testimonials-success-stories.html">
+              Testimonials &amp; Success Stories
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Quick Links Column -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-icon-list">
+          
+          
+          
+          <li><a href="industrial-attachment.html">Industrial &amp; Field Attachment</a></li><li><a href="student-support-services.html">Student Support Services</a></li><li><a href="modes-of-study.html">Modes of Study</a></li><li>
+            <a href="apply.html">
+              Apply Now
+            </a>
+          </li>
+          <li>
+            <a href="docs/GoCare%20Training%20Institute%20Prospectus.pdf" target="_blank">
+              Download Prospectus
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Student Portal
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Staff Portal
+            </a>
+          </li>
+        
+          <li><a href="hostels-and-accommodation.html">Hostels &amp; Accommodation</a></li></ul>
+      </div>
+
+      <!-- Contact Us Column -->
+      <div class="footer-col footer-contact-col">
+        <h4>Contact Us</h4>
+        <div class="contact-group">
+          <div class="contact-icon-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e74c3c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span class="contact-detail-text">Nairobi City Campus, Nairobi CBD, GatKim Complex, Temple Road</span>
+          </div>
+        </div>
+        <div class="contact-group">
+          <div class="contact-icon-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e74c3c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span class="contact-detail-text">Thika Road Campus, Eastern Bypass, Kamakis, Ruiru</span>
+          </div>
+        </div>
+        <div class="contact-group">
+          <div class="contact-icon-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e74c3c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <span class="contact-detail-text">0703 115 502 | 0745 229 485 | 0745 220 344</span>
+          </div>
+        </div>
+        <div class="contact-group">
+          <div class="contact-icon-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e74c3c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <a href="mailto:info@gocareinstitute.ac.ke" class="contact-detail-text" style="color:inherit;text-decoration:none">info@gocareinstitute.ac.ke</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Accreditation Tagline Bar -->
+    <div class="footer-accred-bar">
+      <p class="accred-tagline">TRAIN WITH THE EXPERTS &hellip; BECOME AN EXPERT!</p>
+      <div class="accred-badges">
+        <span class="accred-badge"><img loading="eager" decoding="async" src="images/partners/TVETA.png" alt="TVETA logo"></span>
+        <span class="accred-badge"><img loading="eager" decoding="async" src="images/partners/tveta curriculum.png" alt="TVET CDACC logo"></span>
+        <span class="accred-badge"><img loading="eager" decoding="async" src="images/partners/national_industrial_training_authority_logo.png" alt="NITA logo"></span>
+        <span class="accred-badge"><img loading="eager" decoding="async" src="images/partners/khpoa.png" alt="KHPOA logo"></span>
+        <span class="accred-badge"><img loading="eager" decoding="async" src="images/partners/ministry of education.png" alt="Ministry of Education logo"></span>
+        <span class="accred-badge"><img loading="eager" decoding="async" src="images/partners/knec.png" alt="KNEC logo"></span>
+        <span class="accred-badge"><img loading="eager" decoding="async" src="images/partners/amca.png" alt="AMCA logo"></span>
+        <span class="accred-badge"><img loading="eager" decoding="async" src="images/partners/SDCC.png" alt="Skill Development Council Canada logo"></span>
+        <span class="accred-badge"><img loading="eager" decoding="async" src="images/partners/American_Heart_Association_Logo.svg" alt="American Heart Association logo"></span>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom footer-bottom--redesigned">
+      <div class="footer-bottom-left">
+        <!-- Social Icons -->
+        <div class="socials">
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/GoCareTrainingInstitute/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
+          </a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/gocaretraininginstitute/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            </svg>
+          </a>
+          <!-- X -->
+          <a href="https://x.com/GoCareInstitute" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="X">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+          <!-- TikTok -->
+          <a href="https://www.tiktok.com/@gocaretraininginstitute" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.08-.14 1.62.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://ke.linkedin.com/company/gocaretraininginstitute" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/@gocaretraininginstitute" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2026 GoCare Training Institute. All rights reserved. | TVETA Accredited &amp; Licensed | TVET CDACC Approved | NITA Accredited | Globally Recognized</p>
+      </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+  <script>
+    (function(){
+      var btn = document.getElementById('backToTop');
+      if(!btn) return;
+      window.addEventListener('scroll', function(){
+        btn.classList.toggle('visible', window.scrollY > 400);
+      });
+      btn.addEventListener('click', function(){
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
+  <script src="mobile-nav.js"></script>
+</body>
+</html>
