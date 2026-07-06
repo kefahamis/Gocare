@@ -4099,7 +4099,7 @@ footer#contactSection::after {
 }
 
 .footer-top--five {
-  grid-template-columns: 1.4fr 1.2fr 1fr 1fr 0.9fr;
+  grid-template-columns: 1.1fr 1.2fr 1fr 1fr 0.9fr;
   gap: 36px;
 }
 
@@ -4381,7 +4381,7 @@ footer#contactSection::after {
 
 /* ---------- 5-Column Footer Grid ---------- */
 .footer-top--five {
-  grid-template-columns: 1.4fr 1.2fr 1fr 1fr 0.9fr;
+  grid-template-columns: 1.1fr 1.2fr 1fr 1fr 0.9fr;
   gap: 36px;
 }
 
@@ -4450,12 +4450,15 @@ footer#contactSection::after {
 .footer-contact-col .contact-icon-label {
   margin-bottom: 0;
   gap: 10px;
+  align-items: flex-start;
 }
 
 .contact-detail-text {
   font-size: 0.88rem;
   color: rgba(200, 214, 229, 0.75);
   font-family: "Inter", sans-serif;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 /* ---------- Footer Mini Map ---------- */
@@ -9712,7 +9715,7 @@ textarea.form-control {
 }
 
 .footer-top.footer-top--five {
-  grid-template-columns: 1.4fr 1.2fr 1fr 1fr 0.9fr;
+  grid-template-columns: 1.1fr 1.2fr 1fr 1fr 0.9fr;
   gap: 36px;
 }
 
@@ -13613,7 +13616,10 @@ section, .section, .courses-sec, .why-us-sec, .testimonials-sec, .highlighted-se
    ═══════════════════════════════════════════════════════════ */
 
 /* ── Prevent horizontal overflow globally ── */
-html, body { overflow-x: hidden; }
+/* Use `clip` not `hidden`: `hidden` forces overflow-y to auto, making body a
+   scroll container which breaks `position: sticky` on the nav. `clip` prevents
+   horizontal overflow without establishing a scroll container. */
+html, body { overflow-x: clip; }
 img, video, iframe { max-width: 100%; }
 
 /* ── Topbar ── */
