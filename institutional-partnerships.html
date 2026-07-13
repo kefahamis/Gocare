@@ -474,5 +474,8 @@
     (function () { var b = document.getElementById('backToTop'); if (!b) return; window.addEventListener('scroll', function () { b.classList.toggle('visible', window.scrollY > 400); }); b.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); }); })();
   </script>
   <script src="mobile-nav.js"></script>
+  <script src="search-index.js" defer></script>
+  <script id="gc-search-js" src="search.js" defer></script>
+  <script src="accessibility.js" defer></script>
 </body>
 </html>
