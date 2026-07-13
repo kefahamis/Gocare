@@ -44,12 +44,12 @@
     ".gc-a11y-ov.open{opacity:1;pointer-events:auto;}" +
     ".gc-a11y-panel{position:fixed;left:0;top:0;bottom:0;width:340px;max-width:88vw;background:#fff;z-index:99999;box-shadow:6px 0 40px rgba(20,8,32,.3);transform:translateX(-105%);transition:transform .28s cubic-bezier(.16,1,.3,1);display:flex;flex-direction:column;font-family:'Inter',system-ui,sans-serif;color:#2a1740;}" +
     ".gc-a11y-panel.open{transform:none;}" +
-    ".gc-a11y-hd{display:flex;align-items:center;gap:12px;padding:20px 20px 16px;background:linear-gradient(135deg,#54206e,#33104a);color:#fff;}" +
-    ".gc-a11y-hd svg{width:30px;height:30px;flex-shrink:0;filter:drop-shadow(0 1px 2px rgba(0,0,0,.35));}" +
+    ".gc-a11y-hd{display:flex;align-items:center;gap:12px;padding:20px 20px 16px;background:linear-gradient(135deg,#4a1a6d,#2c0f44);color:#fff;}" +
+    ".gc-a11y-hd svg{width:30px;height:30px;flex-shrink:0;filter:drop-shadow(0 1px 2px rgba(0,0,0,.4));}" +
     ".gc-a11y-hd h2{font-family:'Outfit','Inter',sans-serif;font-size:1.12rem;font-weight:800;margin:0;line-height:1.1;color:#fff;}" +
-    ".gc-a11y-hd p{margin:3px 0 0;font-size:.75rem;font-weight:500;color:#ede1f8;opacity:1;}" +
-    ".gc-a11y-x{margin-left:auto;background:rgba(255,255,255,.24);border:0;color:#fff;width:30px;height:30px;border-radius:8px;cursor:pointer;font-size:1.2rem;line-height:1;transition:background .15s;}" +
-    ".gc-a11y-x:hover{background:rgba(255,255,255,.38);}" +
+    ".gc-a11y-hd p{margin:3px 0 0;font-size:.75rem;font-weight:500;color:#efe4f9;opacity:1;}" +
+    ".gc-a11y-x{margin-left:auto;background:#fff;border:0;color:#4a1a6d;width:32px;height:32px;border-radius:9px;cursor:pointer;font-size:1.25rem;font-weight:700;line-height:1;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.2);transition:background .15s,transform .15s;}" +
+    ".gc-a11y-x:hover{background:#f0e6f8;transform:scale(1.06);}" +
     ".gc-a11y-body{overflow-y:auto;padding:16px;flex:1;}" +
     ".gc-a11y-sec{font-size:.66rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#9b8bb0;margin:14px 4px 8px;}" +
     ".gc-a11y-sec:first-child{margin-top:0;}" +
@@ -65,6 +65,18 @@
     ".gc-a11y-rate{display:flex;gap:6px;margin-top:8px;}" +
     ".gc-a11y-rate button{flex:1;border:1px solid #e6ddf0;background:#faf7fd;border-radius:8px;padding:7px;font-size:.72rem;font-weight:700;color:#6b6478;cursor:pointer;}" +
     ".gc-a11y-rate button.on{background:#642a7e;border-color:#642a7e;color:#fff;}" +
+    ".gc-a11y-panel [hidden]{display:none !important;}" +
+    ".gc-a11y-play{width:100%;display:flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:12px;padding:14px;font-family:'Outfit','Inter',sans-serif;font-size:.92rem;font-weight:800;cursor:pointer;background:linear-gradient(135deg,#642a7e,#4a1a6d);color:#fff;box-shadow:0 6px 16px rgba(74,26,109,.3);transition:filter .18s,background .18s;}" +
+    ".gc-a11y-play:hover{filter:brightness(1.09);}" +
+    ".gc-a11y-play .gc-a11y-play-ic{display:inline-flex;}" +
+    ".gc-a11y-play svg{width:20px;height:20px;}" +
+    ".gc-a11y-play.playing{background:linear-gradient(135deg,#e8543c,#c2410c);box-shadow:0 6px 16px rgba(194,65,12,.35);}" +
+    ".gc-a11y-tts-status{display:flex;align-items:center;gap:8px;justify-content:center;margin-top:10px;font-size:.78rem;font-weight:700;color:#642a7e;}" +
+    ".gc-a11y-dot{width:9px;height:9px;border-radius:50%;background:#e8543c;flex-shrink:0;animation:gcBlink 1s ease-in-out infinite;}" +
+    "@keyframes gcBlink{0%,100%{opacity:1;}50%{opacity:.2;}}" +
+    ".gc-a11y-mini{margin-top:9px;width:100%;border:1px solid #e6ddf0;background:#faf7fd;border-radius:10px;padding:10px;font-weight:700;font-size:.82rem;color:#4a1a6d;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;}" +
+    ".gc-a11y-mini:hover{border-color:#642a7e;background:#f3ecfa;}" +
+    ".gc-a11y-mini svg{width:16px;height:16px;}" +
     ".gc-a11y-reset{width:100%;margin-top:14px;border:1px solid #f0c9b3;background:#fff5ef;color:#c2410c;border-radius:10px;padding:11px;font-weight:800;font-size:.82rem;cursor:pointer;}" +
     ".gc-a11y-reset:hover{background:#ffe9dc;}" +
     ".gc-a11y-guide{position:fixed;left:0;right:0;height:44px;background:rgba(100,42,126,.14);border-top:2px solid #642a7e;border-bottom:2px solid #642a7e;z-index:99997;pointer-events:none;display:none;}" +
@@ -99,7 +111,10 @@
       speak: '<path d="M11 5L6 9H2v6h4l5 4zM15 9a5 5 0 0 1 0 6M18 7a8 8 0 0 1 0 10"/>',
       mute: '<path d="M11 5L6 9H2v6h4l5 4zM22 9l-6 6M16 9l6 6"/>',
       sound: '<path d="M9 18V5l12-2v13M9 13l12-2"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>',
-      solid: '<rect x="3" y="3" width="18" height="18" rx="2" fill="currentColor"/>'
+      solid: '<rect x="3" y="3" width="18" height="18" rx="2" fill="currentColor"/>',
+      play: '<path d="M7 4.5v15l12-7.5z" fill="currentColor" stroke="none"/>',
+      stop: '<rect x="6" y="6" width="12" height="12" rx="2.5" fill="currentColor" stroke="none"/>',
+      pause: '<rect x="7" y="5" width="3.6" height="14" rx="1.3" fill="currentColor" stroke="none"/><rect x="13.4" y="5" width="3.6" height="14" rx="1.3" fill="currentColor" stroke="none"/>'
     }[name] || "";
     return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + p + "</svg>";
   }
@@ -189,20 +204,59 @@
     }
   }
 
-  // Read aloud
-  var speaking = false;
-  function readAloud() {
-    if (!("speechSynthesis" in window)) { alert("Read-aloud is not supported by this browser."); return; }
-    if (speaking) { window.speechSynthesis.cancel(); speaking = false; syncBtns(); return; }
+  // Read aloud — state machine: "idle" | "playing" | "paused"
+  var tts = "idle", ttsKeepAlive = null;
+  function ttsSupported() { return "speechSynthesis" in window && "SpeechSynthesisUtterance" in window; }
+
+  function ttsUI() {
+    if (!panel) return;
+    var b = panel.querySelector("#gcRead"); if (!b) return;
+    var ic = b.querySelector(".gc-a11y-play-ic"), tx = b.querySelector(".gc-a11y-play-tx");
+    var status = panel.querySelector("#gcTtsStatus"), pauseBtn = panel.querySelector("#gcPause");
+    if (tts === "idle") {
+      b.classList.remove("playing");
+      if (ic) ic.innerHTML = icon("play");
+      if (tx) tx.textContent = "Read Page Aloud";
+      if (status) status.hidden = true;
+      if (pauseBtn) pauseBtn.hidden = true;
+    } else {
+      b.classList.add("playing");
+      if (ic) ic.innerHTML = icon("stop");
+      if (tx) tx.textContent = "Stop Reading";
+      if (status) { status.hidden = false; status.innerHTML = '<span class="gc-a11y-dot"></span> ' + (tts === "paused" ? "Paused" : "Reading page aloud…"); }
+      if (pauseBtn) { pauseBtn.hidden = false; pauseBtn.innerHTML = (tts === "paused" ? icon("play") + "<span>Resume</span>" : icon("pause") + "<span>Pause</span>"); }
+    }
+  }
+
+  function ttsStop() {
+    try { window.speechSynthesis.cancel(); } catch (e) {}
+    clearInterval(ttsKeepAlive); ttsKeepAlive = null;
+    tts = "idle"; ttsUI();
+  }
+  function ttsStart() {
+    if (!ttsSupported()) { alert("Sorry — read-aloud isn't supported by this browser."); return; }
     var src = document.querySelector("main") || document.querySelector(".ph-content") || document.body;
     var text = (src.innerText || "").replace(/\s+/g, " ").trim().slice(0, 16000);
     if (!text) return;
+    try { window.speechSynthesis.cancel(); } catch (e) {}
     var u = new SpeechSynthesisUtterance(text);
     u.rate = state.rate;
-    u.onend = function () { speaking = false; syncBtns(); };
-    window.speechSynthesis.cancel();
-    window.speechSynthesis.speak(u);
-    speaking = true; syncBtns();
+    u.onend = u.onerror = function () {
+      if (tts !== "idle") { clearInterval(ttsKeepAlive); ttsKeepAlive = null; tts = "idle"; ttsUI(); }
+    };
+    try { window.speechSynthesis.speak(u); }
+    catch (e) { tts = "idle"; ttsUI(); return; }
+    tts = "playing"; ttsUI();
+    // Browsers cut off long utterances (~15s); a periodic pause/resume keeps it going.
+    clearInterval(ttsKeepAlive);
+    ttsKeepAlive = setInterval(function () {
+      if (tts === "playing") { try { window.speechSynthesis.pause(); window.speechSynthesis.resume(); } catch (e) {} }
+    }, 9000);
+  }
+  function ttsToggle() { if (tts === "idle") ttsStart(); else ttsStop(); }
+  function ttsPauseResume() {
+    if (tts === "playing") { try { window.speechSynthesis.pause(); } catch (e) {} tts = "paused"; ttsUI(); }
+    else if (tts === "paused") { try { window.speechSynthesis.resume(); } catch (e) {} tts = "playing"; ttsUI(); }
   }
 
   /* ---------- apply everything from state ---------- */
@@ -235,7 +289,7 @@
   function syncBtns() {
     TOGGLES.forEach(function (t) { if (btnMap[t[0]]) btnMap[t[0]].classList.toggle("on", !!state[t[0]]); });
     if (btnMap._size) btnMap._size.textContent = fontPct() + "%";
-    if (btnMap._read) btnMap._read.classList.toggle("on", speaking);
+    ttsUI();
     ["0.7", "1", "1.4"].forEach(function (r, i) {
       var b = btnMap["_rate" + i]; if (b) b.classList.toggle("on", state.rate === +r);
     });
@@ -307,8 +361,12 @@
     });
     h += "</div>";
     h += '<div class="gc-a11y-sec">Read Aloud</div>' +
-      '<button class="gc-a11y-t" id="gcRead" style="width:100%;flex-direction:row;justify-content:center;gap:8px;">' +
-      icon("speak") + "<span>Read Page Aloud</span></button>" +
+      '<button class="gc-a11y-play" id="gcRead" aria-label="Read this page aloud">' +
+      '<span class="gc-a11y-play-ic">' + icon("play") + '</span>' +
+      '<span class="gc-a11y-play-tx">Read Page Aloud</span></button>' +
+      '<div class="gc-a11y-tts-status" id="gcTtsStatus" hidden></div>' +
+      '<button class="gc-a11y-mini" id="gcPause" aria-label="Pause or resume reading" hidden></button>' +
+      '<div class="gc-a11y-sec">Reading Speed</div>' +
       '<div class="gc-a11y-rate"><button data-rate="0.7">Slow</button>' +
       '<button data-rate="1">Normal</button><button data-rate="1.4">Fast</button></div>';
     h += '<button class="gc-a11y-reset">Reset All Settings</button></div>';
@@ -337,15 +395,16 @@
     panel.querySelectorAll("[data-tog]").forEach(function (b) {
       b.addEventListener("click", function () { var k = b.getAttribute("data-tog"); state[k] = !state[k]; applyAll(); });
     });
-    btnMap._read.addEventListener("click", readAloud);
+    panel.querySelector("#gcRead").addEventListener("click", ttsToggle);
+    panel.querySelector("#gcPause").addEventListener("click", ttsPauseResume);
     panel.querySelectorAll("[data-rate]").forEach(function (b) {
       b.addEventListener("click", function () {
         state.rate = +b.getAttribute("data-rate"); save(); syncBtns();
-        if (speaking) { window.speechSynthesis.cancel(); speaking = false; readAloud(); }
+        if (tts !== "idle") { ttsStop(); ttsStart(); }   // restart at new speed
       });
     });
     panel.querySelector(".gc-a11y-reset").addEventListener("click", function () {
-      if (speaking) { window.speechSynthesis.cancel(); speaking = false; }
+      ttsStop();
       state = Object.assign({}, DEFAULTS); applyAll();
     });
   }
