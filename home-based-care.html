@@ -163,7 +163,7 @@
   <!-- -- SUB BAR --------------------------------------- -->
   <div class="subbar">
     <div class="wrap subbar-inner">
-      <span class="subbar-tagline">TRAIN WITH THE EXPERTS &nbsp;..&nbsp; BECOME AN EXPERT!</span>
+      <span class="subbar-tagline">Train With The Experts... Become an Expert!</span>
       <div class="subbar-portals">
         <a href="#" class="subbar-btn subbar-btn--student">Student Portal</a>
         <a href="#" class="subbar-btn subbar-btn--staff">Staff Portal</a>
@@ -179,7 +179,14 @@
   
 
 <style>
-  :root { --o: #ec7424; --dark: #4a1a6d; --w: #F5F0E8; }
+  :root { --o: #ec7424; --dark: #4a1a6d; --p: #642a7e; --pl: #c9a0e9; --w: #F5F0E8; }
+
+  /* Purple theme accents — GoCare Health Solutions (owned by GoCare, purple-branded) */
+  .ghs-page .ph-eyebrow { background: rgba(100,42,126,.22); color: #e7d3f5; border-color: rgba(124,58,158,.45); }
+  .ghs-page .ph-content h1 em { color: var(--pl); }
+  .ghs-page .ph-breadcrumb a:hover { color: var(--pl); }
+  .ghs-page .ph-btn-primary { background: var(--p); box-shadow: 0 4px 14px rgba(100,42,126,.4); }
+  .ghs-page .ph-btn-primary:hover { background: var(--dark); box-shadow: 0 8px 22px rgba(74,26,109,.5); }
   .ghs-page { background: #fff; padding-bottom: 0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
   
   /* Hero GHS */
@@ -188,7 +195,7 @@
   .ghs-logo { display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 10px; }
   .ghs-logo-icon { width: 60px; height: 60px; background: var(--dark); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 800; border: 4px solid var(--o); }
   .ghs-logo-text { font-family: 'Outfit', sans-serif; text-align: left; }
-  .ghs-logo-text h2 { font-size: 3rem; color: var(--o); font-weight: 800; line-height: 0.9; margin: 0; }
+  .ghs-logo-text h2 { font-size: 3rem; color: var(--p); font-weight: 800; line-height: 0.9; margin: 0; }
   .ghs-logo-text span { font-size: 1.8rem; color: var(--dark); font-weight: 800; text-transform: uppercase; letter-spacing: 2px; }
   .ghs-tagline { font-style: italic; color: var(--dark); font-size: 1.4rem; font-weight: 600; margin-top: 15px; }
 
@@ -200,18 +207,18 @@
   .ghs-cards-row { display: flex; gap: 20px; }
   
   .ghs-card { background: #fff; border-radius: 16px; border: 1px solid #e2e8f0; padding: 30px 20px; text-align: center; flex: 1; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; position: relative; }
-  .ghs-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-color: var(--o); }
-  .ghs-card-icon { height: 70px; display: flex; align-items: center; justify-content: center; color: var(--o); margin-bottom: 20px; }
-  .ghs-card h4 { font-family: 'Outfit', sans-serif; font-size: 1.4rem; color: var(--o); line-height: 1.2; margin-bottom: 15px; min-height: 60px; display: flex; align-items: center; justify-content: center; }
+  .ghs-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-color: var(--p); }
+  .ghs-card-icon { height: 70px; display: flex; align-items: center; justify-content: center; color: var(--p); margin-bottom: 20px; }
+  .ghs-card h4 { font-family: 'Outfit', sans-serif; font-size: 1.4rem; color: var(--p); line-height: 1.2; margin-bottom: 15px; min-height: 60px; display: flex; align-items: center; justify-content: center; }
   .ghs-card p { font-size: 0.95rem; color: var(--dark); font-weight: 600; line-height: 1.4; border-top: 1px solid #f1f5f9; padding-top: 15px; }
 
   .ghs-card-tag { display: block; color: #642a7e; font-size: 1.05rem; font-weight: 800; margin-top: 2px; }
   .ghs-card--purple:hover { border-color: #642a7e; }
   .ghs-hero-footer { display: flex; justify-content: flex-end; margin-top: 40px; }
-  .btn-ghs { background: linear-gradient(to right, #f37021, #d05d15); color: #fff; padding: 15px 40px; border-radius: 50px; font-weight: 800; font-size: 1.4rem; display: flex; align-items: center; gap: 10px; text-decoration: none !important; box-shadow: 0 8px 25px rgba(237,116,37,0.3); }
+  .btn-ghs { background: linear-gradient(to right, #642a7e, #4a1a6d); color: #fff; padding: 15px 40px; border-radius: 50px; font-weight: 800; font-size: 1.4rem; display: flex; align-items: center; gap: 10px; text-decoration: none !important; box-shadow: 0 8px 25px rgba(100,42,126,0.35); }
 
   .ghs-contact-bar { background: #fff; border-top: 1px solid #e2e8f0; padding: 20px 0; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
-  .ghs-contact-item { display: flex; align-items: center; gap: 10px; color: var(--o); font-weight: 800; font-size: 1.1rem; }
+  .ghs-contact-item { display: flex; align-items: center; gap: 10px; color: var(--p); font-weight: 800; font-size: 1.1rem; }
   .ghs-contact-item i { font-size: 1.2rem; }
   .ghs-contact-item a { color: inherit; text-decoration: none; }
 
@@ -253,7 +260,7 @@
     <!-- PAGE HERO -->
   <section class="ph">
     <div class="ph-bg">
-      <img loading="eager" decoding="async" src="images/new-images/IMG_5629.jpeg" alt="GoCare Home-Based Care">
+      <img loading="eager" decoding="async" src="images/female-nurse-portrait-with-older-patient.jpg" alt="GoCare caregiver with an elderly patient at home">
     </div>
     <div class="ph-overlay"></div>
     <div class="ph-inner">
@@ -265,8 +272,7 @@
         <h1>Professional <em>Home-Based Care</em></h1>
         <p>Compassionate, professional healthcare in the comfort of your home &ndash; from nursing and elderly care to post-operative support, delivered by GoCare-trained caregivers.</p>
         <div class="ph-btns">
-          <a href="contact.html" class="ph-btn-primary">Request Home Care <i data-lucide="arrow-right"></i></a>
-          <a href="courses.html" class="ph-btn-ghost">Explore Courses <i data-lucide="arrow-right"></i></a>
+          <a href="https://gocare.co.ke/" target="_blank" rel="noopener noreferrer" class="ph-btn-primary">Request Home Care <i data-lucide="arrow-right"></i></a>
         </div>
       </div>
     </div>
@@ -301,8 +307,8 @@
               <p>Personalized medical support at home</p>
             </div>
             <div class="ghs-card ghs-card--purple">
-              <div class="ghs-card-icon" style="color:#642a7e"><i data-lucide="dumbbell" style="width:48px;height:48px"></i></div>
-              <h4 style="color:#642a7e">Physiotherapy at Home</h4>
+              <div class="ghs-card-icon" style="color:#4a1a6d"><i data-lucide="dumbbell" style="width:48px;height:48px"></i></div>
+              <h4 style="color:#4a1a6d">Physiotherapy at Home</h4>
               <p>Rehabilitation &amp; mobility recovery</p>
             </div>
             <div class="ghs-card">
@@ -333,7 +339,7 @@
   <section id="services" style="padding: 100px 0; background: #F5F0E8; scroll-margin-top: 90px;">
     <div class="wrap">
        <div style="text-align:center; margin-bottom:60px">
-         <h2 style="font-family:'Outfit', sans-serif; font-size:2.8rem; color:var(--dark); font-weight:800; margin-bottom:20px">Comprehensive <span style="color:var(--o)">Homecare</span> Solutions</h2>
+         <h2 style="font-family:'Outfit', sans-serif; font-size:2.8rem; color:var(--dark); font-weight:800; margin-bottom:20px">Comprehensive <span style="color:var(--p)">Homecare</span> Solutions</h2>
          <p style="font-size:1.2rem; color:var(--gray); max-width:800px; margin:0 auto; line-height:1.8">We bring the hospital experience to your home with professional expertise and compassionate care.</p>
        </div>
        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap:30px">

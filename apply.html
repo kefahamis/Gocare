@@ -30,11 +30,7 @@
 
     /* -- PAGE LAYOUT (transparent so watermark shows through) -- */
     .app-page { background: transparent; min-height: 80vh; padding: 0 0 80px; position: relative; z-index: 1; }
-    .app-wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 1; }
-    .app-hero { background: linear-gradient(135deg, rgba(74,26,109,0.97), rgba(100,42,126,0.97)), url('images/courses-application.jpg'); background-size: cover; background-position: center; padding: 56px 0 44px; margin-bottom: 50px; position: relative; z-index: 1; }
-    .app-hero-inner { max-width: 1100px; margin: 0 auto; padding: 0 20px; text-align: center; color: #fff; }
-    .app-hero h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.5rem; font-weight: 800; margin-bottom: 10px; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,0.35); }
-    .app-hero p { font-size: 1.1rem; color: #f0e6ff; text-shadow: 0 1px 4px rgba(0,0,0,0.3); }
+    .app-wrap { max-width: 1100px; margin: 50px auto 0; padding: 0 20px; position: relative; z-index: 1; }
 
     /* -- INTRO WELCOME SCREEN -- */
     .form-intro { background: #fff; border: 1px solid #e5e7eb; border-radius: 20px; padding: 48px 52px; margin: 0 auto 40px; max-width: 860px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
@@ -162,12 +158,9 @@
       .step-line { width: 30px; }
       .step-label { font-size: 0.7rem; max-width: 70px; }
       .app-form-card { padding: 24px; }
-      .app-hero h1 { font-size: 2rem; }
       .app-sidebar { position: static; }
     }
     @media (max-width: 480px) {
-      .app-hero { padding: 44px 16px 28px; }
-      .app-hero h1 { font-size: 1.6rem; }
       .form-intro { padding: 28px 22px; }
       .form-intro h1 { font-size: 1.5rem; }
       .app-form-card { padding: 20px 16px; }
@@ -399,7 +392,7 @@
   <!-- -- SUB BAR --------------------------------------- -->
   <div class="subbar">
     <div class="wrap subbar-inner">
-      <span class="subbar-tagline">TRAIN WITH THE EXPERTS &nbsp;..&nbsp; BECOME AN EXPERT!</span>
+      <span class="subbar-tagline">Train With The Experts... Become an Expert!</span>
       <div class="subbar-portals">
         <a href="#" class="subbar-btn subbar-btn--student">Student Portal</a>
         <a href="#" class="subbar-btn subbar-btn--staff">Staff Portal</a>
@@ -408,12 +401,27 @@
   </div>
 
   <main class="app-page">
-    <div class="app-hero">
-      <div class="app-hero-inner">
-        <h1>Application Form</h1>
-        <p id="heroSub">Registration and Admission Ongoing &mdash; Begin Your Journey</p>
+    <!-- PAGE HERO -->
+    <section class="ph">
+      <div class="ph-bg">
+        <img loading="eager" decoding="async" src="images/new-images/Admissions-hero.jpeg" alt="Apply to GoCare Training Institute">
       </div>
-    </div>
+      <div class="ph-overlay"></div>
+      <div class="ph-inner">
+        <div class="ph-content">
+          <span class="ph-eyebrow"><i data-lucide="file-edit"></i> Admissions Open</span>
+          <nav class="ph-breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a><i data-lucide="chevron-right"></i><span>Apply Now</span>
+          </nav>
+          <h1>Application <em>Form</em></h1>
+          <p id="heroSub">Registration and Admission Ongoing &mdash; Begin Your Journey</p>
+          <div class="ph-btns">
+            <a href="#formIntro" class="ph-btn-primary">Start Application <i data-lucide="arrow-right"></i></a>
+            <a href="courses.html" class="ph-btn-ghost">Explore Courses <i data-lucide="arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <div class="app-wrap">
 
@@ -638,7 +646,7 @@
                 </div>
                 <div class="form-group">
                   <label>Preferred Campus *</label>
-                  <select id="f_campus"><option value="">Select Campus</option><option>Nairobi City Campus (CBD)</option><option>Ruiru Campus (Thika Road)</option></select>
+                  <select id="f_campus"><option value="">Select Campus</option><option>Nairobi City Campus (CBD)</option><option>Thika Road Campus</option></select>
                 </div>
               </div>
               <div class="form-group">
@@ -783,9 +791,17 @@
                         <select id="f_acc_intake">
                           <option value="">Select intake</option>
                           <option>January</option>
+                          <option>February</option>
+                          <option>March</option>
+                          <option>April</option>
                           <option>May</option>
+                          <option>June</option>
                           <option>July</option>
+                          <option>August</option>
                           <option>September</option>
+                          <option>October</option>
+                          <option>November</option>
+                          <option>December</option>
                         </select>
                       </div>
                     </div>
@@ -1018,6 +1034,20 @@
         </div>
       </div>
     </div>
+    <div class="footer-accred-bar">
+      <p class="accred-tagline">TRAIN WITH THE EXPERTS &hellip; BECOME AN EXPERT!</p>
+      <div class="accred-badges">
+        <span class="accred-badge"><img loading="eager" decoding="async" src="images/partners/TVETA.png" alt="TVETA logo"></span>
+        <span class="accred-badge"><img loading="eager" decoding="async" src="images/partners/tveta curriculum.png" alt="TVET CDACC logo"></span>
+        <span class="accred-badge"><img loading="eager" decoding="async" src="images/partners/national_industrial_training_authority_logo.png" alt="NITA logo"></span>
+        <span class="accred-badge"><img loading="eager" decoding="async" src="images/partners/khpoa.png" alt="KHPOA logo"></span>
+        <span class="accred-badge"><img loading="eager" decoding="async" src="images/partners/ministry of education.png" alt="Ministry of Education logo"></span>
+        <span class="accred-badge"><img loading="eager" decoding="async" src="images/partners/knec.png" alt="KNEC logo"></span>
+        <span class="accred-badge"><img loading="eager" decoding="async" src="images/partners/amca.png" alt="AMCA logo"></span>
+        <span class="accred-badge"><img loading="eager" decoding="async" src="images/partners/SDCC.png" alt="Skill Development Council Canada logo"></span>
+        <span class="accred-badge"><img loading="eager" decoding="async" src="images/partners/American_Heart_Association_Logo.svg" alt="American Heart Association logo"></span>
+      </div>
+    </div>
 
     <!-- Bottom Bar -->
     <div class="footer-bottom footer-bottom--redesigned">
@@ -1097,13 +1127,13 @@
       document.getElementById('step' + n).classList.add('active');
       if (n === 7) populateReview();
       renderStepper();
-      var hero = document.querySelector('.app-hero');
+      var hero = document.querySelector('.ph');
       window.scrollTo({ top: hero ? hero.offsetTop : 0, behavior: 'smooth' });
     }
 
     function val(id) { var el = document.getElementById(id); return el && el.value ? el.value : ''; }
     function radioVal(name) { var el = document.querySelector('input[name="' + name + '"]:checked'); return el ? el.value : ''; }
-    function setRv(id, v) { document.getElementById(id).textContent = v || '&mdash;'; }
+    function setRv(id, v) { document.getElementById(id).textContent = v || '—'; }
 
     function populateReview() {
       setRv('rv_name', val('f_name'));

@@ -162,7 +162,7 @@
   <!-- -- SUB BAR --------------------------------------- -->
   <div class="subbar">
     <div class="wrap subbar-inner">
-      <span class="subbar-tagline">TRAIN WITH THE EXPERTS &nbsp;..&nbsp; BECOME AN EXPERT!</span>
+      <span class="subbar-tagline">Train With The Experts... Become an Expert!</span>
       <div class="subbar-portals">
         <a href="#" class="subbar-btn subbar-btn--student">Student Portal</a>
         <a href="#" class="subbar-btn subbar-btn--staff">Staff Portal</a>
@@ -828,7 +828,7 @@
       .intk-title span{color:var(--o);}
       .intk-sub{font-size:1.02rem;color:#5b6472;line-height:1.65;margin:0 0 24px;max-width:460px;}
       .intk-banner{display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,var(--o),#d05d15);border-radius:14px;padding:18px 22px;margin-bottom:26px;box-shadow:0 14px 32px rgba(236,116,36,.3);}
-      .intk-banner i{width:26px;height:26px;color:#fff;flex-shrink:0;}
+      .intk-banner i, .intk-banner svg{width:26px;height:26px;color:#fff;stroke:#fff;flex-shrink:0;}
       .intk-banner strong{color:#fff;font-size:1.02rem;font-weight:800;line-height:1.4;}
       .intk-list{list-style:none;padding:0;margin:0 0 30px;display:flex;flex-direction:column;gap:14px;}
       .intk-list li{display:flex;align-items:center;gap:13px;color:#334155;font-size:.98rem;line-height:1.4;}
@@ -854,6 +854,9 @@
       .intk-mchip--now{background:linear-gradient(135deg,#ff9f43,var(--o));border-color:transparent;box-shadow:0 10px 22px rgba(236,116,36,.4);}
       .intk-mchip--now b{color:#fff;}
       .intk-mchip--now span{color:rgba(255,255,255,.92);}
+      .intk-mchip--past{background:#f3f4f6;border-color:#e5e7eb;opacity:.65;}
+      .intk-mchip--past b{color:#9ca3af;}
+      .intk-mchip--past span{color:#9ca3af;}
       .intk-cal-foot{margin-top:18px;display:flex;align-items:center;gap:8px;font-size:.82rem;color:#64748b;line-height:1.45;}
       .intk-cal-foot svg{width:16px;height:16px;color:var(--o);flex-shrink:0;}
       @media(max-width:860px){ .intk-block{grid-template-columns:1fr;gap:34px;} }
@@ -906,9 +909,14 @@
         var now = new Date().getMonth();
         var chips = document.querySelectorAll('#intkMonths .intk-mchip');
         chips.forEach(function(c){
-          if (parseInt(c.getAttribute('data-m'), 10) === now) {
+          var m = parseInt(c.getAttribute('data-m'), 10);
+          var s = c.querySelector('span');
+          if (m === now) {
             c.classList.add('intk-mchip--now');
-            var s = c.querySelector('span'); if (s) s.textContent = 'Now';
+            if (s) s.textContent = 'Now';
+          } else if (m < now) {
+            c.classList.add('intk-mchip--past');
+            if (s) s.textContent = 'Past';
           }
         });
       })();
