@@ -384,6 +384,33 @@
   .icp-app-icon .lucide {
     width: 36px; height: 36px; stroke: #fff; stroke-width: 1.8;
   }
+
+  /* -- AHA COURSES SECTION -- */
+  .aha-section { background: #fff; padding: 60px 40px; border-top: 3px solid var(--o); }
+  .aha-inner { max-width: 1200px; margin: 0 auto; }
+  .aha-head { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 8px; }
+  .aha-head img { height: 46px; width: auto; }
+  .aha-section h2 { font-family: 'Outfit', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--dark); text-align: center; margin: 0; }
+  .aha-section h2 span { color: var(--o); }
+  .aha-sub { text-align: center; color: #64748b; font-size: 1rem; max-width: 620px; margin: 6px auto 34px; line-height: 1.6; }
+  .aha-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .aha-card {
+    display: flex; flex-direction: column;
+    background: rgba(245, 235, 210, 0.55);
+    border: 1px solid rgba(236,116,36,0.22);
+    border-radius: 12px; padding: 24px; text-decoration: none;
+    transition: transform .2s, box-shadow .2s, border-color .2s;
+  }
+  .aha-card:hover { transform: translateY(-5px); box-shadow: 0 16px 32px rgba(74,26,109,0.14); border-color: var(--o); }
+  .aha-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+  .aha-icon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #ec7424, #4a1a6d); }
+  .aha-icon .lucide { width: 24px; height: 24px; stroke: #fff; stroke-width: 2; }
+  .aha-dur { font-size: .78rem; font-weight: 700; color: var(--o); background: rgba(236,116,36,0.12); padding: 5px 12px; border-radius: 50px; }
+  .aha-card h3 { font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 800; color: var(--dark); margin: 0 0 8px; line-height: 1.3; }
+  .aha-card p { font-size: .9rem; color: #475569; line-height: 1.6; margin: 0 0 16px; flex-grow: 1; }
+  .aha-cta { display: inline-flex; align-items: center; gap: 6px; font-size: .88rem; font-weight: 700; color: var(--o); }
+  .aha-cta .lucide { width: 15px; height: 15px; }
+  @media (max-width: 900px) { .aha-grid { grid-template-columns: 1fr; } .aha-section { padding: 40px 20px; } }
 </style>
 
 <!-- -- HERO -- -->
@@ -514,6 +541,70 @@
 
   </div>
 </div>
+
+<!-- -- AHA EMERGENCY CARE COURSES -- -->
+<section class="aha-section">
+  <div class="aha-inner">
+    <div class="aha-head">
+      <img loading="eager" decoding="async" src="../images/partners/American_Heart_Association_Logo.svg" alt="American Heart Association">
+      <h2>AHA <span>Emergency Care Courses</span></h2>
+    </div>
+    <p class="aha-sub">Globally recognized American Heart Association certifications delivered at GoCare &ndash; giving you life-saving skills and an international edge.</p>
+    <div class="aha-grid">
+
+      <a href="aha-emergency-care-programs.html" class="aha-card">
+        <div class="aha-card-top">
+          <div class="aha-icon"><i data-lucide="shield-check"></i></div>
+          <span class="aha-dur">Varies</span>
+        </div>
+        <h3>AHA Emergency Care Programs</h3>
+        <p>American Heart Association&ndash;certified emergency care training including BLS, ACLS, PALS and Heartsaver.</p>
+        <span class="aha-cta">Learn More <i data-lucide="arrow-right"></i></span>
+      </a>
+
+      <a href="basic-life-support-bls.html" class="aha-card">
+        <div class="aha-card-top">
+          <div class="aha-icon"><i data-lucide="heart-pulse"></i></div>
+          <span class="aha-dur">1 Day</span>
+        </div>
+        <h3>Basic Life Support (BLS)</h3>
+        <p>AHA-accredited BLS training for healthcare professionals and first responders.</p>
+        <span class="aha-cta">Learn More <i data-lucide="arrow-right"></i></span>
+      </a>
+
+      <a href="advanced-cardiac-life-support-acls.html" class="aha-card">
+        <div class="aha-card-top">
+          <div class="aha-icon"><i data-lucide="activity"></i></div>
+          <span class="aha-dur">2 Days</span>
+        </div>
+        <h3>Advanced Cardiac Life Support (ACLS)</h3>
+        <p>AHA-certified ACLS for managing cardiac emergencies and advanced resuscitation.</p>
+        <span class="aha-cta">Learn More <i data-lucide="arrow-right"></i></span>
+      </a>
+
+      <a href="pediatric-advanced-life-support-pals.html" class="aha-card">
+        <div class="aha-card-top">
+          <div class="aha-icon"><i data-lucide="baby"></i></div>
+          <span class="aha-dur">3 Days</span>
+        </div>
+        <h3>Pediatric Advanced Life Support (PALS)</h3>
+        <p>AHA-certified PALS covering paediatric emergencies and resuscitation protocols.</p>
+        <span class="aha-cta">Learn More <i data-lucide="arrow-right"></i></span>
+      </a>
+
+      <a href="heartsaver-first-aid.html" class="aha-card">
+        <div class="aha-card-top">
+          <div class="aha-icon"><i data-lucide="shield-plus"></i></div>
+          <span class="aha-dur">1 Day</span>
+        </div>
+        <h3>Heartsaver First Aid CPR &amp; AED</h3>
+        <p>AHA Heartsaver certification for first aid, CPR and AED use in any setting.</p>
+        <span class="aha-cta">Learn More <i data-lucide="arrow-right"></i></span>
+      </a>
+
+    </div>
+  </div>
+</section>
 
 <!-- -- SUCCESS STORIES -- -->
 <div class="icp-stories">

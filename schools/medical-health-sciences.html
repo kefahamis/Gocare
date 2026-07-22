@@ -905,8 +905,10 @@
 .cc-icon-wrap.short-course i,
 .cc-icon-wrap.short-course .lucide { color: #0f766e; }
 .cc-card[data-type="hidden"] { display: none; }
-@media(max-width:960px) { .cc-grid { grid-template-columns: repeat(2,1fr); } }
-@media(max-width:580px) { .cc-grid { grid-template-columns: 1fr; } .cc-header h2 { font-size: 2rem; } }
+.cc-grid.cc-grid--cols4 { grid-template-columns: repeat(4, 1fr); }
+@media(max-width:1200px) { .cc-grid.cc-grid--cols4 { grid-template-columns: repeat(3,1fr); } }
+@media(max-width:960px) { .cc-grid { grid-template-columns: repeat(2,1fr); } .cc-grid.cc-grid--cols4 { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:580px) { .cc-grid { grid-template-columns: 1fr; } .cc-grid.cc-grid--cols4 { grid-template-columns: 1fr; } .cc-header h2 { font-size: 2rem; } }
 
 /* ── SCHOOL PAGE RESPONSIVE ── */
 @media (max-width: 1024px) {
@@ -1012,7 +1014,7 @@
         </a>
 
         <a href="../courses/diploma-in-mortuary-science-level-6.html" class="cc-card" data-type="diploma">
-          <div class="cc-card-top diploma"><img loading="lazy" decoding="async" src="../images/Mortuary.jpg" alt="Mortuary Science"></div>
+          <div class="cc-card-top diploma"><img loading="lazy" decoding="async" src="../images/new-images/IMG_7586 (1).JPG" alt="Mortuary Science"></div>
           <div class="cc-card-body">
             <div class="cc-badge-row">
               <div class="cc-icon-wrap"><i data-lucide="flask-conical"></i></div>
@@ -1172,12 +1174,12 @@
         </a>
 
         <a href="../courses/certificate-in-orthopaedic-and-trauma-medicine-level-5.html" class="cc-card" data-type="certificate">
-          <div class="cc-card-top certificate"><img loading="lazy" decoding="async" src="../images/Orthopaedic-Trauma Medicine.jpg" alt="Orthopaedic & Trauma Medicine Level 5"></div>
+          <div class="cc-card-top certificate"><img loading="lazy" decoding="async" src="../images/new-images/1(1).jpg" alt="Orthopaedic & Trauma Medicine Level 5"></div>
           <div class="cc-card-body">
             <div class="cc-badge-row">
               <div class="cc-icon-wrap certificate"><i data-lucide="bone"></i></div>
               <span class="cc-badge certificate">Certificate</span>
-              <span class="cc-duration"><i data-lucide="clock"></i> 18 Months</span>
+              <span class="cc-duration"><i data-lucide="clock"></i> 2 Years</span>
             </div>
             <div class="cc-title">Certificate in Orthopaedic & Trauma Medicine &ndash; Level 5</div>
             <div class="cc-meta">Learn orthopaedic casting, traction and fracture management.</div>
@@ -1219,7 +1221,7 @@
           </div>
         </a>
 
-        <a href="../courses/basic-life-support-bls.html" class="cc-card" data-type="short-course">
+        <a href="../courses/basic-life-support-bls.html" class="cc-card" data-type="short-course certificate">
           <div class="cc-card-top short-course"><img loading="lazy" decoding="async" src="../images/Nursing-Assistant.jpg" alt="Basic Life Support BLS"></div>
           <div class="cc-card-body">
             <div class="cc-badge-row">
@@ -1235,7 +1237,7 @@
           </div>
         </a>
 
-        <a href="../courses/advanced-cardiac-life-support-acls.html" class="cc-card" data-type="short-course">
+        <a href="../courses/advanced-cardiac-life-support-acls.html" class="cc-card" data-type="short-course certificate">
           <div class="cc-card-top short-course"><img loading="lazy" decoding="async" src="../images/caregiving.jpg" alt="Advanced Cardiac Life Support ACLS"></div>
           <div class="cc-card-body">
             <div class="cc-badge-row">
@@ -1251,7 +1253,7 @@
           </div>
         </a>
 
-        <a href="../courses/pediatric-advanced-life-support-pals.html" class="cc-card" data-type="short-course">
+        <a href="../courses/pediatric-advanced-life-support-pals.html" class="cc-card" data-type="short-course certificate">
           <div class="cc-card-top short-course"><img loading="lazy" decoding="async" src="../images/hca-clinical.jpg" alt="Pediatric Advanced Life Support PALS"></div>
           <div class="cc-card-body">
             <div class="cc-badge-row">
@@ -1267,7 +1269,7 @@
           </div>
         </a>
 
-        <a href="../courses/heartsaver-first-aid.html" class="cc-card" data-type="short-course">
+        <a href="../courses/heartsaver-first-aid.html" class="cc-card" data-type="short-course certificate">
           <div class="cc-card-top short-course"><img loading="lazy" decoding="async" src="../images/caregiver-level-2.jpg" alt="Heartsaver First Aid CPR AED"></div>
           <div class="cc-card-body">
             <div class="cc-badge-row">
@@ -1283,7 +1285,7 @@
           </div>
         </a>
 
-        <a href="../courses/aha-emergency-care-programs.html" class="cc-card" data-type="short-course">
+        <a href="../courses/aha-emergency-care-programs.html" class="cc-card" data-type="short-course certificate">
           <div class="cc-card-top short-course"><img loading="eager" decoding="async" src="../images/partners/American_Heart_Association_Logo.svg" alt="AHA Emergency Care Programs" style="object-fit:contain;background:#fff;padding:24px;"></div>
           <div class="cc-card-body">
             <div class="cc-badge-row">
@@ -1293,6 +1295,22 @@
             </div>
             <div class="cc-title">AHA Emergency Care Programs</div>
             <div class="cc-meta">American Heart Association&ndash;certified emergency care training including BLS, ACLS, PALS and Heartsaver.</div>
+          </div>
+          <div class="cc-card-footer">
+            <span class="cc-cta">Learn More <i data-lucide="arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="../courses/certificate-in-home-based-care-support-level-3.html" class="cc-card" data-type="short-course">
+          <div class="cc-card-top short-course"><img loading="lazy" decoding="async" src="../images/homecare-level-3.jpg" alt="Home-Based Care Support Level 3"></div>
+          <div class="cc-card-body">
+            <div class="cc-badge-row">
+              <div class="cc-icon-wrap short-course"><i data-lucide="home"></i></div>
+              <span class="cc-badge short-course">Short Course</span>
+              <span class="cc-duration"><i data-lucide="clock"></i> 5 Months</span>
+            </div>
+            <div class="cc-title">Home-Based Care Support &ndash; Level 3</div>
+            <div class="cc-meta">Deliver professional care services in home and community environments.</div>
           </div>
           <div class="cc-card-footer">
             <span class="cc-cta">Learn More <i data-lucide="arrow-right"></i></span>
@@ -1467,7 +1485,7 @@
         <span class="accred-badge"><img loading="eager" decoding="async" src="../images/partners/TVETA.png" alt="TVETA logo"></span>
         <span class="accred-badge"><img loading="eager" decoding="async" src="../images/partners/tveta curriculum.png" alt="TVET CDACC logo"></span>
         <span class="accred-badge"><img loading="eager" decoding="async" src="../images/partners/national_industrial_training_authority_logo.png" alt="NITA logo"></span>
-        <span class="accred-badge"><img loading="eager" decoding="async" src="../images/partners/khpoa.png" alt="KHPOA logo"></span>
+        <span class="accred-badge"><img loading="eager" decoding="async" src="../images/partners/KHPOA.png" alt="KHPOA logo"></span>
         <span class="accred-badge"><img loading="eager" decoding="async" src="../images/partners/ministry of education.png" alt="Ministry of Education logo"></span>
         <span class="accred-badge"><img loading="eager" decoding="async" src="../images/partners/knec.png" alt="KNEC logo"></span>
         <span class="accred-badge"><img loading="eager" decoding="async" src="../images/partners/amca.png" alt="AMCA logo"></span>
@@ -1548,13 +1566,15 @@
 (function(){
   var btns = document.querySelectorAll('.cc-filter-btn');
   var cards = document.querySelectorAll('.cc-card');
+  var grid = document.querySelector('.cc-grid');
   btns.forEach(function(btn){
     btn.addEventListener('click', function(){
       btns.forEach(function(b){ b.classList.remove('active'); });
       btn.classList.add('active');
       var filter = btn.dataset.filter;
+      if(grid){ grid.classList.toggle('cc-grid--cols4', filter === 'diploma'); }
       cards.forEach(function(card){
-        if(filter === 'all' || card.dataset.type === filter){
+        if(filter === 'all' || (card.dataset.type || '').split(' ').indexOf(filter) !== -1){
           card.style.display = '';
         } else {
           card.style.display = 'none';

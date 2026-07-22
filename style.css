@@ -15,7 +15,9 @@
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: transform;
 }
-
+/* .ph-breadcrumb a,.ph-breadcrumb span{
+  white-space: nowrap;
+} */
 #cookie-banner.ck-visible {
   transform: translateY(0);
 }
@@ -6945,7 +6947,7 @@ textarea.form-control {
   padding: 130px 48px 80px;
 }
 
-.hero-text { max-width: 600px; }
+.hero-text { max-width: 900px; }
 
 /* Breadcrumb sits directly under the eyebrow pill, above the heading */
 .course-hero .ph-breadcrumb,
@@ -9207,6 +9209,7 @@ textarea.form-control {
   border-radius: 12px;
   margin-bottom: 20px;
   display: block;
+  object-position: top;
 }
 
 /* ── LIFE AT GOCARE MOSAIC ── */
@@ -13416,7 +13419,9 @@ section, .section, .courses-sec, .why-us-sec, .testimonials-sec, .highlighted-se
 .footer a:hover {
   color: #ec7424 !important;
 }
-
+.ph-btns a{
+  color: #fff !important;
+}
 /* ═══════════════════════════════════════════════════════════
    MOBILE SIDE DRAWER  (mobile only — matches .ham breakpoint)
    ═══════════════════════════════════════════════════════════ */
